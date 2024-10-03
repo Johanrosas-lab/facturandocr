@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+*  - user_email: The user email.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-complete">
+  <div class="success-img">
+    <img src="/themes/insurance_theme/images/checkmark.gif" alt="">
+    <h3>¡Transacción exitosa!</h3>
+    <p> </p>
+  </div>
+  <div class="success-msg">
+{{ 'Gracias, el pago del seguro numero: @number. Se envió un correo a: @email con los detalles de la compra'|t({'@number': order_entity.getOrderNumber, '@email': user_email}) }}
+  </div>
+  <div class="success-btn">
+    <a href="/user/orders">Ir a mis productos</a>
+  </div>
+  {{ 'Adios @email'|t({'@email': user_email}) }}
+</div>

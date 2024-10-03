@@ -1,0 +1,126 @@
+.path-user {
+  overflow-x: hidden;
+
+  .reload-captcha-wrapper {
+    text-align: center;
+  }
+
+  .header-row2{
+    background-color: transparent;
+    padding: 0 0px;
+    position:relative ;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+
+    .region-content{
+      margin-top: 40px;
+    }
+  }
+
+  #block-insurance-theme-socialauthlogin{
+    display: grid;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 300px;
+
+    @media (min-width: $screen-phone) {
+      max-width: 340px;
+    }
+
+  }
+
+  .field--name-field-user-intro-logo{
+    display: none;
+  }
+
+  .field--name-field-user-intro-background{
+    display: none;
+  }
+
+  .user-login,
+  .user-new-pass,
+  .user-register {
+    .col-sm-4 {
+      display: none;
+    }
+  }
+
+  .form-actions{
+    text-align: center;
+    display: grid;
+    margin: 20px auto;
+    min-width: 297px;
+    justify-content: center;
+
+  }
+
+  .password-link{
+    margin-top: -70px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #edit-actions{
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+  //-------------------------------MENU-----------------------------------------
+
+  .region-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .block-block-content{
+      display: flex;
+      margin-right: 20px;
+      width: auto;
+      justify-content: flex-end;
+      align-items: center;
+
+      .block-title {
+        display: none;
+      }
+
+      .field {
+        .contact-info{
+          padding-right: 30px;
+          font-family: sans-serif;
+          flex-direction: column;
+          margin-top: 10px !important;
+          display:inline;
+          justify-content: space-between;
+          @media (max-width: 315px){
+            flex-wrap: wrap;
+          }
+          p{
+            margin-left: 0 !important;
+            margin-bottom: 10px !important;
+            color:$color-black !important;
+          }
+          p.email {
+            background-repeat: no-repeat;
+            background-image: url(/themes/custom/segurosins_theme/images/at.png);
+          }
+          p.phone {
+            background-repeat: no-repeat;
+            background-image: url(/themes/custom/segurosins_theme/images/phone.png);
+          }
+          p.email,p.phone{
+            display: inline;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+    .pull-left {
+      padding-left: 30px;
+    }
+  }
+}

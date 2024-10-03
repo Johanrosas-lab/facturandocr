@@ -1,0 +1,21 @@
+uuid: 9ec0ed0c-ba61-421e-8790-4815d06d257f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_travel_option
+    - profile.type.client
+  module:
+    - options
+id: profile.client.field_client_travel_option
+field_name: field_client_travel_option
+entity_type: profile
+bundle: client
+label: 'Qué tipo de viaje frecuenta realizar?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,24 @@
+uuid: 20a70e6f-f5a5-4e27-9565-659a2f00e34d
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.slider
+  module:
+    - views
+  theme:
+    - insurance_theme
+id: views_block__slider_block_1
+theme: insurance_theme
+region: highlight
+weight: 0
+provider: null
+plugin: 'views_block:slider-block_1'
+settings:
+  id: 'views_block:slider-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

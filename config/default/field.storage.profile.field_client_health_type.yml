@@ -1,0 +1,27 @@
+uuid: 84cddca1-c291-4ad0-8182-e4b346588be8
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_client_health_type
+field_name: field_client_health_type
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: private
+      label: Privado
+    -
+      value: public
+      label: Publico
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

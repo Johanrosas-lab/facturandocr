@@ -1,0 +1,21 @@
+uuid: d0977e29-d76e-464b-95d8-3ce1dd870ebb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_birthday
+    - profile.type.client
+  module:
+    - datetime
+id: profile.client.field_client_birthday
+field_name: field_client_birthday
+entity_type: profile
+bundle: client
+label: 'Fecha de nacimiento'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

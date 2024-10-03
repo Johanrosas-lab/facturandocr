@@ -1,0 +1,21 @@
+uuid: 0918daf2-55b2-442a-8cae-d9aef896fba5
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_tipo_de_residencia_del_ase
+  module:
+    - options
+id: insured.insured_person.field_tipo_de_residencia_del_ase
+field_name: field_tipo_de_residencia_del_ase
+entity_type: insured
+bundle: insured_person
+label: 'Tipo de residencia del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

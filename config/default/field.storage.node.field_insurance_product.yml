@@ -1,0 +1,20 @@
+uuid: c1805c92-af89-4dd0-b9e3-c5e98dc177a3
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: node.field_insurance_product
+field_name: field_insurance_product
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_product
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

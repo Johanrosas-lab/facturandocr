@@ -1,0 +1,21 @@
+uuid: 1b497474-aba0-4183-9a82-d3c3f393d8c8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: additional_insured.field_cellphone_additional
+field_name: field_cellphone_additional
+entity_type: additional_insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

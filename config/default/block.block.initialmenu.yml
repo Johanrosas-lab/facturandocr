@@ -1,0 +1,25 @@
+uuid: d84d2be8-a065-454c-b6d1-8124b320e78f
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.initial-menu
+  module:
+    - system
+  theme:
+    - insurance_theme
+id: initialmenu
+theme: insurance_theme
+region: header
+weight: -12
+provider: null
+plugin: 'system_menu_block:initial-menu'
+settings:
+  id: 'system_menu_block:initial-menu'
+  label: 'Initial Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

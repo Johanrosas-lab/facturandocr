@@ -1,0 +1,101 @@
+.product-order-information{
+  margin-top: 140px;
+  padding: 0 35px;
+  .customer-information{
+    .field--label{
+      width: 135px;
+    }
+  }
+  .order-information{
+    .field--label-inline{
+      .field--label{
+        width: 135px;
+      }
+    }
+    .field--name-order-items{
+      margin-top: 30px;
+      .table-responsive{
+        border-radius: 4px;
+        thead{
+          background-color: $color-secondary;
+          color: $color-white;
+          tr{
+            th{
+              font-family: 'Roboto-Regular';
+              font-weight: normal;
+              border-bottom: 2px solid $color-blue-hover;
+            }
+            .views-field-nothing{
+              text-align: center;
+            }
+          }
+        }
+        tbody{
+          tr{
+            background-color: $color-white;
+            height: 65px;
+            td{
+              vertical-align: middle;
+              border-color: $color-border-gray;
+            }
+            td.views-field-sku{
+              a{
+                text-decoration: none;
+                color: $color-third;
+                &:hover{
+                  text-decoration: underline !important;
+                  color: $color-third !important;
+                }
+              }
+            }
+            td.views-field-nothing{
+              a{
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:before{
+                  color: $color-secondary;
+                  content: "\f054";
+                  font-family: 'FontAwesome';
+                  position: absolute;
+                  display: flex;
+                  width: 30px;
+                  height: 30px;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: $color-white;
+                  border: 1px solid $color-secondary;
+                  border-radius: 50%;
+                }
+                &:hover:before{
+                  color: $color-white;
+                  box-shadow: 0 2px 4px $color-background-overlay;
+                  background-color: $color-secondary;
+                  border-color: $color-secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .field--name-total-price{
+      border-top: 1px solid $color-border-gray;
+      padding-top: 20px;
+      margin-top: 30px;
+      h3{
+        display: none;
+      }
+      .order-total-line{
+        text-align: left;
+        .order-total-line-label{
+          width: 55px;
+        }
+      }
+      .order-total-line__total{
+        color: $color-secondary;
+      }
+    }
+  }
+}

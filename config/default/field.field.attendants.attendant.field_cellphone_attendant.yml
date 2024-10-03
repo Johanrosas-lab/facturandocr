@@ -1,0 +1,23 @@
+uuid: 29330157-f71e-4cfa-8c81-11024ec63b10
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_cellphone_attendant
+id: attendants.attendant.field_cellphone_attendant
+field_name: field_cellphone_attendant
+entity_type: attendants
+bundle: attendant
+label: 'Telefono de Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

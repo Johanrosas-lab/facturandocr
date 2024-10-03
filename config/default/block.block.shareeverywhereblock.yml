@@ -1,0 +1,26 @@
+uuid: 12d33701-06be-4ccc-b657-be78a7443f4a
+langcode: es
+status: true
+dependencies:
+  module:
+    - share_everywhere
+    - system
+  theme:
+    - insurance_theme
+id: shareeverywhereblock
+theme: insurance_theme
+region: content
+weight: -3
+provider: null
+plugin: share_everywhere_block
+settings:
+  id: share_everywhere_block
+  label: 'Share Everywhere Block'
+  provider: share_everywhere
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: 'product/*'
+    negate: false
+    context_mapping: {  }

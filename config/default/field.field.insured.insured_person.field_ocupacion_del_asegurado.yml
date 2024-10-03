@@ -1,0 +1,19 @@
+uuid: 2fa16d07-09de-4c5f-b501-6c96fc23dff5
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_ocupacion_del_asegurado
+id: insured.insured_person.field_ocupacion_del_asegurado
+field_name: field_ocupacion_del_asegurado
+entity_type: insured
+bundle: insured_person
+label: 'I. Ocupación del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

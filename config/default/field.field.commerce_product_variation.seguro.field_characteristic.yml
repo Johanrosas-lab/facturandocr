@@ -1,0 +1,52 @@
+uuid: 5e6df537-9ec0-45e5-bff6-957b37c11718
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.seguro
+    - field.storage.commerce_product_variation.field_characteristic
+    - paragraphs.paragraphs_type.product_variation
+  module:
+    - entity_reference_revisions
+id: commerce_product_variation.seguro.field_characteristic
+field_name: field_characteristic
+entity_type: commerce_product_variation
+bundle: seguro
+label: Característica
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_variation: product_variation
+    target_bundles_drag_drop:
+      product_variation:
+        enabled: true
+        weight: 9
+      description_block:
+        weight: 10
+        enabled: false
+      download_app_block:
+        weight: 11
+        enabled: false
+      download_app_cta:
+        weight: 12
+        enabled: false
+      intro_block:
+        weight: 13
+        enabled: false
+      products_by_category_block:
+        weight: 14
+        enabled: false
+      text_image_block:
+        weight: 15
+        enabled: false
+      view_block:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

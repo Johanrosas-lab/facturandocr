@@ -1,0 +1,9 @@
+uuid: e0420cd3-94d7-4801-829c-2329a0cc6693
+langcode: es
+status: true
+dependencies: {  }
+id: cta_section
+label: 'CTA Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

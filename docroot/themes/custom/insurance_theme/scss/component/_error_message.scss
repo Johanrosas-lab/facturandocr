@@ -1,0 +1,13 @@
+.region-content {
+      h1 {
+        color: $color-secondary;
+      }    
+  .error-message {
+    margin-top: 30px;
+    border: 1px solid $color-secondary;
+    border-radius: 10px;
+    background-color: $color-gray;
+    padding: 50px;
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 047e69a3-41b6-4b49-868f-3b5600bae2bb
+langcode: es
+status: true
+dependencies: {  }
+id: beneficiaries
+label: Beneficiaries
+created: true
+changed: true
+uid: true
+title: true

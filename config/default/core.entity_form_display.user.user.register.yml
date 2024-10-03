@@ -1,0 +1,38 @@
+uuid: 8dd8d086-da3a-41a6-b3e7-d9596860d27c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_user_pin
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  legal_consentimiento_informado:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  client_profiles: true
+  commerce_remote_id: true
+  contact: true
+  customer_profiles: true
+  field_user_pin: true
+  langcode: true
+  language: true
+  timezone: true
+  user_picture: true

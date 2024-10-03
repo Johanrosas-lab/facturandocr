@@ -1,0 +1,32 @@
+/* checkout screen (pantalla de pago) */
+.path-checkout{
+  .home-page{
+    .region-content{
+      .panel-body{
+        fieldset{
+          legend{
+            border-bottom: none;
+            span{
+              font-size: 20px;
+              font-family: 'Roboto-Light';
+              color: $color-black;
+            }
+          }
+          .fieldset-wrapper{
+            div{
+              display: inline-flex;
+              .form-item{
+                margin: 0 60px 0 0;
+                width: 183px;
+                background-color: $color-white;
+                box-shadow: 0px 2px 4px rgba(0,0,0,0.18%);
+                border-radius: 8px;
+                height: 64px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{#
+/**
+* @file
+*
+* Default template for product attribute values.
+*
+* Available variables:
+* - attributes: HTML attributes for the wrapper.
+* - product_attribute_value: The rendered product attribute value fields.
+*   Use 'product_attribute_value' to print them all, or print a subset such as
+*   'product_attribute_value.name'. Use the following code to exclude the
+*   printing of a given field:
+*   @code
+*   {{ product_attribute_value|without('name') }}
+*   @endcode
+* - product_attribute_value_entity: The product attribute value entity.
+*
+* @ingroup themeable
+*/
+#}
+
+<div{{ attributes }}>
+    <header class="variations-header">
+        {{- product_attribute_value -}}
+    </header>
+    <div class="variations-values">
+        {% for row in variations_data %}
+            <div class="variation-values-data">
+                <div class="variation-values-label visible-xs">
+                    {{ row.label }}
+                </div>
+                <div class="variation-values-item">
+                    {{ row.value }}
+                </div>
+            </div>
+         {% endfor %}
+    </div>
+</div>

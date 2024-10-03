@@ -1,0 +1,19 @@
+uuid: 12272cca-16c2-4834-962a-71d005c751c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_subtitle
+    - paragraphs.paragraphs_type.download_app_block
+id: paragraph.download_app_block.field_download_subtitle
+field_name: field_download_subtitle
+entity_type: paragraph
+bundle: download_app_block
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

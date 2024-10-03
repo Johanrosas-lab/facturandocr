@@ -1,0 +1,7 @@
+uuid: 3c6351f9-3195-403b-990d-84eddaf2699e
+langcode: es
+status: false
+dependencies: {  }
+formId: node_como_funciona__form
+captchaType: default
+label: null

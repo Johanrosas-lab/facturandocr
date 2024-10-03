@@ -1,0 +1,15 @@
+uuid: 407e0f3c-ee50-4d81-98de-08e05a040ef5
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DGzwY1Q5lWAj2I1aF07RFkR7XCtlq9qXWG5vWLmYOVA
+label: Recurring
+id: recurring
+workflow: order_recurring
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+traits: {  }
+locked: false

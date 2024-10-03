@@ -1,0 +1,21 @@
+uuid: a252e9c7-f964-4aa9-917c-eb206bf3cc0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_gender_attendant
+  module:
+    - options
+id: attendants.attendant.field_gender_attendant
+field_name: field_gender_attendant
+entity_type: attendants
+bundle: attendant
+label: Genero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

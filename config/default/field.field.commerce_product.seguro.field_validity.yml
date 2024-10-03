@@ -1,0 +1,19 @@
+uuid: 031d2ac5-8fe9-4f34-ae6f-578a272ac581
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.seguro
+    - field.storage.commerce_product.field_validity
+id: commerce_product.seguro.field_validity
+field_name: field_validity
+entity_type: commerce_product
+bundle: seguro
+label: Vigencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

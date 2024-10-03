@@ -1,0 +1,22 @@
+uuid: 436e3dc2-a29e-44ae-a209-ae207c40d611
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - node
+_core:
+  default_config_hash: mQFH4XS43gNh5VhK0KcQQXtkYZkyuAZTIkBIYtrsRwU
+id: commerce_order_item.subscription
+field_name: subscription
+entity_type: commerce_order_item
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,16 @@
+<div class="digital-agent-login-wrapper">
+  <div class="digital-agent-header">
+    <h1>{% trans %}Inicie sesión para adquirir los productos de su agente digital.{% endtrans %}</h1>
+  </div>
+{% if error %}
+  <div>{{ error }}</div>
+{% else %}
+  <div class="digital-agent-form-wrapper">
+    <div class="digital-agent-name">
+      <p>{{ 'Your digital agent'|t }}:</p>
+      <h2>{{ user_name }}</h2>
+    </div>
+    {{ login_form }}
+  </div>
+{% endif %}
+</div>

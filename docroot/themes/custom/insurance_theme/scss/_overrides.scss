@@ -1,0 +1,157 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+@import "component/paragraphs";
+@import "component/views";
+@import "component/modal";
+@import "component/profile_page";
+@import "component/footer";
+@import "component/favorites_page";
+@import "component/insurance_info_page";
+@import "component/shopping_cart_page";
+@import "component/checkout_screen_page";
+@import "component/search_result_page";
+@import "component/informed_consent";
+@import "component/payment_methods";
+@import "component/checkout_review_product";
+@import "component/checkout_formalization_product";
+@import "component/checkout_payment_info";
+@import "component/my_product_table";
+@import "component/my_product_item";
+@import "component/page_settings";
+@import "component/my_product_detail";
+@import "component/checkout_completion_msg";
+@import "component/homepage";
+@import "component/menu";
+@import "component/footer0";
+@import "component/login";
+@import "component/product_pages";
+@import "component/cart_pages";
+@import "component/catalogo";
+@import "component/contact_us";
+@import "component/main-menu-wrapper";
+@import "component/edit_profile_picture";
+@import "component/webform-submission-cotizaciones-form";
+@import "component/error_message";
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+
+// Google fonts import
+@import url('https://fonts.googleapis.com/css?family=Roboto|Varela|Varela+Round');
+
+// ---- Fonts ----- //
+
+// Roboto
+@include font-face('Roboto-Thin', '../fonts/Roboto/Roboto-Thin', null, null, 'ttf');
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto/Roboto-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Roboto/Roboto-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Roboto/Roboto-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto/Roboto-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Roboto/Roboto-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('../fonts/Roboto/Roboto-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto/Roboto-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Roboto/Roboto-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Varela Round
+@include font-face('Varela-Round', '../fonts/Varela_Round/VarelaRound-Regular', null, null, 'ttf');
+
+@font-face {
+  font-family: 'Varela-Round';
+  src: url('Varela-Round.eot'); /* IE9 Compat Modes */
+  src: url('Varela-Round.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto/Varela-Round.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Roboto/Varela-Round.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Roboto-Regular';
+}
+h1 {
+  font-family: 'Varela-Round';
+  @media (max-width: $screen-tablet){
+    font-size: 36px;
+  }
+}
+h2{
+  font-family: 'Roboto-Regular';
+}
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}

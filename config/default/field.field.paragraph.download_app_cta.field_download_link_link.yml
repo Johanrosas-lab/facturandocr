@@ -1,0 +1,23 @@
+uuid: a05e412a-cd45-48b1-ab43-56930b454aa8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_link_link
+    - paragraphs.paragraphs_type.download_app_cta
+  module:
+    - link
+id: paragraph.download_app_cta.field_download_link_link
+field_name: field_download_link_link
+entity_type: paragraph
+bundle: download_app_cta
+label: Enlace
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

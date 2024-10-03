@@ -1,0 +1,21 @@
+uuid: 78f0c0df-f8ab-4ae2-8644-a5c7d5123d4b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.storage.additional_insured.field_born_date_additional
+  module:
+    - datetime
+id: additional_insured.additional_insured.field_born_date_additional
+field_name: field_born_date_additional
+entity_type: additional_insured
+bundle: additional_insured
+label: 'X. Fecha de nacimiento del asegurado adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

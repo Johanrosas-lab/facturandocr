@@ -1,0 +1,30 @@
+uuid: a4ba6fa3-25c4-4a58-baec-fe47d57d9751
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_material_frames
+field_name: field_material_frames
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Madera
+    -
+      value: '1'
+      label: Aluminio
+    -
+      value: '2'
+      label: PVC
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

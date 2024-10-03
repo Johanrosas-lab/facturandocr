@@ -1,0 +1,23 @@
+uuid: 9207aeab-5ee7-4879-9b71-d8667cedcf07
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sliderparagraph.field_bloque
+    - paragraphs.paragraphs_type.sliderparagraph
+id: paragraph.sliderparagraph.default
+targetEntityType: paragraph
+bundle: sliderparagraph
+mode: default
+content:
+  field_bloque:
+    weight: 1
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function ins_payment_form_commerce_payment_method_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Add card name field in payment method form.
+  $form['payment_method']['payment_details']['card_name'] = [
+    '#type' => 'textfield',
+    '#title' => t('Nombre en la Tarjeta'),
+    '#required' => TRUE,
+    '#weight' => -1
+  ];
+}

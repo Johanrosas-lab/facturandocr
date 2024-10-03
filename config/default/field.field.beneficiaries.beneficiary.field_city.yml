@@ -1,0 +1,19 @@
+uuid: 2131025e-ee77-44d9-a540-c1b1cff766fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.beneficiaries.beneficiary
+    - field.storage.beneficiaries.field_city
+id: beneficiaries.beneficiary.field_city
+field_name: field_city
+entity_type: beneficiaries
+bundle: beneficiary
+label: Canton
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

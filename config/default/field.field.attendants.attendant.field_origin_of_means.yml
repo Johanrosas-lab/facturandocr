@@ -1,0 +1,19 @@
+uuid: a3a9d394-4dc1-435a-824e-612eeda0bfcb
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_origin_of_means
+id: attendants.attendant.field_origin_of_means
+field_name: field_origin_of_means
+entity_type: attendants
+bundle: attendant
+label: 'Origen de los recursos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: c23b7e8c-952c-4100-bbcd-a9a99db48b39
+langcode: es
+status: false
+dependencies: {  }
+id: sell_tax
+label: 'Impuesto de ventas'
+plugin: custom
+configuration:
+  display_label: tax
+  round: true
+  rates:
+    -
+      id: 64fddc2e-3fe6-44d4-bdeb-35deb8c4e4d3
+      label: I.V
+      percentage: '0.02'
+  territories:
+    -
+      country_code: CR
+  display_inclusive: true

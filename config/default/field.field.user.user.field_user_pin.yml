@@ -1,0 +1,20 @@
+uuid: 54032d95-2723-4aab-80a1-d9c1b9e7195c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_pin
+  module:
+    - user
+id: user.user.field_user_pin
+field_name: field_user_pin
+entity_type: user
+bundle: user
+label: PIN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

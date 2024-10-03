@@ -1,0 +1,19 @@
+uuid: 6f7f0857-28f0-4635-908b-95f047fabea8
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.storage.additional_insured.field_cellphone_additional
+id: additional_insured.additional_insured.field_cellphone_additional
+field_name: field_cellphone_additional
+entity_type: additional_insured
+bundle: additional_insured
+label: 'ZZZ. Teléfono celular del asegurado adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

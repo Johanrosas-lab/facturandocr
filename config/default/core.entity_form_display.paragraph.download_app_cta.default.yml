@@ -1,0 +1,33 @@
+uuid: 3d060181-b82b-4c2b-80fa-73c0514123e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.download_app_cta.field_download_link_link
+    - field.field.paragraph.download_app_cta.field_download_link_type
+    - paragraphs.paragraphs_type.download_app_cta
+  module:
+    - link
+id: paragraph.download_app_cta.default
+targetEntityType: paragraph
+bundle: download_app_cta
+mode: default
+content:
+  field_download_link_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_download_link_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

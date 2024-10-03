@@ -1,0 +1,42 @@
+name: Seguros INS theme
+type: theme
+description: 'A base theme with sensible default CSS classes added. Learn how to use Classy as a base theme in the <a href="https://www.drupal.org/docs/8/theming">Drupal 8 Theming Guide</a>.'
+package: Core
+version: VERSION
+core: 8.x
+base theme: classy
+hidden: false
+
+libraries:
+  - segurosins_theme/base
+  - segurosins_theme/messages
+  - segurosins_theme/global
+  - core/normalize
+
+libraries-extend:
+  user/drupal.user:
+    - segurosins_theme/user
+  core/drupal.dropbutton:
+    - segurosins_theme/dropbutton
+  core/drupal.dialog:
+    - segurosins_theme/dialog
+  file/drupal.file:
+    - segurosins_theme/file
+  core/drupal.progress:
+    - segurosins_theme/progress
+
+stylesheets-remove:
+
+regions:
+  header: Header
+  header_left: Header left
+  header_right: Header right
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content_top: Content Top
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer

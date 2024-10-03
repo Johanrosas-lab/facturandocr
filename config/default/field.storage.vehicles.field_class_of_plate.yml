@@ -1,0 +1,39 @@
+uuid: 7fe34f1a-7545-4e33-b1ad-1c07da102dc8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: vehicles.field_class_of_plate
+field_name: field_class_of_plate
+entity_type: vehicles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Particular
+    -
+      value: '1'
+      label: 'Carga Liviana'
+    -
+      value: '2'
+      label: Carga
+    -
+      value: '3'
+      label: Bus
+    -
+      value: '4'
+      label: Taxi
+    -
+      value: '5'
+      label: Especial
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

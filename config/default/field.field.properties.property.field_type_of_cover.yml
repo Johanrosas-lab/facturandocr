@@ -1,0 +1,21 @@
+uuid: 766f58ed-8b4c-41c9-9727-f4730e72ea0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_type_of_cover
+  module:
+    - options
+id: properties.property.field_type_of_cover
+field_name: field_type_of_cover
+entity_type: properties
+bundle: property
+label: 'Techos:Tipo de cubierta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

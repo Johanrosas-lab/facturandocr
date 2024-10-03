@@ -1,0 +1,47 @@
+<div class='add-provider-custom-title'>
+  <h2>Registrar proveedor</h2>
+</div>
+<form{{ attributes }}>
+  <div class='row add-provider-first-row'>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_tradename}}
+    </div>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_business_name}}
+    </div>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_business_id}}
+    </div>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_categoria}}
+    </div>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_email}}
+    </div>
+    <div class='col-sm-6 col-md-4'>
+      {{form.field_phone_number}}
+    </div>
+  </div>
+  <div class='row add-provider-second-row'>
+    <div class='observations col-sm-6 col-md-6'>
+      {{form.field_observations}}
+    </div>
+    <div class='col-12 col-sm-6 col-md-6'>
+      <div class="modal-button">
+        {{form.group_pop_up_productos}}
+        <p>Seleccionar los seguros de los cuales el proveedor va a brindar servicios</p>
+      </div>
+    </div>
+  </div>
+  <div class='row add-provider-third-row link'>
+    <div class=''>
+      {{form.field_website_link}}
+    </div>
+  </div>
+  <div class="add-provider-submit actions">
+      {{ form.form_build_id }} {# required #}
+      {{ form.form_token }}{# required #}
+      {{ form.form_id }} {# required #}
+      {{ form.actions }}
+  </div>
+</form>

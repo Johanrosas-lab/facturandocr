@@ -1,0 +1,21 @@
+uuid: f6350b11-967e-4d20-87b7-2b4f0bedac78
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_serie
+field_name: field_serie
+entity_type: vehicles
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

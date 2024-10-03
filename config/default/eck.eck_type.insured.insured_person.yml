@@ -1,0 +1,9 @@
+uuid: bf81ad8d-affc-4b40-b4e7-dda1552c499c
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.insured
+name: Asegurados
+type: insured_person
+description: ''

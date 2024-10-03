@@ -1,0 +1,18 @@
+name: Address Checkout
+type: module
+description: Provides list of addresses during checkout
+# core: 8.x
+package: Commerce
+dependencies:
+  - drupal:commerce
+  - drupal:commerce_checkout
+  - drupal:commerce_order
+  - drupal:commerce_payment
+  - drupal:commerce_price
+  - drupal:commerce_product
+
+# Information added by Drupal.org packaging script on 2017-11-09
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'address_checkout'
+datestamp: 1510225991

@@ -1,0 +1,21 @@
+uuid: 2d9c2e0c-b0a5-446e-8029-e6f9724baa52
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_color
+field_name: field_color
+entity_type: vehicles
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

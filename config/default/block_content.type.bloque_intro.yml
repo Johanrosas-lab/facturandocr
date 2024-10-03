@@ -1,0 +1,8 @@
+uuid: d77a046a-8ba1-4527-a720-1947872e1896
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_intro
+label: 'Bloque Intro'
+revision: 0
+description: 'Introducción a una página'

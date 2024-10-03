@@ -1,0 +1,45 @@
+uuid: d77a81ad-7038-4cbd-8604-94eff29b3a70
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.formas_de_pago.body
+    - field.field.node.formas_de_pago.field_payment_types
+    - node.type.formas_de_pago
+  module:
+    - image
+    - text
+    - user
+id: node.formas_de_pago.default
+targetEntityType: node
+bundle: formas_de_pago
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_types:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  share_everywhere:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

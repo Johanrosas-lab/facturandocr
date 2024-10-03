@@ -1,0 +1,10 @@
+access_token_expiration: 870000
+refresh_token_expiration: null
+_core:
+  default_config_hash: YJrGmZVEcxxUt1ffTwS_DybfKrbnRkwF1GXzPj-j7aE
+langcode: es
+public_key: libraries/keys/public.key
+private_key: libraries/keys/private.key
+token_cron_batch_size: 0
+remember_clients: false
+authorization_code_expiration: 300

@@ -1,0 +1,20 @@
+uuid: 193f69ce-4d40-4388-b8ea-2b89e7c54a60
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - json_field
+id: commerce_order.field_beneficiaries_data
+field_name: field_beneficiaries_data
+entity_type: commerce_order
+type: json
+settings:
+  size: 16777216
+module: json_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

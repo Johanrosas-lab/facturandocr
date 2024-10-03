@@ -1,0 +1,13 @@
+uuid: 6b96e1b6-4a5b-44fa-b118-72921e9f44d6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sOb26JSy3fGpWkvR0WYN6_hMqj_6d1rvbvrkzp1yya0
+id: node_make_sticky_action
+label: 'Hacer que el contenido quede fijo al principio de las listas'
+type: node
+plugin: node_make_sticky_action
+configuration: {  }

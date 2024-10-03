@@ -1,0 +1,58 @@
+uuid: 46a9f6bd-8403-4f0b-aac8-e05ae36e07c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_user_pin
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_pin:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  legal_consentimiento_informado:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  aseguradora_profiles: true
+  client_profiles: true
+  commerce_remote_id: true
+  contact: true
+  customer_profiles: true
+  langcode: true
+  language: true
+  operador_profiles: true
+  provider_profiles: true
+  service_provider_profiles: true
+  sponsor_profiles: true
+  timezone: true

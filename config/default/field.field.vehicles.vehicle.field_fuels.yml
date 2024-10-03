@@ -1,0 +1,21 @@
+uuid: 7a3a18f0-6342-4bf6-b3a3-70df1d0d5480
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_fuels
+  module:
+    - options
+id: vehicles.vehicle.field_fuels
+field_name: field_fuels
+entity_type: vehicles
+bundle: vehicle
+label: Combustible
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+uuid: e9e0e82a-11f7-40b9-81d7-a73f4765a344
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.beneficiaries
+name: Beneficiary
+type: beneficiary
+description: ''

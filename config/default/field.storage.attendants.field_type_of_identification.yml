@@ -1,0 +1,33 @@
+uuid: a78bb641-50ba-4194-8fde-e7b3bb144053
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: attendants.field_type_of_identification
+field_name: field_type_of_identification
+entity_type: attendants
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Persona fisica'
+      label: 'Persona fisica'
+    -
+      value: Cedula
+      label: Cedula
+    -
+      value: residencia
+      label: residencia
+    -
+      value: Pasaporte
+      label: Pasaporte
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

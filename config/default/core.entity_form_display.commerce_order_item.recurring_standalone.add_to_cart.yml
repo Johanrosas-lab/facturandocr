@@ -1,0 +1,39 @@
+uuid: 5d019ec8-46cb-4b66-9baa-70111f0ffbc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.recurring_standalone
+    - core.entity_form_mode.commerce_order_item.add_to_cart
+  module:
+    - commerce_order
+id: commerce_order_item.recurring_standalone.add_to_cart
+targetEntityType: commerce_order_item
+bundle: recurring_standalone
+mode: add_to_cart
+content:
+  quantity:
+    type: xnumber
+    weight: 1
+    region: content
+    settings:
+      step: '1'
+      placeholder: ''
+      min: '1'
+      max: ''
+      default_value: '1'
+      prefix: ''
+      suffix: ''
+      disable_on_cart: '0'
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  unit_price: true

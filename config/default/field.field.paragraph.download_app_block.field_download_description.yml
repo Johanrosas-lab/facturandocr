@@ -1,0 +1,21 @@
+uuid: 2e5fd996-31e3-412d-bc49-1d77baa82ae6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_description
+    - paragraphs.paragraphs_type.download_app_block
+  module:
+    - text
+id: paragraph.download_app_block.field_download_description
+field_name: field_download_description
+entity_type: paragraph
+bundle: download_app_block
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

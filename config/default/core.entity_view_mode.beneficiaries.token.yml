@@ -1,0 +1,10 @@
+uuid: a9b1c926-1388-423b-8125-313941f60a30
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: beneficiaries.token
+label: Token
+targetEntityType: beneficiaries
+cache: true

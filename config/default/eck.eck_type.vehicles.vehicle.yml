@@ -1,0 +1,9 @@
+uuid: 23723d36-2b75-4f10-ad8d-75b7ca9722d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.vehicles
+name: Vehicle
+type: vehicle
+description: ''

@@ -1,0 +1,21 @@
+uuid: 24c2153d-751c-48d6-a4b7-69be2f618af7
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_date_of_birth_of_charge
+  module:
+    - datetime
+id: attendants.attendant.field_date_of_birth_of_charge
+field_name: field_date_of_birth_of_charge
+entity_type: attendants
+bundle: attendant
+label: 'Fecha de Nacimiento Tomador'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

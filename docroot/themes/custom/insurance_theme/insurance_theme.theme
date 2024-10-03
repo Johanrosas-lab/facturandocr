@@ -1,0 +1,301 @@
+<?php
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Define base path value.
+ *
+ * @param array $variables
+ */
+function setupBasePath(array &$variables) {
+  // Make global available base path variable for twig templates.
+  if (!isset($variables['base_path'])) {
+    // Setup base path using core function.
+    $variables['base_path'] = base_path();
+  }
+}
+/**
+ * Implement Hook_preprocess_hook();
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_menu__account(array &$variables) {
+
+  // Execute SparkThemer::theme_preprocess_menu__account()
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_menu__account($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_preprocess_prargraph().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_paragraph__products_by_category_block(&$variables) {
+
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_paragraph__products_by_category_block($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_paragraph__download_app_cta(&$variables) {
+
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_paragraph__download_app_cta($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implamentes hook theme_preprocess
+ * Disable page cache
+ *
+ * @param $vars
+ * @param $hook
+ */
+function insurance_preprocess(&$vars, $hook) {
+  $vars['#cache']['max-age'] = 0;
+}
+
+/**
+ * Implements hook_preprocess_view().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_views_view__products_by_category__block(&$variables) {
+
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_views_view__products_by_category__block($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_preprocess_theme().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_views_view__suggestions__block(&$variables) {
+
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_views_view__suggestions__block($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_preprocess_theme().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_commerce_product__seguro(&$variables) {
+
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_commerce_product__seguro($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_preprocess_theme().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_commerce_product_attribute_value__plans(&$variables) {
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_commerce_product_attribute_value__plans($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Hook theme_preprocess_form();
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_add_to_cart_form(&$variables) {
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_add_to_cart_form($variables);
+  setupBasePath($variables);
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ *
+ * @param array $suggestions
+ * @param array $variables
+ * @param $hook
+ */
+function insurance_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'form' & !empty($variables['element']['#id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
+
+/**
+ * Implements Hook_theme_preprocess_user().
+ * @param $variables
+ */
+function insurance_theme_preprocess_user(&$variables) {
+  \Drupal::service('osc_settings.themer')
+    ->theme_preprocess_user($variables);
+  setupBasePath($variables);
+
+  // Show default card user's.
+  $block = \Drupal\block\Entity\Block::load('showdefaultcards');
+  if (isset($block)) {
+    $block_content = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
+    $variables['klap_payment_default_card'] = $block_content;
+  }
+
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  if ($user->hasRole('op') || $user->hasRole('sponsor')) {
+    // Show agent digital list.
+    $access_link = \Drupal\block\Entity\Block::load('generarlinkdeacceso');
+    if (isset($access_link)) {
+      $block_list_content = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($access_link);
+      $variables['access_link'] = $block_list_content;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_theme()
+ */
+function insurance_theme_theme() {
+  $themes['create_profile_provider'] = [
+    'render element' => 'form',
+  ];
+  return $themes;
+}
+
+/**
+ * Implements hook_preprocess_theme().
+ *
+ * @param $variables
+ */
+function insurance_theme_preprocess_commerce_checkout_pane(&$variables) {
+
+  if ($variables['elements']['#pane_id'] === 'review_product') {
+    $user = \Drupal::currentUser();
+    $user_profile = \Drupal::entityTypeManager()->getStorage('profile')->loadByUser($user, 'client');
+    if ($user_profile->hasField('field_client_address')) {
+      $address_profile = $user_profile->field_client_address->view();
+      $variables['billing']['city'] = $address_profile[0]['locality']['#value'];
+      $variables['billing']['country'] = $address_profile[0]['country']['#value'];
+      $variables['billing']['address'] = $address_profile[0]['address_line1']['#value'];
+    }
+
+    $variables['billing']['user'] = $user_profile->field_client_first_name->getValue()[0]['value'] . ' ' . $user_profile->field_client_last_name->getValue()[0]['value'];
+    $variables['billing']['email'] = $user->getEmail();
+
+
+    $card_data = get_default_card($user_profile);
+    $variables['card']['type'] = $card_data['#type_card'];
+    $variables['card']['mask'] = $card_data['#mask_card'];
+    $variables['card']['year'] = $card_data['#year_card'];
+    $variables['card']['month'] = $card_data['#month_card'];
+
+    $product_data = get_order();
+    ksm($product_data);
+    $variables['product']['items'] = $product_data['product'];
+    $variables['total']['quantity'] = $product_data['resume']['quantity'];
+    $variables['total']['total'] = $product_data['resume']['total'];
+    $variables['total']['currency'] = $product_data['resume']['currency'];
+    $variables['total']['total_tax'] = $product_data['resume']['total_tax'];
+  }
+}
+
+/**
+ * Get user favorite card.
+ */
+function get_default_card($client_profile) {
+  /** @var \Drupal\profile\Entity\Profile $client_profile */
+  // Get profile data
+  if ($client_profile) {
+    // Load user in the API.
+    $userVerify = \Drupal::service('klap_payment.user')->logOnUser();
+    $result = array(
+      '#markup' => t(' '),
+    );
+    if (isset($userVerify['isApproved']) && $userVerify['isApproved']) {
+      // Get the default card.
+      $cardContent = \Drupal::service('klap_payment.card')->getDefaultUserCard();
+      if ($cardContent['cardTokenId'] === "" && $cardContent['apiStatus'] === "No Default Card") {
+        $result = array(
+          '#markup' => t('No tienes tarjetas agregadas'),
+        );
+      }
+      else {
+        $result = array(
+          '#type_card'  => $cardContent['cardDescription'],
+          '#mask_card'  => $cardContent['maskedCard'],
+          '#year_card'  => $cardContent['expirationYear'],
+          '#month_card' => $cardContent['expirationMonth'],
+        );
+      }
+    }
+    return $result;
+  }
+}
+
+/**
+ * Get order information
+ */
+function get_order() {
+  // Get order from user.
+  $order = \Drupal::routeMatch()->getParameter('commerce_order');
+  // Get order items.
+  $order_items = $order->getItems();
+  // Get order id.
+  $order_id = \Drupal::routeMatch()->getParameter('commerce_order')->order_id->getValue()[0]['value'];
+  $product = array();
+  $quantity_total = 0;
+  $tax_total = 0;
+  $adjustments = 0;
+  $order_total = 0;
+  // The data of each product of the order will be saved in a variable.
+  /**
+   * @var $item Drupal\commerce_order\Entity\OrderItem
+   */
+  foreach ($order_items as $key => $item) {
+    $title = explode(' - ', $item->title->getValue()[0]['value']);
+    if (!empty($item->getAdjustments())) {
+      $adjustments = $item->getAdjustments()[0]->getAmount()->getNumber();
+    }
+    $price = $item->unit_price->getValue()[0]['number'];
+
+    $product['product'][$key]['title'] = $title[0];
+    $product['product'][$key]['plan'] = $title[1];
+    $product['product'][$key]['tax'] = $adjustments;
+    $product['product'][$key]['price'] = $price - $adjustments;
+    $product['product'][$key]['currency'] = $item->unit_price->getValue()[0]['currency_code'];
+    $product['product'][$key]['quantity'] = $item->quantity->getValue()[0]['value'];
+    $quantity_total += $item->quantity->getValue()[0]['value'];
+    $order_total += $product['product'][$key]['price'] * $quantity_total;
+    $tax_total += $adjustments * $quantity_total;
+  }
+  // The data general of the order will be saved in a variable.
+  $product['resume']['quantity'] = $quantity_total;
+  $product['resume']['currency'] = $order->total_price->getValue()[0]['currency_code'];
+  $product['resume']['total'] = ['number' => (string) $order_total, 'currency_code' => $product['resume']['currency']];
+  $product['resume']['total_tax'] = ['number' => (string) $tax_total, 'currency_code' => $product['resume']['currency']];
+  return $product;
+}
+
+
+function insurance_theme_preprocess_block__klap_payment_default_card_block(&$variables){
+    setupBasePath($variables);
+}

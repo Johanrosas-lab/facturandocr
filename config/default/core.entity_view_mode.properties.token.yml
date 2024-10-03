@@ -1,0 +1,10 @@
+uuid: e34d5545-eb23-4931-b773-f591f00c943e
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.token
+label: Token
+targetEntityType: properties
+cache: true

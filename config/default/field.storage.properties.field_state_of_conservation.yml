@@ -1,0 +1,30 @@
+uuid: 5f1cdb4d-764c-4b2e-847c-7086d0bebc40
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_state_of_conservation
+field_name: field_state_of_conservation
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Optimo
+    -
+      value: '1'
+      label: Bueno
+    -
+      value: '2'
+      label: Regular
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

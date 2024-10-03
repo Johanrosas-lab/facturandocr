@@ -1,0 +1,52 @@
+uuid: 86d04e0b-d912-46d9-a4c6-98448a1627bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.beneficiaries.field_beneficiaries_email
+    - field.field.node.beneficiaries.field_beneficiaries_first_name
+    - field.field.node.beneficiaries.field_beneficiaries_last_name
+    - field.field.node.beneficiaries.field_beneficiaries_user
+    - node.type.beneficiaries
+  module:
+    - user
+id: node.beneficiaries.default
+targetEntityType: node
+bundle: beneficiaries
+mode: default
+content:
+  field_beneficiaries_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_beneficiaries_first_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_beneficiaries_last_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_beneficiaries_user:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true
+  links: true
+  share_everywhere: true

@@ -1,0 +1,20 @@
+uuid: 7d4ad5ff-f38d-4e48-a513-20db30803e4c
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_year_of_construction
+field_name: field_year_of_construction
+entity_type: properties
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: d9a3f021-ef87-4f7f-a04a-396a097eb30f
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_numero_documento_de_identi
+field_name: field_numero_documento_de_identi
+entity_type: insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

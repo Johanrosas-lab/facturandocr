@@ -1,0 +1,76 @@
+uuid: 3940b31e-c36a-4e0f-b24b-75d59204a037
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_user_pin
+    - field.field.user.user.user_picture
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_sponsor:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_user_pin:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  masquerade:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  member_for:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  profile_client:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  profile_customer:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  aseguradora_profiles: true
+  client_profiles: true
+  commerce_remote_id: true
+  customer_profiles: true
+  langcode: true
+  operador_profiles: true
+  profile_provider: true
+  profile_service_provider: true
+  provider_profiles: true
+  search_api_excerpt: true
+  service_provider_profiles: true
+  sponsor_profiles: true

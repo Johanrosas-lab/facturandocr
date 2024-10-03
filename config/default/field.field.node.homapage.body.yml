@@ -1,0 +1,23 @@
+uuid: 87932602-54b2-462f-bec8-2890cc98148f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.homapage
+  module:
+    - text
+id: node.homapage.body
+field_name: body
+entity_type: node
+bundle: homapage
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

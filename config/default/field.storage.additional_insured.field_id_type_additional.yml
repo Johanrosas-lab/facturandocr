@@ -1,0 +1,30 @@
+uuid: ae093487-c661-4c42-bbb1-439322ee11b5
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: additional_insured.field_id_type_additional
+field_name: field_id_type_additional
+entity_type: additional_insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: nacional
+      label: 'Cédula Nacional'
+    -
+      value: residencia
+      label: 'Cédula Residencia'
+    -
+      value: otro
+      label: Otro
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

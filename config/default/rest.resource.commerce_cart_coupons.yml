@@ -1,0 +1,20 @@
+uuid: 1ff76ae4-68b1-4c7e-bbd2-a9458b08974f
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_cart_api
+    - serialization
+    - user
+id: commerce_cart_coupons
+plugin_id: commerce_cart_coupons
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - PATCH
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - cookie

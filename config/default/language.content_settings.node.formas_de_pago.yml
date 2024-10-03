@@ -1,0 +1,11 @@
+uuid: 214f74a2-9264-41fd-a46e-a246bcb733df
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.formas_de_pago
+id: node.formas_de_pago
+target_entity_type_id: node
+target_bundle: formas_de_pago
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,145 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+          eot: "?",
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+//  =============================================================================
+//  Style mixins
+//  buttons, text, gradients etc.
+
+@mixin btn-transparent($background-color: transparent,$size: 18px,$padding: 12px 30px,$color:$color-secondary ,$font-family:'Roboto-Regular',$font-weight:300,$letter-spacing: 1px,$shadow: none,$border: 1px solid $color-secondary, $text-transform:capitalize,$radius: 100px,$text-decoration: none){
+  background-color  :$background-color;
+  font-size         :$size;
+  padding           :$padding;
+  font-family       :$font-family;
+  font-weight       :$font-weight;
+  color             :$color;
+  letter-spacing    :$letter-spacing;
+  box-shadow        :$shadow;
+  border            :$border;
+  text-transform    :$text-transform;
+  border-radius     :$radius;
+  text-decoration   :$text-decoration;
+}
+@mixin btn-blue($background-color: $color-secondary,$size: 18px,$padding: 12px 30px,$color:$color-white ,$font-family:'Roboto-Regular',$font-weight:300,$letter-spacing: 1px,$shadow: 0px 3px 4px 0 rgba(0,0,0,0.34), $text-transform:capitalize,$border:none,$radius: 100px,$text-decoration: none){
+  background-color  :$background-color;
+  font-size         :$size;
+  padding           :$padding;
+  font-family       :$font-family;
+  font-weight       :$font-weight;
+  color             :$color;
+  letter-spacing    :$letter-spacing;
+  box-shadow        :$shadow;
+  text-transform    :$text-transform;
+  border            :$border;
+  border-radius     :$radius;
+  text-decoration   :$text-decoration;
+}
+@mixin btn-white($background-color: $color-white ,$size: 18px,$padding: 12px 30px,$color:$color-secondary ,$font-family:'Roboto-Regular',$font-weight:300,$letter-spacing: 1px, $text-transform:capitalize,$radius: 100px,$text-decoration: none){
+  background-color  :$background-color;
+  font-size         :$size;
+  padding           :$padding;
+  font-family       :$font-family;
+  font-weight       :$font-weight;
+  color             :$color;
+  letter-spacing    :$letter-spacing;
+  text-transform    :$text-transform;
+  border-radius     :$radius;
+  text-decoration   :$text-decoration;
+}
+@mixin btn-third($background-color: $color-third ,$size: 18px,$padding: 12px 30px,$color:$color-white ,$font-family:'Roboto-Regular',$font-weight:300,$letter-spacing: 1px, $text-transform:capitalize,$radius: 100px,$text-decoration: none) {
+  background-color  :$background-color;
+  font-size         :$size;
+  padding           :$padding;
+  font-family       :$font-family;
+  font-weight       :$font-weight;
+  color             :$color;
+  letter-spacing    :$letter-spacing;
+  text-transform    :$text-transform;
+  border-radius     :$radius;
+  text-decoration   :$text-decoration;
+}
+
+@mixin form-left($margin-right: 50px ,$width:50% ,$float: left){
+  margin-right: $margin-right; 
+  width:  $width;
+  float: $float;
+}
+
+
+@mixin placeholder($color: $color-placeholder, $font-style: italic) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color         : $color;
+      font-style    : $font-style;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color         : $color;
+      font-style    : $font-style;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color         : $color;
+      font-style    : $font-style;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color         : $color;
+      font-style    : $font-style;
+  }
+}
+@mixin slide-product-name($font-family: 'Roboto-Regular',$size: 15px, $color:$color-black,$line-height:20px,$text-transform: lowercase,$font-weight:normal,$letter-spacing: 0.5px){
+  font-family        :$font-family;
+  font-size          :$size;
+  color              :$color;
+  line-height        :$line-height;
+  text-transform     :$text-transform;
+  font-weight        :$font-weight;
+  letter-spacing     :$letter-spacing;
+}
+@mixin slide-title($font-family: 'Roboto-Regular',$size: 25px, $color:$color-black,$line-height:28px,$text-transform:capitalize,$font-weight:normal,$letter-spacing:0.8px){
+  font-family        :$font-family;
+  font-size          :$size;
+  color              :$color;
+  line-height        :$line-height;
+  text-transform     :$text-transform;
+  font-weight        :$font-weight;
+  letter-spacing     :$letter-spacing;
+}

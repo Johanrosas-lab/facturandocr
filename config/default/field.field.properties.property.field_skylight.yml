@@ -1,0 +1,23 @@
+uuid: 69512386-1ed1-46f6-b30f-d40951e436e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_skylight
+id: properties.property.field_skylight
+field_name: field_skylight
+entity_type: properties
+bundle: property
+label: TragaLuz
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: si
+  off_label: 'no'
+field_type: boolean

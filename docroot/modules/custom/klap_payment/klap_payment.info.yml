@@ -1,0 +1,8 @@
+name: 'Klap Payment'
+type: module
+description: 'EMCom (Electronic and Mobile Commerce)'
+core: 8.x
+package: 'commerce'
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_payment

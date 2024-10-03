@@ -1,0 +1,21 @@
+uuid: 15d965b1-d2a5-4d4b-982b-7145d716f4d2
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: beneficiaries.field_exact_direction
+field_name: field_exact_direction
+entity_type: beneficiaries
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

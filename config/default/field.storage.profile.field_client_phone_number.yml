@@ -1,0 +1,19 @@
+uuid: f619e7df-0e2f-4bd1-a625-f82e0c6230a0
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+    - telephone
+id: profile.field_client_phone_number
+field_name: field_client_phone_number
+entity_type: profile
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

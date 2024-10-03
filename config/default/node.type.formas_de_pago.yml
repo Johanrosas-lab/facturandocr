@@ -1,0 +1,17 @@
+uuid: d4cc676d-441a-48be-b2b4-a6124ebab223
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Formas de pago'
+type: formas_de_pago
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

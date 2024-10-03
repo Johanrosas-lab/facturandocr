@@ -1,0 +1,49 @@
+.region-footer{
+  background-color: $primary;
+  padding: 30px;
+  border-bottom: 5px solid $seconary;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  #block-piedepagina{
+    ul.menu{
+      display: flex;
+      li{
+        margin-right: 30px;
+        a{
+          color: $white;
+          font-size: 16px;
+          font-family: 'aleo';
+          text-decoration: none;
+          &:hover{
+            color: $seconary;
+          }
+        }
+      }
+    }
+  }
+  #block-osc{
+    margin: 50px 0 0;
+    ul.menu{
+      li{
+        a{
+          color: $white;
+          font-weight: 100;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: 'lato';
+        }
+      }
+    }
+  }
+  @media (max-width: 768px){
+    padding: 10px;
+  }
+}
+.path-frontpage{
+  .region-footer{
+    position: absolute;
+    width: 100%;
+    bottom: inherit !important;
+  }
+}

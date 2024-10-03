@@ -1,0 +1,184 @@
+uuid: 268480e9-9927-4229-b7e7-0d9b15010608
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.field.insured.insured_person.field_apellidos_del_asegurado
+    - field.field.insured.insured_person.field_assa_question_insured
+    - field.field.insured.insured_person.field_canton_del_asegurado
+    - field.field.insured.insured_person.field_distrito_del_asegurado
+    - field.field.insured.insured_person.field_email_del_asegurado
+    - field.field.insured.insured_person.field_estado_civil_del_asegurado
+    - field.field.insured.insured_person.field_fecha_de_nacimiento_del_as
+    - field.field.insured.insured_person.field_nacionalidad_del_asegurado
+    - field.field.insured.insured_person.field_nomb
+    - field.field.insured.insured_person.field_numero_documento_de_identi
+    - field.field.insured.insured_person.field_ocupacion_del_asegurado
+    - field.field.insured.insured_person.field_pregnancy_question
+    - field.field.insured.insured_person.field_provincia_del_asegurado
+    - field.field.insured.insured_person.field_sexo_del_asegurado
+    - field.field.insured.insured_person.field_telefono_celular_del_asegu
+    - field.field.insured.insured_person.field_telefono_domicilio_del_ase
+    - field.field.insured.insured_person.field_tipo_de_direccion_del_aseg
+    - field.field.insured.insured_person.field_tipo_de_documento_de_ident
+    - field.field.insured.insured_person.field_tipo_de_residencia_del_ase
+  module:
+    - datetime
+    - options
+id: insured.insured_person.default
+targetEntityType: insured
+bundle: insured_person
+mode: default
+content:
+  field_apellidos_del_asegurado:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_assa_question_insured:
+    weight: 17
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_canton_del_asegurado:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_distrito_del_asegurado:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email_del_asegurado:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_estado_civil_del_asegurado:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_fecha_de_nacimiento_del_as:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_nacionalidad_del_asegurado:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nomb:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_numero_documento_de_identi:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ocupacion_del_asegurado:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pregnancy_question:
+    weight: 18
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_provincia_del_asegurado:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sexo_del_asegurado:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_telefono_celular_del_asegu:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telefono_domicilio_del_ase:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tipo_de_direccion_del_aseg:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tipo_de_documento_de_ident:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_tipo_de_residencia_del_ase:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true

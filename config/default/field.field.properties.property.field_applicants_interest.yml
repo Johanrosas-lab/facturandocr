@@ -1,0 +1,23 @@
+uuid: 3133eb33-5334-4dc0-8a8e-13553e4aaca5
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_applicants_interest
+id: properties.property.field_applicants_interest
+field_name: field_applicants_interest
+entity_type: properties
+bundle: property
+label: 'Interes asegurable del solicitante'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

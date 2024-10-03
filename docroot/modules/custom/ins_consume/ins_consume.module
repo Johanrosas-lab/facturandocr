@@ -1,0 +1,188 @@
+<?php
+
+/**
+ * @file
+ * Contains ins_consume.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use GuzzleHttp\Client;
+use Drupal\Core\Url;
+
+
+/**
+ * Implements hook_help().
+ */
+function ins_consume_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ins_consume module.
+    case 'help.page.ins_consume':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('INS Consume API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme()
+ */
+function ins_consume_theme($existing, $type, $theme, $path) {
+  return array(
+    'cotizar_xml' => array(
+      'variables' => array(
+        'primas' => [],
+        'coberturas' => [],
+        'basic_information' => []
+      ),
+    ),
+    'error_ins' => array(
+      'variables' => array(
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function ins_consume_form_webform_submission_cotizaciones_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+  unset($form['#submit']);
+  unset($form['actions']['submit']['#submit']);
+  $form['#submit'] = ['ins_consume_943_submit'];
+  $form['actions']['submit']['#submit'] = ['ins_consume_943_submit'];
+}
+/**
+ * Product 943 submit
+ */
+function ins_consume_943_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+  $values = $form_state->getValues();
+  $config = \Drupal::config('ins_consume.adminsettings');
+  $myXMLData =
+    '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cot="'.$config->get('default_url').'" xmlns:tran="'.$config->get('default_url').'">
+    <soapenv:Header>
+      <cot:SeguridadHeaderElement>
+        <Empresa>'.$config->get('default_company').'</Empresa>
+        <Sistema>'.$config->get('default_system').'</Sistema>
+        <Direcciones>'.$config->get('default_address').'</Direcciones>
+      </cot:SeguridadHeaderElement>
+    </soapenv:Header>
+    <soapenv:Body>
+      <cot:CotizarPolizaRequest>
+        <InfoSolicitud>
+          <InfoTransaccion>
+            <FechaHora>'.date("Y-m-d")."T".date("H:i:s").'</FechaHora>
+          </InfoTransaccion>
+          <Cotizacion>
+            <ConsecutivoConfiguracion>943</ConsecutivoConfiguracion>
+            <Solicitante>'.$config->get('default_user_information').'</Solicitante>
+            <Parametros><![CDATA[
+              <PARAMETROS>
+                <TIPOIDCLI>'.$values['tipo_de_identificacion'].'</TIPOIDCLI>
+                <IDENTCLI>'.$values['identificacion'].'</IDENTCLI>
+                <PRIAPELLIDOCLI/>
+                <SEGAPELLIDOCLI/>
+                <PRINOMBRECLI/>
+                <SEGNOMBRECLI/>
+                <NOMCOMPLETOCLI>'.$values['nombre_del_asegurado'].'</NOMCOMPLETOCLI>
+                <GENEROCLI/>
+                <FECNACICLI>'.$values['fecha_de_nacimiento'].'</FECNACICLI>
+                <TIPOTELCLI/>
+                <NUMTELCLI/>
+                <PROVCLI/>
+                <CANTCLI/>
+                <DISTCLI/>
+                <CORREOE>'.$values['correo_electronico'].'</CORREOE>
+                <VIGDESDE>'.$values['_cuando_iniciara_su_viaje_'].'</VIGDESDE>
+                <VIGHASTA>'.$values['_cuando_finalizara_su_viaje_'].'</VIGHASTA>
+                <NUMPOLIZA/>
+                <SUCEMI>'.$values['sucursal_emision'].'</SUCEMI>
+                <AGENTE>1105370</AGENTE>
+                <FORMAPAGO/>
+                <DIRECRSGO/>
+                <MONTO2>0</MONTO2>
+                <NUMOPERACION/>
+                <OBSERVACIONES>'.$values['destino_de_su_viaje'].'</OBSERVACIONES>
+                <MONTO1></MONTO1>
+                <CBEDAD>'.$values['edad'].'</CBEDAD>
+                <TIPOACTRSGO>'.$values['tipo_de_actividad'].'</TIPOACTRSGO>
+                <MOASR>NO</MOASR>
+                <TIPORIESGOCOB>'.$values['tipo_de_riesgo'].'</TIPORIESGOCOB>
+                <TIPOTARIFACOB>'.$values['tipo_tarifa'].'</TIPOTARIFACOB>
+                <SUMASEGRSGO>1</SUMASEGRSGO>
+                <PHOSINBUC>'.$values['numero_celular_o_telefono_fijo'].'</PHOSINBUC>
+                <DIRECSINBUC/>
+                <DIASVIAJE>0</DIASVIAJE>
+                <PROVSINBUC/>
+                <TIPOIDBENEF/>
+                <TIPOIDBENEF>'.$values['tipo_identificacion_beneficiario_1'].'</TIPOIDBENEF>
+                <IDBENEF>'.$values['no_identificacion_beneficiario'].'</IDBENEF>
+                <IDBENEF/>
+                <NOMCOMPBENEF>'.$values['nombre_del_beneficiario'].'</NOMCOMPBENEF>
+                <PARENTESCOBENEF>'.$values['parentesco'].'</PARENTESCOBENEF>
+                <PORCENTAJEBENEF>'.$values['porcentaje'].'</PORCENTAJEBENEF>
+                <NOMBENEF/>
+                <PRIAPEBENEF/>
+                <SEGAPEBENEF/>
+                <TIPOIDBENEF/>
+                <TIPOIDBENEF>0</TIPOIDBENEF>
+                <IDBENEF>0</IDBENEF>
+                <IDBENEF/>
+                <NOMCOMPBENEF/>
+                <PARENTESCOBENEF/>
+                <PORCENTAJEBENEF>0</PORCENTAJEBENEF>
+                <NOMBENEF/>
+                <PRIAPEBENEF/>
+                <SEGAPEBENEF/>
+                <TIPOIDBENEF/>
+                <TIPOIDBENEF>0</TIPOIDBENEF>
+                <IDBENEF>0</IDBENEF>
+                <IDBENEF/>
+                <NOMCOMPBENEF/>
+                <PARENTESCOBENEF/>
+                <PORCENTAJEBENEF>0</PORCENTAJEBENEF>
+                <NOMBENEF/>
+                <PRIAPEBENEF/>
+                <SEGAPEBENEF/>
+                <TIPOIDBENEF/>
+                <TIPOIDBENEF>0</TIPOIDBENEF>
+                <IDBENEF>0</IDBENEF>
+                <IDBENEF/>
+                <NOMCOMPBENEF/>
+                <PARENTESCOBENEF/>
+                <PORCENTAJEBENEF>0</PORCENTAJEBENEF>
+                <NOMBENEF/>
+                <PRIAPEBENEF/>
+                <SEGAPEBENEF/>
+              </PARAMETROS>
+
+              ]]>
+            </Parametros>
+          </Cotizacion>
+        </InfoSolicitud>
+      </cot:CotizarPolizaRequest>
+    </soapenv:Body>
+  </soapenv:Envelope>';
+  // Generate the SOAP request
+  $http_client = new Client();
+  $params = ['body' => $myXMLData, 'headers' => ['Content-Type' => 'application/text',]];
+  $request = $http_client->request('POST', $config->get('default_url_consume'), $params);
+  // Clean the response
+  $response = str_replace("<soapenv:Body>", "", $request->getBody()->getContents());
+  $response = str_replace("</soapenv:Body>", "", $response);
+  $response = str_replace('<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">', "", $response);
+  $response = str_replace('</soapenv:Envelope>', "", $response);
+  $response = html_entity_decode($response);
+  // Verify if session have been set
+  if(isset($_SESSION['ins-cot'])){
+    unset($_SESSION['ins-cot']);
+  }
+  // Save the response in session to be used
+  $_SESSION['ins-cot'] = $response;
+  $_SESSION['values'] = $values;
+  // Move to next step
+  $url = Url::fromRoute('ins_consume.consume');
+  $form_state->setRedirectUrl($url);
+}

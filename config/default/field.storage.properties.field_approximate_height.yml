@@ -1,0 +1,20 @@
+uuid: cfd143d8-f2f9-4b41-8a20-b79927f6f461
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_approximate_height
+field_name: field_approximate_height
+entity_type: properties
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,44 @@
+uuid: e6162b5c-6573-4e27-962e-6fba61a108ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_section_.field_background_image
+    - field.field.paragraph.hero_section_.field_color_headline
+    - field.field.paragraph.hero_section_.field_headline
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.hero_section_
+  module:
+    - image
+id: paragraph.hero_section_.default
+targetEntityType: paragraph
+bundle: hero_section_
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_color_headline:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

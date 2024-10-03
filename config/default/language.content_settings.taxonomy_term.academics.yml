@@ -1,0 +1,11 @@
+uuid: 7b3216eb-f7a5-4ba5-9f90-b4890ea4d780
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.academics
+id: taxonomy_term.academics
+target_entity_type_id: taxonomy_term
+target_bundle: academics
+default_langcode: site_default
+language_alterable: false

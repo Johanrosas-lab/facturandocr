@@ -1,0 +1,11 @@
+uuid: 3a669bea-5289-4747-839e-839c18782d3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.seguro
+id: commerce_product_variation.seguro
+target_entity_type_id: commerce_product_variation
+target_bundle: seguro
+default_langcode: site_default
+language_alterable: false

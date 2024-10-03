@@ -1,0 +1,18 @@
+uuid: 2a08d1de-dd13-447f-8f5b-23142d8c441e
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_store
+    - serialization
+    - simple_oauth
+id: entity.commerce_store
+plugin_id: 'entity:commerce_store'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

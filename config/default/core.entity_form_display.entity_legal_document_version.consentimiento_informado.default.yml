@@ -1,0 +1,25 @@
+uuid: 55aea0bb-72a0-4c96-a5c9-2dd22da0cfb6
+langcode: es
+status: true
+dependencies:
+  config:
+    - entity_legal.document.consentimiento_informado
+    - field.field.entity_legal_document_version.consentimiento_informado.entity_legal_document_text
+  module:
+    - text
+id: entity_legal_document_version.consentimiento_informado.default
+targetEntityType: entity_legal_document_version
+bundle: consentimiento_informado
+mode: default
+content:
+  entity_legal_document_text:
+    type: text_textarea_with_summary
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

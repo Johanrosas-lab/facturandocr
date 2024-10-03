@@ -1,0 +1,23 @@
+uuid: 67cf2426-163a-4f2c-b871-31d1aa0a10d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.informed_consent
+  module:
+    - text
+id: node.informed_consent.body
+field_name: body
+entity_type: node
+bundle: informed_consent
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

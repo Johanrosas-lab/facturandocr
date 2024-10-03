@@ -1,0 +1,20 @@
+uuid: 4a179b53-427e-4c12-808e-11c2bd6e1603
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_year_of_production
+field_name: field_year_of_production
+entity_type: vehicles
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

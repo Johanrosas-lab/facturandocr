@@ -1,0 +1,67 @@
+uuid: d1851a0d-5453-4f81-ab12-b7e2c6e649c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.seguro
+    - core.entity_view_mode.commerce_product.cart
+    - field.field.commerce_product.seguro.body
+    - field.field.commerce_product.seguro.field_general_conditions
+    - field.field.commerce_product.seguro.field_order_fields
+    - field.field.commerce_product.seguro.field_product_image
+    - field.field.commerce_product.seguro.field_validity
+  module:
+    - text
+id: commerce_product.seguro.cart
+targetEntityType: commerce_product
+bundle: seguro
+mode: cart
+content:
+  body:
+    type: text_trimmed
+    weight: 4
+    region: content
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_validity:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  flag_favorites:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  share_everywhere:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_age: true
+  field_agreement_product: true
+  field_currency: true
+  field_general_conditions: true
+  field_insurance_restrictions: true
+  field_order_fields: true
+  field_product_image: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true
+  variations: true

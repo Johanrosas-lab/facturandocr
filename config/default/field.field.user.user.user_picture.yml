@@ -1,0 +1,38 @@
+uuid: cb95dbc4-af86-4a7f-a669-5a5d3f8e69b1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.user_picture
+  module:
+    - image
+    - user
+id: user.user.user_picture
+field_name: user_picture
+entity_type: user
+bundle: user
+label: Picture
+description: 'Your virtual face or picture.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: da446569-99d2-4c1d-a0a4-8a110bf9ec91
+    alt: ''
+    title: ''
+    width: 610
+    height: 610
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

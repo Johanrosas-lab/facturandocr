@@ -1,0 +1,19 @@
+uuid: dda68b3d-819c-4089-9c14-feadd02a4356
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_headline
+    - paragraphs.paragraphs_type.hero_section_
+id: paragraph.hero_section_.field_color_headline
+field_name: field_color_headline
+entity_type: paragraph
+bundle: hero_section_
+label: 'Color headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

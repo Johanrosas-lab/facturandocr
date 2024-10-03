@@ -1,0 +1,20 @@
+uuid: 4be4db1a-c3ab-4680-a77c-f611bf0e6112
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - json_field
+id: commerce_order.field_card_order
+field_name: field_card_order
+entity_type: commerce_order
+type: json
+settings:
+  size: 16384
+module: json_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

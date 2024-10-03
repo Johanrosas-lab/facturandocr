@@ -1,0 +1,21 @@
+uuid: 8f87eb85-f5f5-40e1-9177-936293339eb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_type_of_windows
+  module:
+    - options
+id: properties.property.field_type_of_windows
+field_name: field_type_of_windows
+entity_type: properties
+bundle: property
+label: 'ventanas: Tipo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

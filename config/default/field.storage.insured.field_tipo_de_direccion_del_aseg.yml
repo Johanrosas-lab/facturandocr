@@ -1,0 +1,27 @@
+uuid: 3b7af603-f4bc-453a-9d81-f71902600779
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: insured.field_tipo_de_direccion_del_aseg
+field_name: field_tipo_de_direccion_del_aseg
+entity_type: insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Casa
+      label: Casa
+    -
+      value: Oficina
+      label: Oficina
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

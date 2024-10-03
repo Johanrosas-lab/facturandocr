@@ -1,0 +1,6 @@
+default_company: D956782B1F83FFA726EC6B022B9BC0AF61A415280034A529454ECADFC3E23F12
+default_url: 'http://www.ins-cr.com/servicios/transacciones/B2B/cotizacion/cotins'
+default_system: AA2D3274FB76D34C6A5714ADE288F254
+default_address: 98245AEAC667DB9C9CA6D55FB3297A4C
+default_user_information: UsrDummy
+default_url_consume: 'http://serviciosweb-externos-desa.ins-cr.com/ins/servicios/externos/integracion/transacciones/cotizacion/cotins'

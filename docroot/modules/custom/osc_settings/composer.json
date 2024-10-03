@@ -1,0 +1,14 @@
+{
+  "name": "drupal/osc_settings",
+  "type": "drupal-module",
+  "description": "Osc Settings module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/osc_settings",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/osc_settings",
+    "source": "http://cgit.drupalcode.org/osc_settings"
+  },
+  "require": { }
+}

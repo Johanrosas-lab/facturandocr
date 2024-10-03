@@ -1,0 +1,5 @@
+name: 'ins_consume'
+type: module
+description: 'INS Consume API'
+core: 8.x
+package: 'Custom'

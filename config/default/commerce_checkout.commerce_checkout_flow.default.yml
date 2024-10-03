@@ -1,0 +1,47 @@
+uuid: f2be710d-b7d1-4c7f-8271-7e4c5c20cd6b
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_payment
+    - email_registration
+id: default
+label: Default
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  panes:
+    login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: login
+      weight: 0
+    completion_register:
+      step: _disabled
+      weight: 7
+    review:
+      step: review
+      weight: 3
+    contact_information:
+      double_entry: false
+      step: order_information
+      weight: 1
+    order_summary:
+      view: ''
+      step: payment
+      weight: 5
+    completion_message:
+      step: complete
+      weight: 6
+    payment_information:
+      step: order_information
+      weight: 2
+    payment_process:
+      capture: true
+      step: payment
+      weight: 4
+    email_registration_login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: _disabled
+      weight: 8

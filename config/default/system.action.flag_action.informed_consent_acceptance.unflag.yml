@@ -1,0 +1,13 @@
+uuid: 054e2f18-c57d-44c1-97de-a46640ea6af4
+langcode: es
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.informed_consent_acceptance.unflag
+label: 'Unflag this item'
+type: node
+plugin: 'flag_action:informed_consent_acceptance.unflag'
+configuration:
+  flag_id: informed_consent_acceptance
+  flag_action: unflag

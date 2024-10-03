@@ -1,0 +1,19 @@
+uuid: f975072d-72e8-4fdd-b80f-cf25c80f8339
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_description
+    - paragraphs.paragraphs_type.text_image_block
+id: paragraph.text_image_block.field_text_description
+field_name: field_text_description
+entity_type: paragraph
+bundle: text_image_block
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

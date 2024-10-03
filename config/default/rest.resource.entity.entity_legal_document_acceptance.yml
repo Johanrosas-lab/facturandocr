@@ -1,0 +1,21 @@
+uuid: b3535cff-4fd6-47a7-92f7-f08b6838d6bb
+langcode: es
+status: false
+dependencies:
+  module:
+    - entity_legal
+    - serialization
+    - simple_oauth
+id: entity.entity_legal_document_acceptance
+plugin_id: 'entity:entity_legal_document_acceptance'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - oauth2

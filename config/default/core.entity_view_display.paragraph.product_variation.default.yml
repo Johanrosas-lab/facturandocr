@@ -1,0 +1,30 @@
+uuid: aa5239ec-b678-4288-be4c-aa0533c4da8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_variation.field_characteristic
+    - field.field.paragraph.product_variation.field_variation_value
+    - paragraphs.paragraphs_type.product_variation
+id: paragraph.product_variation.default
+targetEntityType: paragraph
+bundle: product_variation
+mode: default
+content:
+  field_characteristic:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variation_value:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 0a633f38-1df0-4021-9eda-3e23ee709d9c
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_material_frames
+  module:
+    - options
+id: properties.property.field_material_frames
+field_name: field_material_frames
+entity_type: properties
+bundle: property
+label: 'ventanas: Material de los marcos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

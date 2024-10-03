@@ -1,0 +1,20 @@
+uuid: f8676c8d-b8fc-4d2d-9b67-d7bce95852ab
+langcode: es
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - taxonomy
+    - user
+id: entity.taxonomy_vocabulary
+plugin_id: 'entity:taxonomy_vocabulary'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,34 @@
+uuid: bcad428d-5a6f-4e1f-b6f6-0df617c68ccf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards_container_.field_cards
+    - field.field.paragraph.cards_container_.field_cards_cards
+    - paragraphs.paragraphs_type.cards_container_
+  module:
+    - entity_reference_revisions
+id: paragraph.cards_container_.default
+targetEntityType: paragraph
+bundle: cards_container_
+mode: default
+content:
+  field_cards:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cards_cards:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

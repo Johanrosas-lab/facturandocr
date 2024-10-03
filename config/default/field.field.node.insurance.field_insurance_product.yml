@@ -1,0 +1,28 @@
+uuid: 706c7151-b681-41a2-afff-e79e3b790a20
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.seguro
+    - field.storage.node.field_insurance_product
+    - node.type.insurance
+id: node.insurance.field_insurance_product
+field_name: field_insurance_product
+entity_type: node
+bundle: insurance
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      seguro: seguro
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

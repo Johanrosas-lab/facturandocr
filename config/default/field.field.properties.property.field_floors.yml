@@ -1,0 +1,21 @@
+uuid: 0bc3424f-0c26-4a0e-9c5b-8e94d17d6e71
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_floors
+  module:
+    - options
+id: properties.property.field_floors
+field_name: field_floors
+entity_type: properties
+bundle: property
+label: Pisos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

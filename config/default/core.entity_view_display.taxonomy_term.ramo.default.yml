@@ -1,0 +1,33 @@
+uuid: f12e7fe8-e7c8-4b21-aad4-fbadeb68e749
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ramo.field_image
+    - taxonomy.vocabulary.ramo
+  module:
+    - image
+    - text
+id: taxonomy_term.ramo.default
+targetEntityType: taxonomy_term
+bundle: ramo
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

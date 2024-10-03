@@ -1,0 +1,21 @@
+uuid: 8997d8a3-6a13-4794-a810-65a5a95b913c
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.field_name_attendant
+field_name: field_name_attendant
+entity_type: attendants
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

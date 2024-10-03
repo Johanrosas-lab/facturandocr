@@ -1,0 +1,19 @@
+uuid: 349fd114-f810-4825-a2f9-5bb60bef8928
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce
+    - commerce_product
+id: commerce_product_variation.subscription_type
+field_name: subscription_type
+entity_type: commerce_product_variation
+type: 'commerce_plugin_item:commerce_subscription_type'
+settings: {  }
+module: commerce
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

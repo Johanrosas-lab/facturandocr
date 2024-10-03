@@ -1,0 +1,52 @@
+uuid: 63e53f88-ebd7-4ee3-9fd4-004c148cb7b0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro_block.field_intro_background
+    - field.field.paragraph.intro_block.field_intro_block
+    - field.field.paragraph.intro_block.field_intro_subtitle
+    - field.field.paragraph.intro_block.field_intro_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.intro_block
+  module:
+    - image
+id: paragraph.intro_block.default
+targetEntityType: paragraph
+bundle: intro_block
+mode: default
+content:
+  field_intro_background:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_intro_block:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_intro_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_intro_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

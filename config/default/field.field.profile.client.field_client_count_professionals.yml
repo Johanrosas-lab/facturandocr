@@ -1,0 +1,23 @@
+uuid: 035c06e9-fef8-46fd-8f35-881c6a2219b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_count_professionals
+    - profile.type.client
+id: profile.client.field_client_count_professionals
+field_name: field_client_count_professionals
+entity_type: profile
+bundle: client
+label: 'Cantidad de profesionales en la familia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

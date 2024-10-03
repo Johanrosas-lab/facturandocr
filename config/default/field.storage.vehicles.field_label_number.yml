@@ -1,0 +1,20 @@
+uuid: ecda6388-ae7b-49a8-b867-539e75919897
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_label_number
+field_name: field_label_number
+entity_type: vehicles
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

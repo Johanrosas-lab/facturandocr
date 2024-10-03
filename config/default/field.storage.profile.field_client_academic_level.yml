@@ -1,0 +1,20 @@
+uuid: 1a43683b-5d8e-49a6-8e00-7592d4ab86b7
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.field_client_academic_level
+field_name: field_client_academic_level
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

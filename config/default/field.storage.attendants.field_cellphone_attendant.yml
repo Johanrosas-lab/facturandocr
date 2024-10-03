@@ -1,0 +1,20 @@
+uuid: b79d0094-2247-42ce-985c-935da7db1ec0
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.field_cellphone_attendant
+field_name: field_cellphone_attendant
+entity_type: attendants
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

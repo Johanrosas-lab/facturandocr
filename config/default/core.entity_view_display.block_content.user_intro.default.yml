@@ -1,0 +1,35 @@
+uuid: 9582ecce-35bd-43c2-b914-0d5577d2e12a
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.user_intro
+    - field.field.block_content.user_intro.field_user_intro_background
+    - field.field.block_content.user_intro.field_user_intro_logo
+  module:
+    - image
+id: block_content.user_intro.default
+targetEntityType: block_content
+bundle: user_intro
+mode: default
+content:
+  field_user_intro_background:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_user_intro_logo:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: aeed4980-151f-43b3-9873-fb91bca28b39
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_plate
+field_name: field_plate
+entity_type: vehicles
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

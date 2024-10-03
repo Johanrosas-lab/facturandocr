@@ -1,0 +1,21 @@
+uuid: 5b42f857-c34d-47af-8e38-cd62c47650ff
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_type_of_worker
+  module:
+    - options
+id: attendants.attendant.field_type_of_worker
+field_name: field_type_of_worker
+entity_type: attendants
+bundle: attendant
+label: 'Tipo de trabajador'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

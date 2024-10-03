@@ -1,0 +1,23 @@
+uuid: d2352bb6-91cd-47f9-8ed2-45e08b2078e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bloque
+    - paragraphs.paragraphs_type.sliderparagraph
+id: paragraph.sliderparagraph.field_bloque
+field_name: field_bloque
+entity_type: paragraph
+bundle: sliderparagraph
+label: bloque
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,33 @@
+uuid: 405b7c91-4b5f-43c6-82d2-a171731adb0d
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_floors
+field_name: field_floors
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Concreto con acabado'
+    -
+      value: '1'
+      label: Madera
+    -
+      value: '2'
+      label: 'Ceramica o porcelanato'
+    -
+      value: '3'
+      label: 'Piso laminado'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

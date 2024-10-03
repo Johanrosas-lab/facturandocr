@@ -1,0 +1,19 @@
+uuid: ff02b0a9-8a8e-4a01-b294-e0b9648be2e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_characteristic
+    - paragraphs.paragraphs_type.product_variation
+id: paragraph.product_variation.field_characteristic
+field_name: field_characteristic
+entity_type: paragraph
+bundle: product_variation
+label: Characteristic
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

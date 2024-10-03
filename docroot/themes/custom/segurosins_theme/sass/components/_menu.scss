@@ -1,0 +1,98 @@
+.region-header{
+  display: flex;
+  background-color: $white;
+  padding: 10px 30px;
+  align-items: center;
+  border-top: 8px solid $primary;
+  justify-content: space-between;
+  #block-contacto{
+    .contact-info{
+      display: flex;
+    }
+    p{
+      margin: 0;
+      font-family: 'aleo';
+    }
+    p.label{
+      color: $light-gray;
+    }
+    p.email,
+    p.phone{
+      padding-left: 20px;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: contain;
+      margin-left: 30px;
+    }
+    p.email{
+      background-image: url(/themes/custom/segurosins_theme/images/at.png);
+    }
+    p.phone{
+      background-image: url(/themes/custom/segurosins_theme/images/phone.png);
+    }
+  }
+  @media (max-width: 768px){
+    flex-direction: column;
+    align-items: flex-start;
+    #block-segurosins-theme-branding{
+      margin-bottom: 20px;
+    }
+    .contact-info{
+      flex-direction: column;
+      margin-top: 10px !important;
+      p{
+        margin-left: 0 !important;
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+}
+.region-primary-menu{
+  background-color: $primary;
+  ul.menu{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: 0;
+    li{
+      padding-right: 30px;
+      a{
+        color: $white;
+        text-decoration: none;
+        font-family: 'aleo';
+      }
+      &:last-child{
+        position: absolute;
+        right: 0;
+        a{
+          padding: 10px 17px;
+          background-color: $seconary;
+          border-radius: 20px;
+          &:hover{
+            background-color: $white;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px){
+    ul.menu{
+      li{
+        &:last-child{
+          position: inherit;
+        }
+      }
+    }
+  }
+  @media (max-width: 446px){
+    ul.menu{
+      flex-wrap: wrap;
+      li{
+        &:last-child{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

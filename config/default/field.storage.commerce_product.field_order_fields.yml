@@ -1,0 +1,19 @@
+uuid: b559d78e-5eec-4c56-8061-78734d9dbd0f
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_order_fields
+field_name: field_order_fields
+entity_type: commerce_product
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: 690eccea-e23f-43b7-ae3c-8f956bbacf9b
+langcode: es
+status: true
+dependencies: {  }
+id: insured
+label: Asegurados
+created: false
+changed: false
+uid: false
+title: false

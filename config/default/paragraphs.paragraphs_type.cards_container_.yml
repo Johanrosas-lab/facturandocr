@@ -1,0 +1,9 @@
+uuid: ad6ecdf2-961e-4100-92a3-11fdb05ff8b7
+langcode: es
+status: true
+dependencies: {  }
+id: cards_container_
+label: "Cards container\t"
+icon_uuid: null
+description: 'Contenedor de cards de productos'
+behavior_plugins: {  }

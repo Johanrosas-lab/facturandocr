@@ -1,0 +1,38 @@
+uuid: 47877d67-568e-445a-bac2-962d90c9c78f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - taxonomy.vocabulary.ramo
+  module:
+    - image
+id: taxonomy_term.ramo.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: ramo
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: f81e4d01-4c60-4fe6-ad42-33e34e40b0d7
+    alt: ''
+    title: ''
+    width: 256
+    height: 256
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

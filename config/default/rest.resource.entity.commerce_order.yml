@@ -1,0 +1,21 @@
+uuid: ec766386-3c35-46c2-a8b2-0f0a39aa3465
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - hal
+    - serialization
+    - simple_oauth
+id: entity.commerce_order
+plugin_id: 'entity:commerce_order'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - oauth2

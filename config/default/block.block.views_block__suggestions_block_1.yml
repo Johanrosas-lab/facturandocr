@@ -1,0 +1,32 @@
+uuid: a59bf9f5-6824-4877-8dee-e242a2b8c662
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.suggestions
+  module:
+    - node
+    - views
+  theme:
+    - insurance_theme
+id: views_block__suggestions_block_1
+theme: insurance_theme
+region: highlight
+weight: 0
+provider: null
+plugin: 'views_block:suggestions-block_1'
+settings:
+  id: 'views_block:suggestions-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      homapage: homapage
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,23 @@
+uuid: 4eb9238b-6575-4679-aea6-87bb6ec6e1c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.formas_de_pago
+  module:
+    - text
+id: node.formas_de_pago.body
+field_name: body
+entity_type: node
+bundle: formas_de_pago
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

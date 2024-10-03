@@ -1,0 +1,21 @@
+uuid: 1dc6c2c9-5217-478f-93af-089cdaf7e399
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_mezzanine
+  module:
+    - options
+id: properties.property.field_mezzanine
+field_name: field_mezzanine
+entity_type: properties
+bundle: property
+label: EntrePisos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 390b4ef0-fc04-4de0-9a76-bb44ec8d9f22
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.recurring
+    - field.storage.commerce_order.billing_period
+  module:
+    - commerce_recurring
+_core:
+  default_config_hash: 4Vu5Ni_pOJPYydTtLPzfypNWmMT23TMhpG_y5HZnqFQ
+id: commerce_order.recurring.billing_period
+field_name: billing_period
+entity_type: commerce_order
+bundle: recurring
+label: 'Billing period'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: commerce_billing_period

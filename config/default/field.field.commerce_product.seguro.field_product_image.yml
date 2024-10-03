@@ -1,0 +1,38 @@
+uuid: c5443e73-17f5-414d-908c-f3bf47d470d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.seguro
+    - field.storage.commerce_product.field_product_image
+  module:
+    - image
+id: commerce_product.seguro.field_product_image
+field_name: field_product_image
+entity_type: commerce_product
+bundle: seguro
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 66a834c5-b047-4ebe-8a26-21b1a8bf4942
+    alt: ''
+    title: ''
+    width: 785
+    height: 538
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

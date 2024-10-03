@@ -1,0 +1,10 @@
+uuid: 221e61a0-e7b3-41dd-ae2a-1aa28f5ddb06
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.token
+label: Token
+targetEntityType: attendants
+cache: true

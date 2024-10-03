@@ -1,0 +1,536 @@
+/* Not logged-in Home Page styles */
+.paragraph {
+  &--type--intro-block {
+    .intro-block {
+      position: relative;
+      padding: 95px 115px 73px 115px;
+      @media (max-width: $screen-desktop){
+        padding: 95px 80px 154px 80px;
+      }
+      @media (max-width: 875px){
+        padding: 95px 40px 154px 40px;
+      }
+      @media (max-width: $screen-tablet){
+        padding: 15px 40px;
+      }
+      @media (max-width: $screen-phone){
+        padding: 15px 20px;
+      }
+      @media (max-width: 380px){
+        padding: 0px 0px;
+      }
+      .background-overlay{
+        background-color: $color-background-overlay;
+        padding: 40px 30px;
+        border-radius: 8px;
+        @media (max-width: $screen-phone){
+          padding: 30px 15px;
+        }
+        @media (max-width: 380px){
+          border-radius: 0;
+        }
+        @media (max-width: 320px){
+          padding: 30px 5px;
+        }
+      }
+      img {
+        @extend .object-fit-cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &-titles {
+        position: relative;
+        color: $color-white;
+        h1{
+          font-size: 46px;
+          text-shadow: 2px 2px $color-text-shadow;
+          margin: 0 auto;
+          max-width: 613px;
+          letter-spacing: 3px;
+          line-height: 44px;
+          @media (max-width: $screen-tablet){
+            font-size: 36px;
+            line-height: 33px;
+            letter-spacing: 2px;
+          }
+          @media (max-width: 600px){
+            font-size: 36px;
+            line-height: 33px;
+            letter-spacing: normal;
+          }
+        }
+        h2{
+          text-shadow: 2px 2px $color-text-shadow;
+          @media (max-width: 600px){
+            font-size: 25px;
+          }
+        }
+      }
+      &-search {
+        position: relative;
+        input {
+          background: $color-white;
+        }
+      }
+    }
+  }
+  // CTA section - "Registrese gratis"
+  &--type--description-block {
+    height: auto;
+    padding: 80px 115px;
+    background-image: url(../images/pattern-2.png);
+    background-repeat: no-repeat;
+    background-position: right -384px;
+    background-size: 436px;
+    @media (max-width: 900px){
+      background-image: none;
+    }
+    .description-block{
+      display: flex;
+      align-items: center;
+      header{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        h2{
+          font-family: 'Varela-Round';
+          color: $color-secondary;
+          font-size: 28px;
+          line-height: 34px;
+          max-width: 657px;
+          padding-bottom: 9px;
+        }
+        h3 {
+          font-family: 'Roboto-Light';
+          color: $color-secondary;
+          font-size: 25px;
+          padding-bottom: 32px;
+          letter-spacing: 0.8px;
+        }
+      }
+      .call-to-action {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        a {
+          // @extend .btn-init;
+          @include btn-third();
+          transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -webkit-transition: all 0.2s ease-in-out;
+          box-shadow: 1px 3px 4px 0 rgba(0,0,0,0.18);
+          &:hover{
+            box-shadow: 1px 3px 4px 0 rgba(0,0,0,0.18);
+            background-color: $color-third-hover;
+          }
+        }
+      }
+    }
+    @media (max-width: $screen-tablet){
+      height: 480px;
+      padding: 90px 40px;
+      .description-block{
+        display: block;
+        header,
+        .call-to-action{
+          width: 100%;
+          justify-content: left;
+        }
+      }
+    }
+  }
+
+  // Insurance product image slider
+  &--type--view-block{
+    padding-top: 40px;
+  }
+  &--type--view-block,
+  &--type--products-by-category-block{
+    background-color: $color-grid-background;
+    padding: 50px 40px;
+    margin-top: -20px;
+    @media (max-width: 540px){
+      header{
+        padding-bottom: 25px !important;
+      }
+    }
+    @media (max-width: $screen-phone){
+      margin-top: 25px;
+    }
+    header{
+      width: 350px;
+      padding: 0 0;
+      h2{
+        @include slide-title();
+      }
+    }
+    .view-header{
+      text-align: right;
+      padding: 0 20px;
+      position: relative;
+      right: 79px;
+      z-index: 999;
+      width: 90%;
+      margin-left: auto;
+      top: -30px;
+      a{
+        @include btn-transparent($size: 16px,$padding: 8px 22px);
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        &:hover{
+        @include btn-blue($size: 16px,$padding: 8px 22px);
+        border: 1px solid $color-secondary;
+        text-decoration: none;
+        }
+      }
+      @media (max-width: 540px){
+        top: inherit;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        right: inherit;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+    .slick__arrow{
+      top: -42px;
+      width: 100%;
+      text-align: right;
+      .slick-arrow{
+        height: auto;
+        text-align: right;
+      }
+      .slick-prev{
+        width: 95%;
+        &:before{
+          content: "\f104";
+          font-family: 'FontAwesome';
+          color: $color-black;
+          font-size: 40px;
+        }
+        @media (min-width: 1340px){
+          width: 97% !important;
+        }
+        @media (max-width: $screen-phone){
+          width: 85% !important;
+        }
+      }
+      .slick-next{
+        width: auto;
+        &:before{
+          content: "\f105";
+          font-family: 'FontAwesome';
+          color: $color-black;
+          font-size: 40px;
+        }
+      }
+    }
+    .slick-list{
+      .slick-track{
+        .slide{
+          ul{
+            li{
+              padding: 10px 30px;
+              .media{
+                height: 175px;
+                img{
+                  border-radius: 8px;
+                  height: 175px;
+                  object-fit: cover;
+                }
+              }
+              .slide__caption{
+                padding: 0;
+                h5{
+                  @include slide-product-name();
+                  padding: 0 20px;
+                  text-align: center;
+                  position: relative;
+                  top: 0px;
+                  &::first-letter{
+                    text-transform: uppercase;
+                  }
+                  a{
+                    @include slide-product-name();
+                    display: inline-block;
+                    transition: all 0.1s ease-in-out;
+                    -moz-transition: all 0.1s ease-in-out;
+                    -webkit-transition: all 0.1s ease-in-out;
+                    &::first-letter{
+                      text-transform: uppercase;
+                    }
+                    &:hover{
+                      text-decoration: none;
+                      color: $color-secondary !important;
+                    }
+                    &:focus{
+                      outline: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //  App link/image section
+  &--type--download-app-block{
+    height: auto;
+    padding: 80px 115px;
+    background: #0c3873;
+    background: -moz-linear-gradient(top, #0c3873 0%, #244b81 50%, #3c5f8f 100%);
+    background: -webkit-linear-gradient(top, #0c3873 0%,#244b81 50%,#3c5f8f 100%);
+    background: linear-gradient(to bottom, #0c3873 0%,#244b81 50%,#3c5f8f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c3873', endColorstr='#3c5f8f',GradientType=0 );
+    @media (max-width: $screen-tablet){
+      padding: 90px 40px;
+    }
+    .app_links{
+      display: flex;
+      align-items: center;
+      @media (max-width: $screen-tablet){
+        display: block;
+      }
+      .content-left{
+        width: 50%;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $screen-tablet){
+          width: 100%;
+        }
+        header{
+          h2{
+            font-size: 30px;
+            font-family: 'Roboto-Light';
+            line-height: 35px;
+            color: $color-white;
+            letter-spacing: 1px;
+            margin-top: 0 !important;
+            padding-bottom: 20px;
+            .field{
+              padding: 5px 0;
+            }
+            @media (max-width: $screen-desktop){
+
+            }
+          }
+        }
+        .app_link_description{
+          display: none;
+          .field{
+            color: $color-white;
+            font-size: 17px;
+            font-family: 'Roboto-Regular';
+            text-align: left;
+            line-height: 35px;
+            letter-spacing: 0.5px;
+            width: 90%;
+          }
+        }
+        .app_link_ctas{
+          .field--name-field-donwload-call-to-action{
+            display: inline-flex;
+            .field--item{
+              padding: 20px;
+              &:first-child{
+                background-image: url('../images/appstore.png');
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 50px;
+                margin: 20px 20px 20px 0;
+              }
+              &:nth-child(2){
+                background-image: url('../images/googleplay.png');
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 50px;
+                margin: 20px 0 20px 20px;
+              }
+              .paragraph{
+                margin-top: -10px;
+                a{
+                  padding: 12px 93px;
+                  color: transparent;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .image-right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $screen-tablet){
+          width: 100%;
+          padding-top: 50px;
+        }
+        .field{
+          img{
+            max-width: 400px;
+            width: 100%;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    @media (max-width: $screen-phone){
+      .app_link_ctas{
+        .field--item{
+          margin: 20px 0 !important;
+        }
+      }
+      .image-right{
+        .field{
+          width: 220px;
+        }
+      }
+    }
+  }
+
+  // CTA Acerca de asegurate cr
+  &--type--text-image-block{
+    height: auto;
+    padding: 80px 115px;
+    .text-image{
+      display: flex;
+      @media (max-width: $screen-tablet){
+        display: block;
+        padding: 90px 40px;
+      }
+      .content-right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $screen-tablet){
+          width: 100%;
+        }
+        header{
+          h2{
+            .field{
+              font-size: 36px;
+              color: $color-secondary;
+              font-family: 'Roboto-Regular';
+            }
+          }
+        }
+        .text-description{
+          padding-top: 25px;
+          padding-bottom: 25px;
+          .field{
+            font-size: 16px;
+            font-family: 'Roboto-Regular';
+            line-height: 22px;
+            color: $color-black;
+          }
+        }
+        .text-button{
+          .field{
+            padding: 30px 0;
+            a{
+              @include btn-blue($padding: 12px 70px);
+              &:hover{
+                background-color: $color-blue-hover;
+              }
+            }
+          }
+        }
+      }
+      .image-left{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $screen-tablet){
+          width: 100%;
+        }
+        .text-image-image{
+          .field{
+            img{
+              width: 100%;
+              max-width: 365px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*  User logged-in Homepage */
+.user-logged-in{
+  .paragraph{
+    &--type--view-block,
+    &--type--products-by-category-block{
+      .slick-list{
+        .slick-track{
+          .slide{
+            ul{
+              li{
+                .slide__caption{
+                  .flag-heart{
+                    position: relative;
+                    top: -40px;
+                    .flag-favorites{
+                      width: 52px;
+                      // border-radius: 0 8px;
+                      // background-color: rgba(0,0,0,0.20);
+                      a{
+                        font-size: 1px;
+                        text-decoration: none;
+                        color: transparent;
+                        &:hover{
+                          color: $color-favorites !important;
+                        }
+                        &:focus{
+                          outline: 0 !important;
+                        }
+                        &:before{
+                          content: "\f004";
+                          font-family: 'FontAwesome';
+                          font-size: 28px;
+                          left: 11px;
+                          position: relative;
+                        }
+                        @media (max-width: $screen-desktop){
+                          color: $color-placeholder !important;
+                        }
+                      }
+                    }
+                    .flag-favorites.action-unflag{
+                      a{
+                        color: $color-favorites !important;
+                        display: block;
+                      }
+                    }
+                  }
+                  h5{
+                    top: -40px;
+                  }
+                  @media (max-width: $screen-desktop){
+                    h5{
+                      top: -40px;
+                    }
+                  }
+                }
+                &:hover h5{
+                  top: -40px;
+                }
+                &:hover a{
+                  color: $color-placeholder !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

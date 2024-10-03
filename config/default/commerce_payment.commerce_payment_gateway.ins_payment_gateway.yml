@@ -1,0 +1,24 @@
+uuid: a2912248-0851-4b73-89a4-5b2e7d80a7d0
+langcode: es
+status: true
+dependencies:
+  module:
+    - ins_payment
+id: ins_payment_gateway
+label: 'INS Payment'
+weight: null
+plugin: ins_payment_onsite
+configuration:
+  client_id: '110540429'
+  client_secret: 4fd6d14b-e956-08cf-7bd8-6069e5fd6850
+  format_xml: MjA0OCE8UlNBS2V5VmFsdWU+PE1vZHVsdXM+c2NEdHg1eGtmNWEveE1RVFR3MXQydHU5MUw2REw0eWc1bW0wTGxFZDlKVEtsMHhlaVlHanQrWWh2NFM0bzVYTEhOdTJ4OWJveFA0QkpYL0U4N1ZISzVJRFJyTUdTRm9WYjI0SWU4TjF2Q1QzaURLMHNCTjZURlRGQ0hLeG53OVJodEd4VEFFMEVSQ001NWhIR0tNR2hLaldDMW5KTVRPTmh3OThkMTB1cktheERTK2tqM0ZXSzBWczc1MURRY1ZFOG1kaGVCVGNxMi9MUytWWGdMZ1RqZzZGVlpiRHI2cEpUd2FYNDIwTDNxR1ByNmhIZ2Irbi8rK3ZsZjZqblIzY2pKbEdldzU3VTdLaVdXSGl1QmVpZEJuOUdXT0Y4Q05CWjNLMnYwZE51S1dPMzFzcVd0MjZVWTRyUUJGZ3JzS2l0Q3AyZFE4Y0RacER0dzRUSXFoYmhRPT08L01vZHVsdXM+PEV4cG9uZW50PkFRQUI8L0V4cG9uZW50PjwvUlNBS2V5VmFsdWU+
+  format_pem: "-----BEGIN PUBLIC KEY-----\r\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9n4WgwCmCM7GFLfqKNxn\r\ns2mSEiv8Bw8Q3UjwwsGrAbyPCsODtrEvOwBUp1U2MPUMnwf5EJC4gtji7MnwMXca\r\neucxRkqeKo/WYbn7rYREc6zFNyfDBN4BaKdzhBEKRbDW73jIDPZs8fnYTd2RtpFo\r\nuFg0eyIPJ3qXlFKj9gARrVtmg/N8WFGemZchGQGW/uLEfKE6sf1Gbzz/MJTNOjRt\r\nMTPuWrvH9bpoE3SUWy1zP+AS7ap7KpdFPVfjfePE/aMeDxK5+bTYWwGjI8Tg5FpL\r\nmrxnbU2eB0jcPmR9iJSfHC3gjzDLnX2TGn9mmvsXND0Wnd2tdYzEwetvzE6ELTqb\r\n1wIDAQAB\r\n-----END PUBLIC KEY-----"
+  display_label: 'INS Payment'
+  mode: SANDBOX
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  api_base_test: 'https://apiintegracion.ins-cr.com/v1'
+  api_base_live: 'https://apiproduccion.ins-cr.com/v1'
+conditions: {  }
+conditionOperator: AND

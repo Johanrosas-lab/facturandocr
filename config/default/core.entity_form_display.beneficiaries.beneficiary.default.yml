@@ -1,0 +1,130 @@
+uuid: 192dd448-84f3-492c-b653-36921e556c26
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.beneficiaries.beneficiary
+    - field.field.beneficiaries.beneficiary.field_city
+    - field.field.beneficiaries.beneficiary.field_exact_direction
+    - field.field.beneficiaries.beneficiary.field_gender
+    - field.field.beneficiaries.beneficiary.field_id_number
+    - field.field.beneficiaries.beneficiary.field_last_name
+    - field.field.beneficiaries.beneficiary.field_name
+    - field.field.beneficiaries.beneficiary.field_occupation
+    - field.field.beneficiaries.beneficiary.field_province
+    - field.field.beneficiaries.beneficiary.field_relationship
+    - field.field.beneficiaries.beneficiary.field_telephone_of_contact
+id: beneficiaries.beneficiary.default
+targetEntityType: beneficiaries
+bundle: beneficiary
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_city:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_exact_direction:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_gender:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_id_number:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_occupation:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_province:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_relationship:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone_of_contact:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+hidden: {  }

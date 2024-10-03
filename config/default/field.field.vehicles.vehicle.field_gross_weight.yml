@@ -1,0 +1,23 @@
+uuid: 3dd807ac-c33d-4a45-9875-26a9a1e99f12
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_gross_weight
+id: vehicles.vehicle.field_gross_weight
+field_name: field_gross_weight
+entity_type: vehicles
+bundle: vehicle
+label: 'Peso Bruto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

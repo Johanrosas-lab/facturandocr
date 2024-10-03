@@ -1,0 +1,8 @@
+graph_version: '2.11'
+_core:
+  default_config_hash: NrJGhXDjEi8AstqfCkQW5b8I9VKjtJKs9dYNzcDMbTQ
+langcode: es
+app_id: '392655951610581'
+app_secret: c9bcbdd0941a23264d6383a608517386
+endpoints: ''
+scopes: ''

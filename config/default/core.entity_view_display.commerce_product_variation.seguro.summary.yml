@@ -1,0 +1,51 @@
+uuid: 7b12e3b9-9fcf-4df4-9eaf-85f7090cd13d
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.seguro
+    - core.entity_view_mode.commerce_product_variation.summary
+  module:
+    - commerce_price
+id: commerce_product_variation.seguro.summary
+targetEntityType: commerce_product_variation
+bundle: seguro
+mode: summary
+content:
+  price:
+    type: commerce_price_calculated
+    weight: 1
+    label: inline
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
+    region: content
+  product_id:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  sku:
+    label: inline
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  attribute_plans: true
+  field_variation_cancer: true
+  field_variation_dead_accidental: true
+  field_variation_family_dental: true
+  field_variation_family_funel: true
+  field_variation_inability_total: true
+  field_variation_monthly_rent: true
+  field_variation_no_accidental: true
+  langcode: true
+  title: true

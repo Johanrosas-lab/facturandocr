@@ -1,0 +1,11 @@
+uuid: e1083ed1-359c-4876-ad88-0db522548a3b
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'file:file:aae7d8b8-5b3b-40c1-a21c-4b8bed42f065'
+id: intro_block
+label: 'Intro Block'
+icon_uuid: aae7d8b8-5b3b-40c1-a21c-4b8bed42f065
+description: ''
+behavior_plugins: {  }

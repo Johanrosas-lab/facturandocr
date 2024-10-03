@@ -1,0 +1,26 @@
+uuid: 53499636-7ad6-4ed0-bb62-2141fe8e438d
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+    - system
+  theme:
+    - insurance_theme
+id: checkoutprogress
+theme: insurance_theme
+region: content
+weight: -10
+provider: null
+plugin: commerce_checkout_progress
+settings:
+  id: commerce_checkout_progress
+  label: 'Checkout progress'
+  provider: commerce_checkout
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '/checkout/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: d342b5e4-e295-4345-9a3f-e6d457aaaf1e
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_year_of_construction
+id: properties.property.field_year_of_construction
+field_name: field_year_of_construction
+entity_type: properties
+bundle: property
+label: 'Año de construccion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

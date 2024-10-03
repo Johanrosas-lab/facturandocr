@@ -1,0 +1,9 @@
+services:
+  osc_settings.themer:
+    class: Drupal\osc_settings\Theme\Themer
+    arguments: ['@config.factory', '@entity_type.manager', '@current_user']
+
+  osc_settings.flag_subscriber:
+    class: Drupal\osc_settings\EventSubscriber\FlagSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,9 @@
+services:
+  serializer.normalizer.entity_commerce_product_variations:
+    class: Drupal\osc_commerce_rest\Normalizer\EntityProductVariationFieldItemNormalizer
+    tags:
+      - { name: normalizer, priority: 5 }
+  serializer.normalizer.entity_commerce_order_item_variations:
+    class: Drupal\osc_commerce_rest\Normalizer\EntityOrderItemVariationFieldItemNormalizer
+    tags:
+      - { name: normalizer, priority: 5 }

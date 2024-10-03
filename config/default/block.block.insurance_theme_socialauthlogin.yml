@@ -1,0 +1,26 @@
+uuid: 6bce506a-10bd-430f-ad76-aa4c6dde23b2
+langcode: es
+status: true
+dependencies:
+  module:
+    - social_auth
+    - system
+  theme:
+    - insurance_theme
+id: insurance_theme_socialauthlogin
+theme: insurance_theme
+region: content
+weight: -7
+provider: null
+plugin: social_auth_login
+settings:
+  id: social_auth_login
+  label: 'Social Auth Login'
+  provider: social_auth
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/register\r\n"
+    negate: false
+    context_mapping: {  }

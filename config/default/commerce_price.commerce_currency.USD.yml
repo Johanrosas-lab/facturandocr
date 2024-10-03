@@ -1,0 +1,9 @@
+uuid: 9062771d-ea41-425c-bbb4-5103910d0fcc
+langcode: es
+status: true
+dependencies: {  }
+currencyCode: USD
+name: 'dólar estadounidense'
+numericCode: '840'
+symbol: $
+fractionDigits: 2

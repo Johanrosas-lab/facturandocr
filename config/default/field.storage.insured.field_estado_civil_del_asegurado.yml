@@ -1,0 +1,36 @@
+uuid: 9ef30f31-f943-4c44-b35d-710242d27aff
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: insured.field_estado_civil_del_asegurado
+field_name: field_estado_civil_del_asegurado
+entity_type: insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Soltero(a)
+      label: Soltero(a)
+    -
+      value: Casado(a)
+      label: Casado(a)
+    -
+      value: Separado(a)
+      label: Separado(a)
+    -
+      value: Viudo(a)
+      label: Viudo(a)
+    -
+      value: 'Unión de hecho'
+      label: 'Unión de hecho'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

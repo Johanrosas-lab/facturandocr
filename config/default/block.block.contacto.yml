@@ -1,0 +1,25 @@
+uuid: 690d3e2f-5ffe-419e-9396-2dc401f13da5
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:66fdf8cc-ddf0-47ed-abc0-4830d1b9505d'
+  module:
+    - block_content
+  theme:
+    - insurance_theme
+id: contacto
+theme: insurance_theme
+region: header
+weight: -15
+provider: null
+plugin: 'block_content:66fdf8cc-ddf0-47ed-abc0-4830d1b9505d'
+settings:
+  id: 'block_content:66fdf8cc-ddf0-47ed-abc0-4830d1b9505d'
+  label: 'Contacto '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

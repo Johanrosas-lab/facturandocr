@@ -1,0 +1,45 @@
+uuid: 8e1aa9e7-6d0f-4dc4-8fb9-53117825c64d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_block.field_description_call_to_action
+    - field.field.paragraph.description_block.field_description_subtitle
+    - field.field.paragraph.description_block.field_description_title
+    - paragraphs.paragraphs_type.description_block
+  module:
+    - link
+id: paragraph.description_block.default
+targetEntityType: paragraph
+bundle: description_block
+mode: default
+content:
+  field_description_call_to_action:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_description_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

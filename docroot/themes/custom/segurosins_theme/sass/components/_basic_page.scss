@@ -1,0 +1,28 @@
+.page-node-type-page{
+  .region-content{
+    #block-segurosins-theme-content{
+      padding: 30px;
+      .field--name-field-headline{
+        font-family: 'aleo';
+        font-size: 30px;
+        color: $seconary;
+      }
+      .field--name-body{
+        p{
+          font-family: 'lato';
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/*  contact page */
+.path-contact{
+  #block-segurosins-theme-content{
+    padding: 30px;
+    .contact-form{
+
+    }
+  }
+}

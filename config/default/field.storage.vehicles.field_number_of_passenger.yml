@@ -1,0 +1,20 @@
+uuid: 2e53bd71-71ea-4c8a-9afb-a44fff770581
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_number_of_passenger
+field_name: field_number_of_passenger
+entity_type: vehicles
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: 19f1eda5-faf5-4f9a-9b1d-237b5982e87f
+langcode: es
+status: true
+dependencies: {  }
+id: vehicles
+label: Vehicles
+created: true
+changed: true
+uid: true
+title: true

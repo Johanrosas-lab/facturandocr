@@ -1,0 +1,19 @@
+uuid: 3c319232-f3dd-4f18-ba4a-2b4b0f7d234c
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_wall_material
+id: properties.property.field_wall_material
+field_name: field_wall_material
+entity_type: properties
+bundle: property
+label: 'Tapias:Material'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

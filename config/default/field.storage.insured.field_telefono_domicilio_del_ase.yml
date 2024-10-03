@@ -1,0 +1,19 @@
+uuid: 33c46c8f-927b-4875-bce7-0d7d5671fe28
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - telephone
+id: insured.field_telefono_domicilio_del_ase
+field_name: field_telefono_domicilio_del_ase
+entity_type: insured
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

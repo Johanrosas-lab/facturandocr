@@ -1,0 +1,21 @@
+uuid: 0f5e8323-596c-4333-bfd9-f26c01b46252
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - field.storage.commerce_order.field_card_order
+  module:
+    - json_field
+id: commerce_order.default.field_card_order
+field_name: field_card_order
+entity_type: commerce_order
+bundle: default
+label: 'Card order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json

@@ -1,0 +1,5 @@
+name: 'OSC Settings'
+type: module
+description: 'OSC Settings Module'
+core: 8.x
+package: 'OSC'

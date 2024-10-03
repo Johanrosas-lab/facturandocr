@@ -1,0 +1,21 @@
+uuid: 6f2cf0d5-4f59-4061-bfdf-fb03dbb4017f
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+    - serialization
+    - simple_oauth
+id: entity.profile
+plugin_id: 'entity:profile'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - oauth2

@@ -1,0 +1,19 @@
+uuid: cb0a306b-2899-4610-a81c-eaea855aee46
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.storage.additional_insured.field_mail_additional
+id: additional_insured.additional_insured.field_mail_additional
+field_name: field_mail_additional
+entity_type: additional_insured
+bundle: additional_insured
+label: 'ZZZZ. Email del asegurado adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

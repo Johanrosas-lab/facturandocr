@@ -1,0 +1,23 @@
+uuid: 0fd5521e-f154-48fb-b2df-88a4bc5522ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.seguro
+    - field.storage.commerce_product.field_currency
+  module:
+    - options
+id: commerce_product.seguro.field_currency
+field_name: field_currency
+entity_type: commerce_product
+bundle: seguro
+label: Moneda
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Colones
+default_value_callback: ''
+settings: {  }
+field_type: list_string

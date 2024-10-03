@@ -1,0 +1,21 @@
+uuid: 72685561-d052-4d14-bdf6-e25e2a320747
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_outer_walls
+  module:
+    - options
+id: properties.property.field_outer_walls
+field_name: field_outer_walls
+entity_type: properties
+bundle: property
+label: 'Paredes Externas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

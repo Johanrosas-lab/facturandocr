@@ -1,0 +1,20 @@
+uuid: 8b99cac4-48bd-4082-ad68-ee2c1c6c0465
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_height_of_walls
+field_name: field_height_of_walls
+entity_type: properties
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

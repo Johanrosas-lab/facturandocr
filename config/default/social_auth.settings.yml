@@ -1,0 +1,23 @@
+auth:
+  social_auth_facebook:
+    route: social_auth_facebook.redirect_to_fb
+    img_path: modules/contrib/social_auth_facebook/img/facebook_logo.svg
+  social_auth_google:
+    route: social_auth_google.redirect_to_google
+    img_path: modules/contrib/social_auth_google/img/google_logo.svg
+post_login: /user
+redirect_user_form: false
+disable_admin_login: false
+disabled_roles:
+  administrator: administrator
+  service_provider: '0'
+  customer: '0'
+  channel_manager: '0'
+  provider: '0'
+  aseguradora: '0'
+  op: '0'
+  sponsor: '0'
+_core:
+  default_config_hash: 1tS3jCuYxV3TXQ2cq320XarjdXWprvWK5bru8DCsIUY
+langcode: es
+user_allowed: register

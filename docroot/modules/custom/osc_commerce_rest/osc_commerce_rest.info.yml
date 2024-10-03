@@ -1,0 +1,5 @@
+name: 'OSC Commerce Rest'
+type: module
+description: Define's a custom REST Resource
+core: 8.x
+package: 'OSC'

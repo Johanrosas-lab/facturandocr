@@ -1,0 +1,19 @@
+uuid: 54b81de3-3a5e-41ed-a059-cb4d9d1d8648
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_products_category_title
+    - paragraphs.paragraphs_type.products_by_category_block
+id: paragraph.products_by_category_block.field_products_category_title
+field_name: field_products_category_title
+entity_type: paragraph
+bundle: products_by_category_block
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

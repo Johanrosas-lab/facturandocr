@@ -1,0 +1,8 @@
+uuid: 048be9e7-69c6-4610-98a9-7193d696fcee
+langcode: es
+status: true
+dependencies: {  }
+name: Categorias
+vid: categories
+description: 'Tipos de Seguros'
+weight: 0

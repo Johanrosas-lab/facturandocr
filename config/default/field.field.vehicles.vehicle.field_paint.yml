@@ -1,0 +1,21 @@
+uuid: 2ef3ba3f-2fca-4ba7-adca-e5ff46482059
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_paint
+  module:
+    - options
+id: vehicles.vehicle.field_paint
+field_name: field_paint
+entity_type: vehicles
+bundle: vehicle
+label: Pintura
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 9c488270-cea0-41a0-bf69-4140fd2656b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_estado_civil_del_asegurado
+  module:
+    - options
+id: insured.insured_person.field_estado_civil_del_asegurado
+field_name: field_estado_civil_del_asegurado
+entity_type: insured
+bundle: insured_person
+label: 'H. Estado civil del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

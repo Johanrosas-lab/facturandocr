@@ -1,0 +1,21 @@
+uuid: b1989ac6-bf4e-4d6b-b9a9-8ba2dde7e1be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_health_type
+    - profile.type.client
+  module:
+    - options
+id: profile.client.field_client_health_type
+field_name: field_client_health_type
+entity_type: profile
+bundle: client
+label: 'Qué tipo de servicios frecuenta utilizar?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

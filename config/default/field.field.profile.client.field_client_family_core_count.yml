@@ -1,0 +1,23 @@
+uuid: 3af0424a-6f70-439d-8107-337de665a59e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_family_core_count
+    - profile.type.client
+id: profile.client.field_client_family_core_count
+field_name: field_client_family_core_count
+entity_type: profile
+bundle: client
+label: 'Cantidad de miembros en el núcleo familiar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

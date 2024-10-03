@@ -1,0 +1,30 @@
+uuid: 76eff44f-999c-4c88-8f26-5566c16f10d8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: insured.field_tipo_de_documento_de_ident
+field_name: field_tipo_de_documento_de_ident
+entity_type: insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Cédula nacional'
+      label: 'Cédula nacional'
+    -
+      value: 'Cédula residencia'
+      label: 'Cédula residencia'
+    -
+      value: Otro
+      label: Otro
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

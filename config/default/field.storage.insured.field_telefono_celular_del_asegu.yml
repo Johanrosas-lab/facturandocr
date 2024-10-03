@@ -1,0 +1,19 @@
+uuid: c1bb48be-591a-47c0-bde6-7ed623d52634
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - telephone
+id: insured.field_telefono_celular_del_asegu
+field_name: field_telefono_celular_del_asegu
+entity_type: insured
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

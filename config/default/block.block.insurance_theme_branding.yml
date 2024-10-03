@@ -1,0 +1,29 @@
+uuid: d203caee-6b11-4b13-8589-624d5bef82eb
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - insurance_theme
+third_party_settings:
+  block_class:
+    classes: hidden-xs
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: insurance_theme_branding
+theme: insurance_theme
+region: header
+weight: -16
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

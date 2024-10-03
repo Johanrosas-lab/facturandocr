@@ -1,0 +1,23 @@
+uuid: 0c4a4567-92aa-418b-9859-b1d6e9fece27
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_monthly_income
+id: attendants.attendant.field_monthly_income
+field_name: field_monthly_income
+entity_type: attendants
+bundle: attendant
+label: 'Ingreso Mensual'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,67 @@
+uuid: 8cdabe37-9be1-4d66-94ec-cd65838d7021
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_cards
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.cards_container_
+  module:
+    - entity_reference_revisions
+id: paragraph.cards_container_.field_cards_cards
+field_name: field_cards_cards
+entity_type: paragraph
+bundle: cards_container_
+label: 'Cards cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cards: cards
+    target_bundles_drag_drop:
+      about_us:
+        weight: 14
+        enabled: false
+      cards:
+        enabled: true
+        weight: 15
+      cards_container_:
+        weight: 16
+        enabled: false
+      cta_section:
+        weight: 17
+        enabled: false
+      description_block:
+        weight: 18
+        enabled: false
+      download_app_block:
+        weight: 19
+        enabled: false
+      download_app_cta:
+        weight: 20
+        enabled: false
+      hero_section_:
+        weight: 21
+        enabled: false
+      intro_block:
+        weight: 22
+        enabled: false
+      products_by_category_block:
+        weight: 23
+        enabled: false
+      product_variation:
+        weight: 24
+        enabled: false
+      text_image_block:
+        weight: 25
+        enabled: false
+      view_block:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

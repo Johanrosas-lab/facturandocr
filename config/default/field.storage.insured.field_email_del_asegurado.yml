@@ -1,0 +1,18 @@
+uuid: eaf75132-8f63-4277-a64c-732b56af3cb5
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_email_del_asegurado
+field_name: field_email_del_asegurado
+entity_type: insured
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

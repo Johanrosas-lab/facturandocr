@@ -1,0 +1,23 @@
+uuid: 9730301e-3e3d-4b76-8823-18bcfd6b206b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_patio_light
+id: properties.property.field_patio_light
+field_name: field_patio_light
+entity_type: properties
+bundle: property
+label: 'Patio de luz'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: si
+  off_label: 'no'
+field_type: boolean

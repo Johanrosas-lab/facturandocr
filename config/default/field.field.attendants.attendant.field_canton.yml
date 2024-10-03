@@ -1,0 +1,19 @@
+uuid: ee8f4a0a-f1da-4f1a-bb09-a9522a9e6ea4
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_canton
+id: attendants.attendant.field_canton
+field_name: field_canton
+entity_type: attendants
+bundle: attendant
+label: Canton
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

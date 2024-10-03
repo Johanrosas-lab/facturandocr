@@ -1,0 +1,208 @@
+uuid: 3245cc45-b371-42fc-8a79-29de824357b0
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.field.vehicles.vehicle.field_class_of_plate
+    - field.field.vehicles.vehicle.field_color
+    - field.field.vehicles.vehicle.field_cylinder
+    - field.field.vehicles.vehicle.field_engine_number
+    - field.field.vehicles.vehicle.field_fuels
+    - field.field.vehicles.vehicle.field_gross_weight
+    - field.field.vehicles.vehicle.field_label_number
+    - field.field.vehicles.vehicle.field_number_of_passenger
+    - field.field.vehicles.vehicle.field_number_of_vin
+    - field.field.vehicles.vehicle.field_paint
+    - field.field.vehicles.vehicle.field_plate
+    - field.field.vehicles.vehicle.field_right_of_movement
+    - field.field.vehicles.vehicle.field_rtv
+    - field.field.vehicles.vehicle.field_serie
+    - field.field.vehicles.vehicle.field_type_of_vehicle
+    - field.field.vehicles.vehicle.field_vehicle_brand
+    - field.field.vehicles.vehicle.field_vehicle_interest
+    - field.field.vehicles.vehicle.field_year_of_production
+  module:
+    - options
+    - user
+id: vehicles.vehicle.default
+targetEntityType: vehicles
+bundle: vehicle
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: content
+  field_class_of_plate:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_color:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cylinder:
+    weight: 18
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_engine_number:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fuels:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_gross_weight:
+    weight: 19
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_label_number:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_number_of_passenger:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_number_of_vin:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_paint:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_plate:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_right_of_movement:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_rtv:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_serie:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_type_of_vehicle:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vehicle_brand:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vehicle_interest:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_year_of_production:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  changed: true
+  langcode: true

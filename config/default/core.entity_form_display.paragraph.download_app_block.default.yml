@@ -1,0 +1,69 @@
+uuid: f0064620-5438-4609-8153-b3a49ac5d938
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.download_app_block.field_donwload_call_to_action
+    - field.field.paragraph.download_app_block.field_download_description
+    - field.field.paragraph.download_app_block.field_download_image
+    - field.field.paragraph.download_app_block.field_download_subtitle
+    - field.field.paragraph.download_app_block.field_download_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.download_app_block
+  module:
+    - image
+    - paragraphs
+    - text
+id: paragraph.download_app_block.default
+targetEntityType: paragraph
+bundle: download_app_block
+mode: default
+content:
+  field_donwload_call_to_action:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: download_app_cta
+    third_party_settings: {  }
+    region: content
+  field_download_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_download_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_download_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_download_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

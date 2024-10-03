@@ -1,0 +1,29 @@
+uuid: 1322bbbf-4e3f-429a-bbdb-c9630eb21830
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_academic_level
+    - profile.type.client
+    - taxonomy.vocabulary.academics
+id: profile.client.field_client_academic_level
+field_name: field_client_academic_level
+entity_type: profile
+bundle: client
+label: 'Nivel Académico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academics: academics
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: ea5f4503-9f05-41e4-847f-af10f25a26c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.properties
+name: Property
+type: property
+description: ''

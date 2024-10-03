@@ -1,0 +1,21 @@
+uuid: 83fad5e5-c105-447f-ab3e-ff644d9ab3da
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_nacionalidad_del_asegurado
+field_name: field_nacionalidad_del_asegurado
+entity_type: insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

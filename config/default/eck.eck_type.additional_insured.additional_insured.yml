@@ -1,0 +1,9 @@
+uuid: 09c48a5f-e20f-4dc5-bdfa-70935594115d
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.additional_insured
+name: 'Asegurado Adicional'
+type: additional_insured
+description: ''

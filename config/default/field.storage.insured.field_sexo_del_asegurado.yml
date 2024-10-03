@@ -1,0 +1,27 @@
+uuid: fd65a0bd-9d83-4b5d-a0e2-f65685fc7d28
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: insured.field_sexo_del_asegurado
+field_name: field_sexo_del_asegurado
+entity_type: insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: M
+      label: M
+    -
+      value: F
+      label: F
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

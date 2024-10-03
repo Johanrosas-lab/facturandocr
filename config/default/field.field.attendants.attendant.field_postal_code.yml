@@ -1,0 +1,19 @@
+uuid: 9b85d4f8-5088-4f23-a82d-b1446f59a070
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_postal_code
+id: attendants.attendant.field_postal_code
+field_name: field_postal_code
+entity_type: attendants
+bundle: attendant
+label: 'Codigo Postal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

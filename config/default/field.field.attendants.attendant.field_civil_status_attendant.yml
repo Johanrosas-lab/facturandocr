@@ -1,0 +1,21 @@
+uuid: 7cfd9aa4-1f9e-4b8f-9329-443d741b1efa
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_civil_status_attendant
+  module:
+    - options
+id: attendants.attendant.field_civil_status_attendant
+field_name: field_civil_status_attendant
+entity_type: attendants
+bundle: attendant
+label: 'Estado Civil'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,5 @@
+name: 'Register by Operator'
+type: module
+description: 'Register by Operator'
+core: 8.x
+package: 'Custom'

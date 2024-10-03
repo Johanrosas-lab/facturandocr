@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Default theme implementation for checkout panes.
+ *
+ * Available variables:
+ * - elements: The checkout pane's form elements.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="row">
+    <div class="col-md-8 product-review">
+        <div class="row">
+          <h3 class="review-title" >Revisión de compra</h3>
+            <div class="col-md-6 product-revision content">
+                <div class="revision-content">
+                  <h4>Dirección de facturación:</h4>
+                  <p>{{billing.user}}</p>
+                  <p>{{billing.email}}</p>
+                  <p>{{billing.city}}</p>
+                  <p>{{billing.country}},</p>
+                  <p>{{billing.address}}</p>
+                </div>
+            </div>
+            <div class="col-md-6 payment-methods content">
+                <h4>Forma de pago:</h4>
+                <p>{{card.type}} {{card.mask}}</p>
+                <p>Expiración {{card.year}}/{{card.month}}</p>
+            </div>
+            <div class="col-md-12 products-item">
+                <h3>Productos</h3>
+                  {% for item in product.items %}
+                    <div class="row product-row">
+                      <h5>{{ item.title }}</h5>
+                        <div class="col-sm-12 col-md-10">
+                            <p>Cobertura: <span class="value">{{item.plan}}</span></p>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <p class="total-price">Total: <span class="value">{{ item.currency }} {{ item.price }}</span></p>
+                            <p>Cantidad:<span class="value">{{item.quantity}}</span></p>
+                        </div>
+                    </div>
+                 {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product-summary">
+      <h3>.Resumen de compra</h3>
+      <div class="col-md-12 content">
+        <div class="order-line">
+          <span> Cantidad de seguros:</span> <span class="order-value">{{total.quantity}}</span>
+        </div>
+        <div class="order-line">
+          <span class="order-label"> SubTotal: </span> <span class="order-value">{{ total.subtotal | commerce_price_format  }}</span>
+        </div>
+        <!--
+        <div class="order-line">
+          <span class="order-label"> I.V.:  </span> <span class="order-value">{{ total.total_tax | commerce_price_format }}</span>
+        </div>
+        -->
+        <div class="total-total order-line">
+          <span class="order-label"> Gran Total: </span> <span class="order-value">{{ total.total | commerce_price_format  }}</span>
+        </div>
+      </div>
+    </div>
+</div>

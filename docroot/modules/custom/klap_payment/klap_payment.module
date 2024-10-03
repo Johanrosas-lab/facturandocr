@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * @file
+ * Contains klap_payment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Form\FormStateInterface;
+use Drupal\entity_legal\EntityLegalDocumentInterface;
+
+/**
+ * Implements hook_help().
+ */
+function klap_payment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the klap_payment module.
+    case 'help.page.klap_payment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('EMCom (Electronic and Mobile Commerce)') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function klap_payment_profile_presave(EntityInterface $entity) {
+  // Verify if profile exists.
+  if (isset($entity->profile_id) && $entity->profile_id->isEmpty() &&
+      isset($entity->field_client_first_name) && isset($entity->field_client_last_name) &&
+      isset($entity->field_client_phone_number)) {
+    // Get all data we needed from profile form before save the data.
+    $first_name = $entity->field_client_first_name->getValue();
+    $last_name = $entity->field_client_last_name->getValue();
+    $phone = $entity->field_client_phone_number->getValue();
+
+    // Save the data in an object.
+    $profile_object = new stdClass();
+    $profile_object->field_client_first_name = $first_name[0]['value'];
+    $profile_object->field_client_last_name = $last_name[0]['value'];
+    $profile_object->field_client_phone_number = $phone[0]['value'];
+
+    // Send the information.
+    $data_result = \Drupal::service('klap_payment.user')->createUser($profile_object);
+    if (isset($entity->field_client_address) && $entity->field_client_address) {
+      klap_payment_create_address_profile($entity->field_client_address->getValue()[0]);
+    }
+  }
+  else {
+    if (isset($entity->field_client_address) && $entity->field_client_address) {
+      klap_payment_update_address_profile($entity->field_client_address->getValue()[0]);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function klap_payment_preprocess_block__klap_payment_default_card_block(&$variables) {
+  if (isset($variables['content']['#type_card'])) {
+    $variables['type_card'] = $variables['content']['#type_card'];
+  }
+  if (isset($variables['content']['#mask_card'])) {
+    $variables['mask_card'] = $variables['content']['#mask_card'];
+  }
+  if (isset($variables['content']['#year_card'])) {
+    $variables['year_card'] = $variables['content']['#year_card'];
+  }
+  if (isset($variables['content']['#month_card'])) {
+    $variables['month_card'] = $variables['content']['#month_card'];
+  }
+}
+
+/**
+ * Create the address profile.
+ */
+function klap_payment_create_address_profile($address) {
+  $user_id = \Drupal::currentUser()->id();
+  $address_profile = array(
+    'type' => 'customer',
+    'uid' => $user_id,
+    'status' => TRUE,
+    'address' => $address,
+  );
+  $profile_data = \Drupal::entityManager()->getStorage('profile')->create($address_profile);
+  $profile_data->save();
+}
+
+/**
+ * Update the address profile.
+ */
+function klap_payment_update_address_profile($address) {
+  $user = \Drupal::currentUser();
+  $profile = \Drupal::entityTypeManager()->getStorage('profile')->loadByUser($user, 'customer');
+  $profile->set('address', $address);
+  $profile->save();
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function klap_payment_user_delete(EntityInterface $entity) {
+  $user_data = new stdClass();
+  $user_data->id = $entity->id();
+  $user_data->email = $entity->getEmail();
+  $user_data->name = $entity->getDisplayName();
+  $result = \Drupal::service('klap_payment.user')->userDelete($user_data);
+  if ($result['apiStatus'] === "Successful") {
+    \Drupal::logger('klap_payment')->warning("<pre>" . print_r("The user $user_data->id was removed successfully", 1) . "</pre>");
+  }
+  else {
+    $message = "The user $user_data->id was not removed successfully: " . json_encode($result);
+    \Drupal::logger('klap_payment')->error("<pre>" . print_r($message, 1) . "</pre>");
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function klap_payment_theme() {
+  $theme = [
+    'commerce_checkout_completion_message_custom' => [
+      'variables' => [
+        'order_entity' => null,
+        'user_email' => null,
+      ],
+    ],
+  ];
+  return $theme;
+}

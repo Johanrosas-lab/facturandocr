@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * This file contains the logic of Insurances module
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * Implements hook_form_alter().
+ */
+function insurances_form_alter(array &$form, FormStateInterface $form_state, $form_id)
+{
+  switch ($form_id)
+  {
+    case 'commerce_product_seguro_edit_form':
+      insurances_assign_fields($form, $form_state, $form_id);
+      break;
+  }
+}
+
+/**
+ * Function to add new field to the Form
+ */
+function insurances_assign_fields(array &$form, FormStateInterface $form_state, $form_id) {
+  $selected = array();
+  $order_fields = $form['field_order_fields']['widget'][0]['value']['#default_value'];
+  if($order_fields != "") {
+    $order_fields = json_decode($form['field_order_fields']['widget'][0]['value']['#default_value'],true);
+
+    foreach ($order_fields as $entity) {
+      foreach ($entity['fields'] as $value) {
+        $selected[] = $value['machine_name'];
+      }
+    }
+  }
+  // $user_fields = insurances_get_entity_fields_list('user','user',$selected);
+  // $beneficiary_fields = insurances_get_entity_fields_list('beneficiaries', 'beneficiary',$selected);
+  // $properties_fields = insurances_get_entity_fields_list('properties', 'property',$selected);
+  // $vehicle_fields = insurances_get_entity_fields_list('vehicles', 'vehicle',$selected);
+  $insured_fields = insurances_get_entity_fields_list('insured', 'insured_person',$selected);
+  $additional_insured = insurances_get_entity_fields_list('additional_insured', 'additional_insured', $selected);
+  $form['item'] = array(
+      '#title' => t('Campos necesarios para la orden'),
+      '#prefix' => '<div id="order-fields-container">',
+      '#markup' => '<ul class="connectedSortable" id="sortable1">'.
+                        // $user_fields[0] .
+                        // $beneficiary_fields[0] .
+                        // $properties_fields[0] .
+                        // $vehicle_fields[0] .
+                        $insured_fields[0] .
+                        $additional_insured[0] .
+                    '</ul>
+                    <ul class="connectedSortable" id="sortable2">'.
+                      // $user_fields[1] .
+                      // $beneficiary_fields[1] .
+                      // $properties_fields[1] .
+                      // $vehicle_fields[1] .
+                        $insured_fields[1] .
+                        $additional_insured[1] .
+                    '</ul>',
+      '#suffix' => '</div>',
+      '#weight' => 22
+	);
+
+  //Added Library
+  $form['#attached']['library'][] = 'insurances/insurances';
+  $form['#attached']['drupalSettings']['insurances']['insurances'] ['variable'] = 'value';
+}
+
+/**
+ * Function to add new field to the Form
+ */
+function insurances_get_entity_fields_list($entity, $bundle, $selected = NULL)
+{
+  $entity_fields = \Drupal::entityManager()->getFieldDefinitions($entity, $bundle);
+  $selected_fields = "";
+  $fields = "";
+  foreach ($entity_fields as $field_name => $field) {
+    if(preg_match('/field_|email/',$field_name)){
+      $settings=array();
+      switch ($field->getType())
+      {
+        case 'integer':
+          $settings['max'] = $field->getSettings()['max'];
+          $settings['min'] = $field->getSettings()['min'];
+          $settings['unsigned'] = $field->getSettings()['unsigned'];
+          $settings['prefix'] = $field->getSettings()['prefix'];
+          $settings['sufix'] = $field->getSettings()['suffix'];
+          break;
+        case 'string':
+          $settings['max_length'] = $field->getSettings()['max_length'];
+          $settings['is_ascii'] = $field->getSettings()['is_ascii'];
+          $settings['case_sensitive'] = $field->getSettings()['case_sensitive'];
+          break;
+        case 'list_string':
+          $list_values = $field->getSettings()['allowed_values'];
+          $settings['allowed_values'] = array();
+          foreach ($list_values as $key => $item) {
+            $settings['allowed_values'][] = array(
+              'key' => $key,
+              'value' => $item
+            );
+          }
+          break;
+      }
+
+      $item = "<li data-machine-name='".$field_name.
+      "' data-type='" . $field->getType() .
+      "' data-entity='" . $entity .
+      "' data-bundle='" . $bundle .
+      "' data-settings='" . json_encode($settings) .
+      "'>" . $field->getLabel() . "</li>";
+
+      if(isset($selected) && in_array($field_name,$selected)) $selected_fields.= $item;
+      else  $fields.= $item;
+    }
+  }
+
+  return array($fields, $selected_fields);
+}

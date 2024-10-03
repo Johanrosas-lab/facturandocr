@@ -1,0 +1,8 @@
+name: 'OSC Commerce Extra'
+type: module
+description: 'Extra custom features for commerce'
+core: 8.x
+package: 'OSC'
+dependencies:
+  - commerce
+  - commerce:commerce_checkout

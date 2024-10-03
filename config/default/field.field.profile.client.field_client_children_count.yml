@@ -1,0 +1,23 @@
+uuid: 6d219f60-7c95-44ef-819f-5f202d93ece3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_children_count
+    - profile.type.client
+id: profile.client.field_client_children_count
+field_name: field_client_children_count
+entity_type: profile
+bundle: client
+label: 'Cantidad de hijos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

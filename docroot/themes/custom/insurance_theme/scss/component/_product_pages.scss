@@ -1,0 +1,59 @@
+.path-product {
+
+  .product-content {
+    .content-top-wrapper {
+      display: none;
+    }
+
+    .insurance-image{
+      .img-responsive{
+        @media (max-width:$screen-tablet){
+          height: 100px
+        }
+      }
+    }
+
+    .insurance-header{
+      .right-col {
+        padding: 0px 45px 20px 20px;
+
+        @media (min-width:$screen-tablet){
+          padding: 30px 50px 30px 20px
+        }
+
+      }
+    }
+
+    .region{
+      .contextual-region{
+        .container-fluid{
+          padding-left: 0px;
+          padding-right: 0px;
+
+          .panel-body{
+            padding: 0px 0px;
+            .insurance-validity{
+              text-align: center;
+            }
+          }
+
+          .insurance-restriction{
+            .field--item{
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}

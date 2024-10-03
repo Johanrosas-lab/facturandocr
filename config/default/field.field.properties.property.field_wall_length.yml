@@ -1,0 +1,23 @@
+uuid: 55810293-59ea-4465-9b45-3ed542fd0e1a
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_wall_length
+id: properties.property.field_wall_length
+field_name: field_wall_length
+entity_type: properties
+bundle: property
+label: 'Tapias: Largo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

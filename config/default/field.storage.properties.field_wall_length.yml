@@ -1,0 +1,20 @@
+uuid: 7971be71-8cdf-481d-84da-1c65eb1dd6d8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_wall_length
+field_name: field_wall_length
+entity_type: properties
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

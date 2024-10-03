@@ -1,0 +1,9 @@
+uuid: b056ae80-cb8f-4b83-996c-39df5c129b56
+langcode: es
+status: true
+dependencies: {  }
+id: download_app_cta
+label: 'Download App CTA'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

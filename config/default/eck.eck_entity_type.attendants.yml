@@ -1,0 +1,10 @@
+uuid: 6a961623-fd7e-4dfc-aabd-09033cb0ef5a
+langcode: es
+status: true
+dependencies: {  }
+id: attendants
+label: Tomadores
+created: true
+changed: true
+uid: true
+title: true

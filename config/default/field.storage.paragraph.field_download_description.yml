@@ -1,0 +1,20 @@
+uuid: b120fb58-b2a9-4399-a058-73c3983d0ad3
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_download_description
+field_name: field_download_description
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 571d42c0-12a2-4827-bd0c-de0a6b4e4975
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.informed_consent
+id: node.informed_consent
+target_entity_type_id: node
+target_bundle: informed_consent
+default_langcode: site_default
+language_alterable: false

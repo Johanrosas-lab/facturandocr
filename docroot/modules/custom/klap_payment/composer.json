@@ -1,0 +1,14 @@
+{
+  "name": "drupal/klap_payment",
+  "type": "drupal-module",
+  "description": "EMCom (Electronic and Mobile Commerce)",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/klap_payment",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/klap_payment",
+    "source": "http://cgit.drupalcode.org/klap_payment"
+  },
+  "require": { }
+}

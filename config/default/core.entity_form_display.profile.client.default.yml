@@ -1,0 +1,183 @@
+uuid: c8bb7ff0-7224-41df-aaa3-a510d9dda1be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.profile.client.field_client_academic_level
+    - field.field.profile.client.field_client_address
+    - field.field.profile.client.field_client_birthday
+    - field.field.profile.client.field_client_children_count
+    - field.field.profile.client.field_client_count_professionals
+    - field.field.profile.client.field_client_family_core_count
+    - field.field.profile.client.field_client_first_name
+    - field.field.profile.client.field_client_health_type
+    - field.field.profile.client.field_client_id
+    - field.field.profile.client.field_client_last_name
+    - field.field.profile.client.field_client_phone_number
+    - field.field.profile.client.field_client_profession
+    - field.field.profile.client.field_client_travel_option
+    - field.field.profile.client.field_facebook
+    - field.field.profile.client.field_instagram
+    - field.field.profile.client.field_twitter
+    - profile.type.client
+  module:
+    - address
+    - datetime
+    - field_group
+    - social_media_links_field
+    - telephone
+third_party_settings:
+  field_group:
+    group_economic_information:
+      children:
+        - field_client_profession
+        - field_client_academic_level
+        - field_client_count_professionals
+        - field_client_family_core_count
+        - field_client_children_count
+        - field_client_travel_option
+        - field_client_health_type
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        label: 'Información Socioeconómica'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: socioeconomic-form
+      label: 'Información Socioeconómica'
+      region: content
+    group_informaci:
+      children:
+        - field_client_id
+        - field_client_first_name
+        - field_client_last_name
+        - field_client_birthday
+        - field_client_phone_number
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        label: 'Información Personal'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Información Personal'
+      region: content
+id: profile.client.default
+targetEntityType: profile
+bundle: client
+mode: default
+content:
+  field_client_academic_level:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_client_address:
+    weight: 6
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_client_birthday:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_client_children_count:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_client_count_professionals:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_client_family_core_count:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_client_first_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_client_health_type:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_client_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_client_last_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_client_phone_number:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_client_profession:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_client_travel_option:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_facebook:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+  field_instagram:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+  field_twitter:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+hidden: {  }

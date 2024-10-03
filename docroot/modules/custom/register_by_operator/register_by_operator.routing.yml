@@ -1,0 +1,13 @@
+register_by_operator.register:
+  path: /cliente/registro
+  defaults:
+    _controller: '\Drupal\register_by_operator\Controller\RegisterByOperatorController::register'
+  requirements:
+    _permission: 'access content'
+
+register_by_operator.login:
+  path: /cliente/login
+  defaults:
+    _controller: '\Drupal\register_by_operator\Controller\LoginByOperatorController::login'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,92 @@
+uuid: 8e1d0e76-1158-4a1a-be99-da5c6f04bd5e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_sections
+    - node.type.homapage
+    - paragraphs.paragraphs_type.about_us
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.cards_container_
+    - paragraphs.paragraphs_type.cta_section
+    - paragraphs.paragraphs_type.description_block
+    - paragraphs.paragraphs_type.download_app_block
+    - paragraphs.paragraphs_type.hero_section_
+    - paragraphs.paragraphs_type.intro_block
+    - paragraphs.paragraphs_type.products_by_category_block
+    - paragraphs.paragraphs_type.sliderparagraph
+    - paragraphs.paragraphs_type.text_image_block
+    - paragraphs.paragraphs_type.view_block
+  module:
+    - entity_reference_revisions
+id: node.homapage.field_home_sections
+field_name: field_home_sections
+entity_type: node
+bundle: homapage
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      intro_block: intro_block
+      description_block: description_block
+      view_block: view_block
+      products_by_category_block: products_by_category_block
+      text_image_block: text_image_block
+      download_app_block: download_app_block
+      about_us: about_us
+      cards: cards
+      cards_container_: cards_container_
+      cta_section: cta_section
+      hero_section_: hero_section_
+      sliderparagraph: sliderparagraph
+    target_bundles_drag_drop:
+      intro_block:
+        enabled: true
+        weight: 2
+      description_block:
+        enabled: true
+        weight: 3
+      view_block:
+        enabled: true
+        weight: 4
+      products_by_category_block:
+        enabled: true
+        weight: 5
+      download_app_cta:
+        weight: 7
+        enabled: false
+      text_image_block:
+        enabled: true
+        weight: 8
+      download_app_block:
+        enabled: true
+        weight: 9
+      about_us:
+        enabled: true
+        weight: 14
+      cards:
+        enabled: true
+        weight: 15
+      cards_container_:
+        enabled: true
+        weight: 16
+      cta_section:
+        enabled: true
+        weight: 17
+      hero_section_:
+        enabled: true
+        weight: 21
+      product_variation:
+        weight: 24
+        enabled: false
+      sliderparagraph:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions

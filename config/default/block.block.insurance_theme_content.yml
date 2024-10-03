@@ -1,0 +1,22 @@
+uuid: c1c4e864-5013-43c6-964b-42ea867934ec
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - insurance_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: insurance_theme_content
+theme: insurance_theme
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  provider: system
+  label_display: '0'
+visibility: {  }

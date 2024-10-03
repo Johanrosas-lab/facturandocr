@@ -1,0 +1,92 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  <div class="insurance-image">
+    {{ product.field_product_image }}
+  </div>
+  <div class="container main-container">
+    <div class="insurance-header">
+      <div class="row">
+        <div class="col-12 col-sm-9 col-md-9 left-col">
+          <header>
+            {#<span><a href="{{ back_link }}" data-toggle="tooltip" data-placement="top" title="Volver"></a></span> #}
+            <div class="category">{% trans %} Seguros {% endtrans %} {{ product.field_categoria }}</div>
+            <h1>
+              {{ product.title.0 }}
+            </h1>
+          </header>
+        </div>
+        <div class="col-12 col-md-3 right-col">
+          <div class="insurance-links center-block">
+
+            <div class="share-insurance">
+              {{ share_everywhere }}
+            </div>
+            {# <div class="insurance-download">
+              {{print_pdf}} #}
+            <div class="insurance-favorites">
+              {{ product.flag_favorites }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              {% trans %} Información General {% endtrans %}
+            </h3>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <div class="insurance-description description-block">
+                {{ product.body }}
+              </div>
+              <div class="insurance-restriction description-block">
+                {{product.field_insurance_restrictions}}
+              </div>
+              <div class="insurance-general-conditions description-block">
+                {{ product.field_general_conditions }}
+              </div>
+              <div class="insurance-validity description-block">
+                {{ product.field_validity }}
+              </div>
+            </div>
+          </div>
+          <div class="cotizar-boton">
+            <a href="/webform/cotizaciones">
+              Cotizar
+            </a>
+          </div>
+          <div class="insurance-buy">
+            {{ product.variations }}
+          </div>
+        </div>
+      </div>
+      {# <div class = "product_suggestions">
+          <h2>Sugerencias</h2>
+       {{ product_suggestion }}
+
+      </div>#}
+    </div>
+  </div>
+</article>

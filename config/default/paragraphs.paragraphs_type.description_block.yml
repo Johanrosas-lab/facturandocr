@@ -1,0 +1,11 @@
+uuid: eea7a058-aeee-4df8-bb42-e9a95a6e9d17
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'file:file:0893a458-0e9b-4dee-a694-18329d90e658'
+id: description_block
+label: 'Description Block'
+icon_uuid: 0893a458-0e9b-4dee-a694-18329d90e658
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: 3eefd871-f833-49b2-92b2-9b3024fa05e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ramo
+id: taxonomy_term.ramo
+target_entity_type_id: taxonomy_term
+target_bundle: ramo
+default_langcode: site_default
+language_alterable: false

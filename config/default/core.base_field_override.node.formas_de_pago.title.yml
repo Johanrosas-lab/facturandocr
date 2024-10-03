@@ -1,0 +1,18 @@
+uuid: 7a20f38e-9a9e-4a1f-a8ad-5b74cc487b70
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.formas_de_pago
+id: node.formas_de_pago.title
+field_name: title
+entity_type: node
+bundle: formas_de_pago
+label: 'Formas de pago'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

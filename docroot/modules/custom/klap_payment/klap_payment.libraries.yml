@@ -1,0 +1,18 @@
+klap_payment.commands:
+  version: 1
+  js:
+    js/klap_payment.js: {}
+  dependencies:
+     - core/drupal.ajax
+klap_payment.card:
+  version: 1
+  js:
+    js/klap_payment_card.js: {}
+  dependencies:
+     - core/drupal
+klap_payment.modal:
+  version: 1
+  js:
+    js/klap_payment_formalization.js: {}
+  dependencies:
+     - core/drupal

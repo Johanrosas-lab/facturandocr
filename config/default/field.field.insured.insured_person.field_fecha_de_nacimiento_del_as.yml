@@ -1,0 +1,21 @@
+uuid: d283d8a0-de55-45f1-8836-1265e5b6d432
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_fecha_de_nacimiento_del_as
+  module:
+    - datetime
+id: insured.insured_person.field_fecha_de_nacimiento_del_as
+field_name: field_fecha_de_nacimiento_del_as
+entity_type: insured
+bundle: insured_person
+label: 'F. Fecha de nacimiento del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,207 @@
+.layout-checkout-form{
+  margin-top: 50px;
+  h3.formalization-title{
+    padding: 0 30px;
+    font-size: 20px;
+    font-family: 'Roboto-Regular';
+    color: $color-secondary;
+    margin-bottom: 2px;
+  }
+  p.formalization-warning{
+    padding: 0 30px;
+    font-size: 12px;
+    font-family: 'Roboto-Regular';
+    color: $color-placeholder;
+    width: 350px;
+  }
+  .checkout-pane-formalization-product{
+    padding: 10px 0 20px;
+    margin: 0 30px 23px;
+    // border-bottom: 1px solid $color-border-gray;
+    .product-wrapper{
+      padding-bottom: 30px;
+      margin-top: 30px;
+      border-bottom: 1px solid $color-border-gray;
+      .product-form-title{
+        color: $color-black;
+        font-size: 15px;
+        font-family: 'Roboto-Regular';
+        margin-bottom: 15px;
+        text-transform: capitalize;
+      }
+      a.button{
+        background-color: $color-secondary;
+        color: $color-white;
+        border: none;
+        border-radius: 100px;
+        font-size: 12px;
+        padding: 6px 17px;
+        letter-spacing: 1px;
+        margin-right: 15px;
+        text-decoration: none;
+        &:hover{
+          background-color: $color-blue-hover;
+          box-shadow: 0px 2px 4px $color-background-overlay;
+        }
+      }
+      .field-contract{
+        margin-top: 17px;
+        a{
+          background-color: $color-white;
+          color: $color-secondary;
+          border: 1px solid $color-secondary;
+          border-radius: 100px;
+          font-size: 12px;
+          padding: 5px 28px;
+          letter-spacing: 1px;
+          margin-right: 15px;
+          text-decoration: none;
+          &:hover{
+            background-color: $color-secondary;
+            border: 1px solid $color-secondary;
+            color: $color-white;
+          }
+        }
+      }
+      fieldset.form-composite{
+        margin-top: 10px;
+        legend{
+          display: none;
+        }
+        .form-checkboxes{
+          .form-item{
+            width: fit-content;
+            label{
+              &:before{
+                content: "*";
+                position: absolute;
+                right: -7px;
+              }
+              input{
+                box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.5);
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+      svg.fa-times{
+        border: 1px solid $color-red-error;
+        background-color: $color-red-error;
+        width: 15px !important;
+        height: 15px;
+        border-radius: 50%;
+        path{
+          fill: $color-white;
+        }
+      }
+      svg.fa-check{
+        border: 1px solid $color-success;
+        background-color: $color-success;
+        width: 15px !important;
+        height: 15px;
+        border-radius: 50%;
+        path{
+          fill: $color-white;
+        }
+      }
+    }
+
+    /* Insurance form modal styles */
+    #drupal-modal{
+      z-index: 1001;
+      .modal-content{
+          padding: 20px 20px 5px;
+        .modal-header{
+          display: flex;
+          h5{
+            font-size: 20px;
+            color: $color-secondary;
+            display: flex;
+            align-items: center;
+          }
+          a{
+            margin-left: auto;
+            display: flex;
+            padding: 0;
+            font-size: 25px;
+            background-color: transparent;
+            color: $color-secondary;
+            cursor: pointer;
+          }
+        }
+        .modal-body{
+          .product-form-title{
+            margin-bottom: 10px;
+          }
+          button{
+            color: $color-white;
+            background-color: $color-secondary;
+            border-radius: 100px;
+            border: none;
+            padding: 6px 55px;
+            display: flex;
+            margin-left: auto;
+            margin-top: 40px;
+          }
+          .product-form-icon{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  /* loading-spinner */
+  .ajax-throbber{
+    display: none;
+    /* ============== */
+  }
+}
+/* form modal styles */
+#drupal-modal{
+  z-index: 1001;
+  .modal-content{
+    max-height: initial !important;
+    padding: 0;
+    border: none;
+    .modal-header{
+      background-color: $color-secondary;
+      button.close{
+        color: $color-white;
+        opacity: unset;
+      }
+      h4{
+        color: $color-white;
+        font-family: 'Varela-Round';
+      }
+    }
+    .modal-body{
+      legend{
+        border: none;
+        margin-bottom: 0;
+        span{
+          font-size: 15px;
+        }
+      }
+    }
+    .modal-footer{
+      border: none;
+      .modal-buttons{
+        button{
+          background-color: $color-secondary;
+          color: $color-white;
+          border-radius: 100px;
+          border: none;
+          padding: 6px 30px;
+          &:hover{
+            background-color: $color-blue-hover;
+            box-shadow: 0px 2px 4px $color-background-overlay;
+          }
+        }
+      }
+    }
+  }
+}
+.modal-backdrop{
+  z-index: 1000;
+}

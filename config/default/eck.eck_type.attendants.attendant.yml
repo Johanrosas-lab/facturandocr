@@ -1,0 +1,9 @@
+uuid: f0edcca9-99f3-4d16-ba46-9fb406334790
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.attendants
+name: Tomador
+type: attendant
+description: ''

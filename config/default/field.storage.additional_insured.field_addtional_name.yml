@@ -1,0 +1,21 @@
+uuid: 6f9306d8-242d-49e9-83d2-c55a1f9eef91
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: additional_insured.field_addtional_name
+field_name: field_addtional_name
+entity_type: additional_insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

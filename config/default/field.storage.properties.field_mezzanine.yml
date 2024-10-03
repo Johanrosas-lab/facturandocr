@@ -1,0 +1,30 @@
+uuid: 09747cbc-8e2c-4256-bed7-d0deaac522fb
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_mezzanine
+field_name: field_mezzanine
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Concreto Colado'
+    -
+      value: '1'
+      label: Madera
+    -
+      value: '2'
+      label: Metal
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: 01d49521-daa3-40fa-8aa5-f211e5e49760
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_ceiling
+field_name: field_ceiling
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Madera
+    -
+      value: '1'
+      label: Gypsum
+    -
+      value: '2'
+      label: Fibrocemento
+    -
+      value: '3'
+      label: 'Laminas Suspendidas'
+    -
+      value: '4'
+      label: 'Losas de concreto'
+    -
+      value: '5'
+      label: 'No tiene'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 1fd0e6ee-9545-435f-9962-72ed7467765c
+langcode: es
+status: true
+dependencies: {  }
+id: seguro
+label: Seguro
+description: ''
+variationType: seguro
+injectVariationFields: true
+traits: {  }
+locked: false

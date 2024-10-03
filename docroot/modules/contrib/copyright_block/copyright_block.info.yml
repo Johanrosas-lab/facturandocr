@@ -1,0 +1,12 @@
+name: Copyright Block
+description: 'Creates a dynamic customisable copyright message block.'
+type: module
+# core: 8.x
+dependencies:
+  - token
+
+# Information added by Drupal.org packaging script on 2017-12-21
+version: '8.x-1.0-rc2'
+core: '8.x'
+project: 'copyright_block'
+datestamp: 1513897390

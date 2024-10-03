@@ -1,0 +1,23 @@
+uuid: 1e7420a5-6573-4fba-961a-54264fc42e44
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_grille
+id: properties.property.field_grille
+field_name: field_grille
+entity_type: properties
+bundle: property
+label: 'ventanas: Rejas'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: si
+  off_label: 'no'
+field_type: boolean

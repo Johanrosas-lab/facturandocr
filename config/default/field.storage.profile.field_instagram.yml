@@ -1,0 +1,19 @@
+uuid: 85038c4d-ef7c-436e-9c56-0f303caa9ee6
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+    - social_media_links_field
+id: profile.field_instagram
+field_name: field_instagram
+entity_type: profile
+type: social_media_links_field
+settings: {  }
+module: social_media_links_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

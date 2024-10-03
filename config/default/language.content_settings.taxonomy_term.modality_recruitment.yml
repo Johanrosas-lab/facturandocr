@@ -1,0 +1,11 @@
+uuid: 96377112-4fb1-4fa0-a97a-477d19182ac0
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.modality_recruitment
+id: taxonomy_term.modality_recruitment
+target_entity_type_id: taxonomy_term
+target_bundle: modality_recruitment
+default_langcode: site_default
+language_alterable: false

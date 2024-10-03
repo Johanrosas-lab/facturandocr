@@ -1,0 +1,21 @@
+uuid: a1af5e6c-9986-4305-bff2-09a3e2af89da
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_canton_del_asegurado
+field_name: field_canton_del_asegurado
+entity_type: insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

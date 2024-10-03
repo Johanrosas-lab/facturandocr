@@ -1,0 +1,22 @@
+uuid: bd4aaca8-51b9-4436-8aee-846911834ce9
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - insurance_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: insurance_theme_messages
+theme: insurance_theme
+region: content
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  provider: system
+  label_display: '0'
+visibility: {  }

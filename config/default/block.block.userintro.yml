@@ -1,0 +1,39 @@
+uuid: 9121878b-1eb3-45c3-8ddb-dc84fef9af76
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:user_intro:098d855b-3464-4127-a1f0-b9d2ecd0d464'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - insurance_theme
+id: userintro
+theme: insurance_theme
+region: sidebar_first
+weight: -15
+provider: null
+plugin: 'block_content:098d855b-3464-4127-a1f0-b9d2ecd0d464'
+settings:
+  id: 'block_content:098d855b-3464-4127-a1f0-b9d2ecd0d464'
+  label: 'User Intro'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/register\r\n/user/password\r\n"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

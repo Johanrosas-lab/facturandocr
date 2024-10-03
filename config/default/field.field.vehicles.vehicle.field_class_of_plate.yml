@@ -1,0 +1,21 @@
+uuid: 4bcdb79c-f2a9-4dcd-97ac-a0abe9d0d11a
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_class_of_plate
+  module:
+    - options
+id: vehicles.vehicle.field_class_of_plate
+field_name: field_class_of_plate
+entity_type: vehicles
+bundle: vehicle
+label: 'Clase de Placa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

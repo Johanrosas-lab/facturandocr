@@ -1,0 +1,5 @@
+name: 'INS Payment'
+type: module
+description: 'This module connect with the payment system'
+core: 8.x
+package: 'OSC'

@@ -1,0 +1,7 @@
+uuid: 963bf42d-7f72-4261-8dd0-f4a7393fab23
+langcode: es
+status: true
+dependencies: {  }
+id: plans
+label: Coberturas
+elementType: commerce_product_rendered_attribute

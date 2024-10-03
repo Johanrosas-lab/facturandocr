@@ -1,0 +1,19 @@
+uuid: f155fb99-5b50-49c3-9c37-74535ccaab58
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_nationality_of_attendant
+id: attendants.attendant.field_nationality_of_attendant
+field_name: field_nationality_of_attendant
+entity_type: attendants
+bundle: attendant
+label: Nacionalidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

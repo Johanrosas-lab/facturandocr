@@ -1,0 +1,19 @@
+uuid: 3563cfb1-f007-4cf8-813b-d67992bed096
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_numero_documento_de_identi
+id: insured.insured_person.field_numero_documento_de_identi
+field_name: field_numero_documento_de_identi
+entity_type: insured
+bundle: insured_person
+label: 'D. Número documento de identidad del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

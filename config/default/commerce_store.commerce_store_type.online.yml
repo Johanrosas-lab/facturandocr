@@ -1,0 +1,9 @@
+uuid: 0ac29143-afcc-487a-975c-51e21b8e44ad
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eodEXESks2YET1YgUFiT8P4SyG5DijSP879pmL_cBEA
+id: online
+label: Online
+description: null

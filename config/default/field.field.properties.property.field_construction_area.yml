@@ -1,0 +1,23 @@
+uuid: 9224fe36-2a6d-46a0-a216-2fd766c5df05
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_construction_area
+id: properties.property.field_construction_area
+field_name: field_construction_area
+entity_type: properties
+bundle: property
+label: 'Area de construccion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

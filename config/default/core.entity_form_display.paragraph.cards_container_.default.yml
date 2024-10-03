@@ -1,0 +1,38 @@
+uuid: f3f85d95-3ae1-4a97-9f53-07bdcb9a39d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards_container_.field_cards
+    - field.field.paragraph.cards_container_.field_cards_cards
+    - paragraphs.paragraphs_type.cards_container_
+  module:
+    - paragraphs
+id: paragraph.cards_container_.default
+targetEntityType: paragraph
+bundle: cards_container_
+mode: default
+content:
+  field_cards:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cards_cards:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

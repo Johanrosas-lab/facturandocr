@@ -1,0 +1,19 @@
+uuid: 1c81cc23-2d5e-43fc-aae9-742b6a4b7852
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_last_name
+    - profile.type.client
+id: profile.client.field_client_last_name
+field_name: field_client_last_name
+entity_type: profile
+bundle: client
+label: Apellidos
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

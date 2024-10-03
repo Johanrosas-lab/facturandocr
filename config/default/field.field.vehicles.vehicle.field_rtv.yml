@@ -1,0 +1,23 @@
+uuid: 9f2effa5-2df5-4a09-abfc-0b7e7b93221f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_rtv
+id: vehicles.vehicle.field_rtv
+field_name: field_rtv
+entity_type: vehicles
+bundle: vehicle
+label: 'Al dia con RTV'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

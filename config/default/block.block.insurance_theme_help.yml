@@ -1,0 +1,22 @@
+uuid: 6d21688b-aa3b-4b28-9a70-7649cc65691a
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - insurance_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: insurance_theme_help
+theme: insurance_theme
+region: content
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  provider: help
+  label_display: '0'
+visibility: {  }

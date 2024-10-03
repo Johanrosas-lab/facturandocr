@@ -1,0 +1,9 @@
+uuid: 696858e9-4f2c-4d2d-9c55-746f50d9450e
+langcode: es
+status: true
+dependencies: {  }
+id: download_app_block
+label: 'Download App Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,17 @@
+services:
+  logger.channel.ins_consume:
+    parent: logger.channel_base
+    arguments: ['ins_consume']
+  ins_consume.consume_api:
+    class: Drupal\ins_consume\ApiConsume
+    arguments: []
+  ins_consume.order_complete:
+    class: Drupal\ins_consume\EventSubscriber\OrderCompleteSubscriber
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: event_subscriber }
+  ins_consume.cart_events:
+    class: Drupal\ins_consume\EventSubscriber\CartEventSubscriber
+    arguments: ['@messenger', '@commerce_cart.cart_manager']
+    tags:
+      - { name: event_subscriber }

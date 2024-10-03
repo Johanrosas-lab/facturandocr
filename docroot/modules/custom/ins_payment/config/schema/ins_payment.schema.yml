@@ -1,0 +1,15 @@
+commerce_payment.commerce_payment_gateway.plugin.ins_payment_onsite:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    client_id:
+      type: string
+      label: 'Client id'
+    client_secret:
+      type: string
+      label: 'Client secret'
+    format_xml:
+      type: string
+      label: 'XML base 64 Format'
+    format_pem:
+      type: string
+      label: 'PEM File'

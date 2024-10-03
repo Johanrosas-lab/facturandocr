@@ -1,0 +1,122 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+
+    <section class="profile-section eow">
+      <div class="panel panel-default economic-info">
+        <div class="panel-heading">
+          <div class="profile-data-name panel-title">
+            <h2 class=""> {{ profile.name }} </h2>
+          </div>
+          <div class="edit-link pull-right"> {{ edit_link }}</div>
+        </div>
+
+        <div class="panel-body">
+
+          <div class="profile-data pull-left">
+
+            {% if profile.user_facebook %}
+              <div class="user-facebook">
+                <a href= "https://{{profile.user_facebook}}"><i class = "fab fa-facebook-square"></i></a>
+              </div>
+            {% endif %}
+            {% if profile.user_twitter %}
+              <div class="user-twitter">
+                <a href= "https://{{profile.user_twitter}}"><i class="fab fa-twitter-square"></i></a>
+              </div>
+            {% endif %}
+            {% if profile.user_instagram %}
+              <div class="user-instagram">
+                <a href= "https://{{profile.user_instagram}}"><i class="fab fa-instagram"></i></a>
+              </div>
+            {% endif %}
+            <div class="profile-data-contact">
+              <div class="profile-data-contact-email pull-left"><i class="far fa-envelope"></i> {{ profile.mail }}</div>
+              <span class="separator">|</span>
+              <div class="profile-data-contact-phone pull-left"><i class="fas fa-phone"></i> {{ profile.phone }}</div>
+            </div>
+            <div class="profile-data-address">
+              {{ profile.address_one }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="row profile-grid">
+      <div class="col-sm-12 col-md-8">
+        <div class="panel panel-default economic-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">{% trans %} Información socioeconómica {% endtrans %}</h3>
+            {{ edit_link }}
+          </div>
+          <div class="panel-body">
+            <section class="row">
+              <div class="col-sm-6">
+                <div class="economic-data-academic-level">
+                  {{ profile.academic_level }}
+                </div>
+                <div class="economic-data-profession">
+                  {{ profile.profession }}
+                </div>
+                <div class="economic-data-miembros-familia">
+                  {{ profile.family_members_count }}
+                </div>
+                <div class="economic-data-academic-level">
+                  {{ profile.professionals_count }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="economic-data-academic-level">
+                  {{ profile.children_count }}
+                </div>
+                <div class="economic-data-academic-level">
+                  {{ profile.travel_option }}
+                </div>
+                <div class="economic-data-academic-level">
+                  {{ profile.health_care }}
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="panel panel-default address-book">
+          <div class="panel-heading">
+            <h3 class="panel-title">{% trans %} Direcciones {% endtrans %}</h3>
+            {{ edit_address }}
+          </div>
+          <div class="panel-body">
+
+            {{ default_address }}
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% endif %}
+</article>

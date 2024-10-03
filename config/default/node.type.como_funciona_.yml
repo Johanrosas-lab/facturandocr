@@ -1,0 +1,17 @@
+uuid: 329b4067-9077-4782-a1df-fae9d233655e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cómo funciona?'
+type: como_funciona_
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

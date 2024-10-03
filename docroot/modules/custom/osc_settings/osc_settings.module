@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ * Contains osc_settings.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\paragraphs\Entity\Paragraph as Paragraph;
+use Drupal\osc_settings\Controller\UserController;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function osc_settings_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the osc_settings module.
+    case 'help.page.osc_settings':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Osc Settings module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function osc_settings_theme() {
+  return [
+    'osc_settings' => [
+      'render element' => 'children',
+    ],
+    'user_register_form' => [
+      'render element' => 'form',
+      'path' => drupal_get_path('theme', 'insurance_theme') .'/templates/forms',
+    ],
+    'add_to_cart_form' => [
+      'render element' => 'form',
+      'path' => drupal_get_path('theme', 'insurance_theme') .'/templates/forms',
+    ],
+
+    'osc_settings_orders_report' => [
+          'render element' => 'build',
+          'template' => 'osc_settings_orders_report',
+          'variables' => [
+              'table' => null,
+              'years' => null,
+              'date' => null,
+              'form' => null,
+          ],
+      ],
+    'osc_settings_links_block' => [
+      'variables' => [ 'error' => NULL, 'register' => NULL, 'login' => NULL],
+      'template' => 'block--osc-settings-links-block'
+    ],
+
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function osc_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_register_form' :
+      $form['#theme'] = 'user_register_form';
+      break;
+    case 'entity_legal_document_acceptance_form' :
+      $form['submit']['#value'] = t('Siguiente');
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ *
+ * @param $element
+ * @param $form_state
+ * @param $context
+ */
+function osc_settings_field_widget_entity_reference_paragraphs_form_alter(&$element, &$form_state, $context) {
+  // If the field is empty.
+  if (empty($element['subform']['field_characteristic']['widget'][0]['value']['#default_value'])) {
+    if ($form_state->getStorage()['inline_entity_form']) {
+      foreach ($form_state->getStorage()['inline_entity_form'] as $entity_data) {
+        // Get entity from the variation.
+        if ($entity = $entity_data['entities'][0]['entity']) {
+          // Get the paragraphs form the variation.
+          if ($paragraphs = $entity->field_characteristic->getValue()) {
+            // Get  characteristic value.
+            foreach ($paragraphs as $delta => $paragraph) {
+              // if paragraph not created yet. get entity formed.
+              if (isset($paragraph['entity'])) {
+                $target_id = $paragraph['entity']->field_characteristic->getValue()[0];
+                // Set by delta the value on each paragraph.
+                if ($context['delta'] == $delta) {
+                  $element['subform']['field_characteristic']['widget'][0]['value']['#default_value'] = $target_id['value'];
+                }
+                // if paragraph is created get the entity by id.
+              } elseif (isset($paragraph['target_id'])) {
+                // Get the current paragraph created.
+                $paragraph = Paragraph::load($paragraph['target_id']);
+                if ($context['delta'] == $delta) {
+                  $element['subform']['field_characteristic']['widget'][0]['value']['#default_value'] =
+                    $paragraph->field_characteristic->value;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_user_insert().
+ * @param $account.
+ */
+function osc_settings_user_insert($account) {
+  $rol = $account->getRoles();
+  if (!isset($rol[1])) {
+      // Generate Pin unique for users.
+      $pin =  $account->id() . 'OS'. rand(0, 99);
+      /** @var \Drupal\user\Entity\User $account */
+      $account->set('field_user_pin', $pin);
+      $account->set('roles', ['customer']);
+      $account->save();
+  }
+}
+
+/**
+ * Implement hook_menu_local_tasks_alter().
+ * @param $data
+ * @param $route_name
+ */
+function osc_settings_menu_local_tasks_alter(&$data, $route_name) {
+
+  if ('user.login' == $route_name || 'user.register' == $route_name || 'user.pass' == $route_name ) {
+    $data['tabs'][0]['user.register']['#link']['title'] = 'Registrarse';
+    unset( $data['tabs'][0]['user.pass']);
+    unset($data['tabs'][0]['views_view:view.commerce_user_orders.order_page']);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function osc_settings_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['user_picture']['#access'] = FALSE;
+  $form['account']['status']['#access'] = FALSE;
+  $form['field_user_pin']['#access'] = FALSE;
+}

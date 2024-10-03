@@ -1,0 +1,49 @@
+uuid: 3404fddf-63da-4a23-97e8-df89e7c76c09
+langcode: es
+status: true
+dependencies: {  }
+id: customer
+label: Customer
+weight: 4
+is_admin: null
+permissions:
+  - 'access commerce_product overview'
+  - 'access user profiles'
+  - 'administer users'
+  - 'cancel account'
+  - 'change own username'
+  - 'create attendants entities'
+  - 'create beneficiaries entities'
+  - 'create vehicles entities'
+  - 'delete own attendants entities'
+  - 'delete own beneficiaries entities'
+  - 'delete own properties entities'
+  - 'delete own vehicles entities'
+  - 'edit own attendants entities'
+  - 'edit own beneficiaries entities'
+  - 'edit own properties entities'
+  - 'edit own vehicles entities'
+  - 'flag favorites'
+  - 'flag informed_consent_acceptance'
+  - 'legal re-accept consentimiento_informado'
+  - 'legal view consentimiento_informado'
+  - 'manage own commerce_payment_method'
+  - 'restful get beneficiaries'
+  - 'restful get entity_legal'
+  - 'restful get entity_legal_check'
+  - 'restful get favorites'
+  - 'restful get informed_consent'
+  - 'restful get klap_payment'
+  - 'restful get profiles'
+  - 'restful patch profiles'
+  - 'restful post beneficiaries'
+  - 'restful post signout'
+  - 'restful post user_cancel'
+  - 'unflag favorites'
+  - 'unflag informed_consent_acceptance'
+  - 'update own customer profile'
+  - 'view own attendants entities'
+  - 'view own beneficiaries entities'
+  - 'view own client profile'
+  - 'view own properties entities'
+  - 'view own vehicles entities'

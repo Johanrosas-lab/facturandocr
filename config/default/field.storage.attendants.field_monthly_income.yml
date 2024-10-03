@@ -1,0 +1,20 @@
+uuid: c844d6da-0df1-4348-b9e0-81511ffa95e8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.field_monthly_income
+field_name: field_monthly_income
+entity_type: attendants
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

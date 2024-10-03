@@ -1,0 +1,19 @@
+uuid: 5346b96f-ac40-4e16-98c2-e04a2cf79e30
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_canton_del_asegurado
+id: insured.insured_person.field_canton_del_asegurado
+field_name: field_canton_del_asegurado
+entity_type: insured
+bundle: insured_person
+label: 'O. Cantón del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,58 @@
+<div class="data-information-section">
+  {% if (basic_information) %}
+      <div class="data-header-container">
+        <div class="data-header-row">
+          <label>{{'Numero de cotizacion:'|trans}}</label>
+          <span>{{basic_information.NumCotizacion}}</span>
+        </div>
+        <div class="data-header-row">
+          <label>{{'Moneda'|trans}}</label>
+          <span>{{basic_information.Moneda}}</span></div>
+        <div class="data-header-row">
+          <label>{{'Observaciones'|trans}}</label>
+          <span>{{basic_information.Observaciones}}</span>
+        </div>
+      </div>
+      {% for element in basic_information.cotizacion  %}
+          <div class="data-header-row">
+            <label>{{element['campo']}}</label>
+            <span>{{element['valor']}}</span>
+          </div>
+      {% endfor %}
+  {% endif%}
+  {% if (primas) %}
+      {% for element in primas  %}
+          <div class="data-header-row">
+            <div class="data-row-first">
+              <label>{{'Frecuencia de pago:'|trans}}</label>
+              <span>{{element.FrecuenciaPago}}</span>
+            </div>
+            <div class="data-row-second">
+              <label>{{'Prima:'|trans}}</label>
+              <span>{{element.PrimaPago}}</span>
+            </div>
+          </div>
+      {% endfor %}
+  {% endif %}
+  {% if (coberturas) %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{'Nombre:'|trans}}</th>
+            <th scope="col">{{'Cobertura:'|trans}}</th>
+            <th scope="col">{{'Prima:'|trans}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for element in coberturas  %}
+              <tr>
+                <td>{{ element['nombre']}}</td>
+                <td>{{ element['monto']}}</td>
+                <td>{{ element['prima']}}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  {% endif %}
+</div>
+<a href="/comprar-poliza" class="btn btn-default">Comprar</a>

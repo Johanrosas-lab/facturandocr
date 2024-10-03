@@ -1,0 +1,25 @@
+uuid: 54822e5b-367c-4ab7-97c3-f34340e868c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu
+  module:
+    - system
+  theme:
+    - insurance_theme
+id: footermenu
+theme: insurance_theme
+region: footer
+weight: -11
+provider: null
+plugin: 'system_menu_block:footer-menu'
+settings:
+  id: 'system_menu_block:footer-menu'
+  label: 'Footer Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 9
+  expand_all_items: false
+visibility: {  }

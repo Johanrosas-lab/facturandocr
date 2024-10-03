@@ -1,0 +1,26 @@
+uuid: 3319c56c-46dd-4745-8538-6ba131fce889
+langcode: es
+status: true
+dependencies:
+  module:
+    - social_auth
+    - system
+  theme:
+    - bartik
+id: socialauthlogin
+theme: bartik
+region: content
+weight: -3
+provider: null
+plugin: social_auth_login
+settings:
+  id: social_auth_login
+  label: 'Social Auth Login'
+  provider: social_auth
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

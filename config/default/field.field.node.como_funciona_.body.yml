@@ -1,0 +1,23 @@
+uuid: fcf1a977-e4f6-456b-ad0c-eb58bb6313e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.como_funciona_
+  module:
+    - text
+id: node.como_funciona_.body
+field_name: body
+entity_type: node
+bundle: como_funciona_
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: a9ae654a-b05e-4e4e-a991-af8520476f13
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.field_activity_economic
+field_name: field_activity_economic
+entity_type: attendants
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

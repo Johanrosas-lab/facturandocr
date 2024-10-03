@@ -1,0 +1,22 @@
+uuid: e63da764-2f95-46e1-8acb-5a65c870bce5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.formas_de_pago
+id: node.formas_de_pago.status
+field_name: status
+entity_type: node
+bundle: formas_de_pago
+label: Publicado
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

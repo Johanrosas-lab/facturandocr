@@ -1,0 +1,19 @@
+uuid: 4b7b475e-37d1-451a-8f8b-e18b95322b60
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_nomb
+id: insured.insured_person.field_nomb
+field_name: field_nomb
+entity_type: insured
+bundle: insured_person
+label: 'A. Nombre del asegurado'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

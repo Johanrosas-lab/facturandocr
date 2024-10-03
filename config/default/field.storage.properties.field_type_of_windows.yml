@@ -1,0 +1,30 @@
+uuid: fdc34b23-0438-4e73-9fa6-1b3d2fd001f4
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_type_of_windows
+field_name: field_type_of_windows
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Frances
+    -
+      value: '1'
+      label: Corriente
+    -
+      value: '2'
+      label: 'Con celosias'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

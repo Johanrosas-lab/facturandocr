@@ -1,0 +1,23 @@
+uuid: e7d457e0-5b36-4362-a048-e1b56527a6ff
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_id_identification_attendan
+id: attendants.attendant.field_id_identification_attendan
+field_name: field_id_identification_attendan
+entity_type: attendants
+bundle: attendant
+label: 'Numero de Cedula'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

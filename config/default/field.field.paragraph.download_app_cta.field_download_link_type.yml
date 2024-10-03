@@ -1,0 +1,21 @@
+uuid: 65c1fbdb-76ff-4f03-9eed-8ae26a6f4541
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_link_type
+    - paragraphs.paragraphs_type.download_app_cta
+  module:
+    - options
+id: paragraph.download_app_cta.field_download_link_type
+field_name: field_download_link_type
+entity_type: paragraph
+bundle: download_app_cta
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

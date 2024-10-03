@@ -1,0 +1,21 @@
+uuid: 06b2bb68-5d0f-4134-bf00-b4f8a778344b
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_state_of_conservation
+  module:
+    - options
+id: properties.property.field_state_of_conservation
+field_name: field_state_of_conservation
+entity_type: properties
+bundle: property
+label: 'Estado de conservacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

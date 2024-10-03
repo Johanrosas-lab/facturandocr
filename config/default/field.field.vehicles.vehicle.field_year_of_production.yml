@@ -1,0 +1,23 @@
+uuid: c7bdbb19-5098-4d1b-80ef-196ced463ec3
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_year_of_production
+id: vehicles.vehicle.field_year_of_production
+field_name: field_year_of_production
+entity_type: vehicles
+bundle: vehicle
+label: 'Año de Fabricacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

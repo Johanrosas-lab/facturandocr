@@ -1,0 +1,23 @@
+uuid: 4e3c343f-c8ad-4eb5-ab19-9130db200697
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - hal
+    - serialization
+    - simple_oauth
+id: entity.commerce_product
+plugin_id: 'entity:commerce_product'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - oauth2

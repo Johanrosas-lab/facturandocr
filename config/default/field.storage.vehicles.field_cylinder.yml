@@ -1,0 +1,20 @@
+uuid: 1afb5d8b-df9d-44d9-931b-bce6a1883a6e
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.field_cylinder
+field_name: field_cylinder
+entity_type: vehicles
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

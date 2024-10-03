@@ -1,0 +1,41 @@
+uuid: 0b3ed454-a0cc-42b2-a589-c22f888af7de
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_intro
+    - field.field.block_content.bloque_intro.body
+    - field.field.block_content.bloque_intro.field_intro_subtitle
+    - field.field.block_content.bloque_intro.field_intro_title
+  module:
+    - text
+id: block_content.bloque_intro.default
+targetEntityType: block_content
+bundle: bloque_intro
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_intro_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_intro_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

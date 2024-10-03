@@ -1,0 +1,172 @@
+.path-catalogo{
+
+  #edit-combine {
+    width: 70%;
+    margin: auto;
+    @media (min-width:$screen-tablet) {
+      width: 100%;
+    }
+  }
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    .top-header{
+      .row{
+        .col-sm-12{
+          padding: 0 0px ;
+          z-index: 1000 ;
+          position: inherit;
+          .region-header{
+            @media (max-width:$screen-tablet){
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .basic-page{
+    margin-top: 0px;
+
+    .row{
+      padding-left: 0px;
+      padding-right: 0px;
+      #canvasoff{
+        display: none;
+      }
+      .col-sm-12{
+        padding-left: 0px;
+        padding-right: 0px;
+        .region-content{
+          .views-element-container{
+            .view{
+              .view-filters{
+                width: 100vw;
+                background-image: url(https://www.creditassegurances.ad/wp-content/uploads/2019/08/PIAM_BANNER_HOME_ES_sin-texto.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 250px;
+                line-height: 125px;
+                object-fit: cover;
+                display: flex;
+              }
+            }
+          }
+          #block-views-block-related-products-block-1{
+            background-image: none;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    border-top:transparent;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .region-footer{
+
+    }
+  }
+
+  .form-group{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    label {
+      font-size: 50px;
+      color:white;
+      height:120px;
+      width:400px;
+      @media (max-width: $screen-tablet){
+        height: 100px;
+      }
+    }
+    .view-content {
+      padding: 0 110px;
+      display: table;
+      width: 100vw;
+      @media (max-width: $screen-tablet){
+        padding: 0 10px;
+      }
+      .views-row{
+        display: table-row;
+        @media (max-width: $screen-tablet){
+          display: grid;
+          text-align: center;
+        }
+        .views-field{
+          display: table-cell;
+          padding: 10px 8px;
+          border-bottom: 1px solid $color-secondary;
+          @media (max-width: $screen-tablet-landscape){
+            border-bottom: transparent;
+          }
+          .img-responsive {
+            border:none ;
+            height: 150px ;
+            display: unset ;
+            max-width: 100% ;
+            @media (max-width: $screen-tablet-landscape){
+              border:none ;
+              height: 100px ;
+              display: unset ;
+              max-width: 70% ;
+            }
+          }
+          .field-content{
+            a {
+              color: $color-black ;
+              text-decoration: none;
+            }
+            #btnver{
+              padding: 10px 10px;
+              background-color: $color-secondary;
+              border-radius: 20px;
+              color: white ;
+
+              &:hover {
+                background-color: $color-secondary-light;
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-actions{
+      padding-top: 5px;
+      @media (max-width: $screen-tablet-landscape){
+        padding-top: 0px;
+      }
+      #edit-submit-catalogo{
+        visibility: hidden;
+        display: grid;
+        top:10px;
+      }
+      #edit-submit-catalogo:after{
+        content:"Buscar";
+        visibility: visible;
+        padding: 10px 25px;
+        background-color: $color-secondary;
+        border-radius: 20px;
+        color: white;
+
+        &:hover {
+          background-color: $color-secondary-light;
+        }
+      }
+    }
+    .is-active{
+      a{
+        background-color: $color-secondary;
+      }
+    }
+  }
+  .pager-nav{
+    margin-bottom: 50px;
+  }
+}

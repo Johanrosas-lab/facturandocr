@@ -1,0 +1,23 @@
+uuid: 459a8219-ed32-4f2c-a2e1-90a80efa24f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - entity_legal.document.consentimiento_informado
+    - field.field.entity_legal_document_version.consentimiento_informado.entity_legal_document_text
+  module:
+    - text
+id: entity_legal_document_version.consentimiento_informado.default
+targetEntityType: entity_legal_document_version
+bundle: consentimiento_informado
+mode: default
+content:
+  entity_legal_document_text:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 727bbed8-2e9a-489a-abda-59c40dbe782c
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_thirdparty_funds
+id: attendants.attendant.field_thirdparty_funds
+field_name: field_thirdparty_funds
+entity_type: attendants
+bundle: attendant
+label: 'Maneja Fondos de Terceros(Socios-Inversionistas-otros)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'no'
+field_type: boolean

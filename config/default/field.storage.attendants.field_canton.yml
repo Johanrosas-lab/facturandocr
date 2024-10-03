@@ -1,0 +1,21 @@
+uuid: 2d9ed158-9949-4041-8c82-5f7c1d2da2c7
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: attendants.field_canton
+field_name: field_canton
+entity_type: attendants
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

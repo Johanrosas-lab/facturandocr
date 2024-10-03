@@ -1,0 +1,148 @@
+/* general search results styles */
+.path-search{
+  .form-group{
+    padding: 0 30px;
+    margin-top: 150px !important;
+    .view-content{
+      .table-responsive{
+        thead{
+          tr{
+            th{
+              font-size: 20px;
+              color: $color-secondary;
+              font-family: 'Roboto-Regular';
+              padding: 0 44px 35px 8px;
+              border-bottom: none;
+            }
+          }
+        }
+        tbody{
+          tr{
+            height: 70px !important;
+            background-color: $color-white !important;
+            &:hover{
+              transform: translateX(1px);
+              box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+              padding-left: 10px;
+            }
+            &:hover .views-field-title a{
+              color: $color-secondary;
+            }
+            .views-field-title{
+              padding-left: 20px;
+            }
+            td{
+              vertical-align: middle;
+              padding: 0;
+              font-family: 'Roboto-Light';
+              a{
+                font-size: 16px;
+                color: $color-black;
+                text-decoration: none;
+                font-family: 'Roboto-Light';
+                display: inline-block;
+                transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+                &:hover{
+                  text-decoration: underline;
+                  color: $color-secondary;
+                }
+                img{
+
+                }
+              }
+              .form-actions{
+                padding-left: 0;
+                button,
+                #edit-submit{
+                  @include btn-third($padding: 5px 20px);
+                  border-color: $color-third;
+                  box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.34);
+                  margin-bottom: 19px;
+                  &:hover{
+                  background-color: $color-third-hover;
+                  border-color: $color-third-hover;
+                  }
+                }
+              }
+            }
+            .views-field-title{
+              a{
+                text-transform: lowercase;
+                font-family: 'Roboto';
+                color: $color-secondary;
+                &::first-letter{
+                  text-transform: uppercase !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nav.pager-nav{
+      ul.pagination{
+        li{
+          a{
+            color: $color-placeholder;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            margin: 0 5px;
+            &:hover{
+              background-color: transparent;
+              color: $color-secondary;
+            }
+          }
+        }
+        li.active{
+          a{
+            color: $color-secondary;
+            background: none;
+            background-color: none;
+            border-bottom: 4px solid $color-secondary;
+          }
+        }
+        .pager__item--next{
+          a{
+            visibility: hidden;
+            &:before{
+              color: $color-placeholder;
+              content: "\f105";
+              font-family: 'FontAwesome';
+              font-size: 20px;
+              visibility: visible;
+              position: relative;
+              bottom: 4px;
+            }
+            &:hover:before{
+              color: $color-secondary;
+            }
+          }
+        }
+        .pager__item--previous{
+          a{
+            visibility: hidden;
+            &:before{
+              color: $color-placeholder;
+              content: "\f104";
+              font-family: 'FontAwesome';
+              font-size: 20px;
+              visibility: visible;
+              position: relative;
+              bottom: 4px;
+            }
+            &:hover:before{
+              color: $color-secondary;
+            }
+          }
+        }
+        .pager__item--last,
+        .pager__item--first{
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 0229cfd0-f7c0-40ed-a7b7-91015f63b89f
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_grille
+field_name: field_grille
+entity_type: properties
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

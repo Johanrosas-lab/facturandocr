@@ -1,0 +1,23 @@
+uuid: ddd0c228-ef09-443f-afab-54972a1a5999
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_walls
+id: properties.property.field_walls
+field_name: field_walls
+entity_type: properties
+bundle: property
+label: 'Tapias o Muros'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

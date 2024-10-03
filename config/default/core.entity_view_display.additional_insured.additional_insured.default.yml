@@ -1,0 +1,141 @@
+uuid: 5d839928-1bd2-4711-af7f-8aae38cc2eca
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.field.additional_insured.additional_insured.field_addtional_name
+    - field.field.additional_insured.additional_insured.field_born_date_additional
+    - field.field.additional_insured.additional_insured.field_cellphone_additional
+    - field.field.additional_insured.additional_insured.field_gender_additional
+    - field.field.additional_insured.additional_insured.field_id_additional
+    - field.field.additional_insured.additional_insured.field_id_type_additional
+    - field.field.additional_insured.additional_insured.field_last_name_additional
+    - field.field.additional_insured.additional_insured.field_mail_additional
+    - field.field.additional_insured.additional_insured.field_nationality_additional
+    - field.field.additional_insured.additional_insured.field_occupation_additional
+    - field.field.additional_insured.additional_insured.field_phone_additional
+  module:
+    - datetime
+    - options
+    - user
+id: additional_insured.additional_insured.default
+targetEntityType: additional_insured
+bundle: additional_insured
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_addtional_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_born_date_additional:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_cellphone_additional:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_gender_additional:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_id_additional:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_id_type_additional:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_last_name_additional:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mail_additional:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nationality_additional:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_occupation_additional:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_additional:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  changed: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 14316b17-b750-4422-ae03-bc56e5a746b1
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - hal
+    - serialization
+    - simple_oauth
+id: entity.commerce_order_item
+plugin_id: 'entity:commerce_order_item'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - oauth2

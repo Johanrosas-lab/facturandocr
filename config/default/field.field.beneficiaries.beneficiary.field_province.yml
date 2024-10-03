@@ -1,0 +1,19 @@
+uuid: 8d1e008e-06a8-433d-a752-9f76e3385ff8
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.beneficiaries.beneficiary
+    - field.storage.beneficiaries.field_province
+id: beneficiaries.beneficiary.field_province
+field_name: field_province
+entity_type: beneficiaries
+bundle: beneficiary
+label: Provincia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

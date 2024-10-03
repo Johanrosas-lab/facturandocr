@@ -1,0 +1,118 @@
+uuid: 6f8b9884-3a46-496d-ae17-56d80d7c5d8d
+langcode: es
+status: false
+dependencies:
+  module:
+    - social_media_links
+    - system
+  theme:
+    - insurance_theme
+id: socialmedialinks
+theme: insurance_theme
+region: footer
+weight: -13
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    rss:
+      value: ''
+      description: ''
+      weight: '-30'
+    email:
+      value: ''
+      description: ''
+      weight: '-29'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-28'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-27'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-26'
+    github:
+      value: ''
+      description: ''
+      weight: '-25'
+    facebook:
+      value: 'ASSACompaniadeSeguros?ref=hl'
+      description: 'Síguenos en Facebook'
+      weight: '-24'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-23'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-22'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-21'
+    contact:
+      value: ''
+      description: ''
+      weight: '-20'
+    behance:
+      value: ''
+      description: ''
+      weight: '-19'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-18'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '-17'
+    twitter:
+      value: ASSASeguros_
+      description: 'Síguenos en Twitter'
+      weight: '-16'
+    youtube:
+      value: ''
+      description: ''
+      weight: '-15'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-14'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-13'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-12'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: v
+    show_name: 0
+  link_attributes:
+    target: _blank
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

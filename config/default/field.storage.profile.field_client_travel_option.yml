@@ -1,0 +1,27 @@
+uuid: f7174bfb-fd1e-4649-9cbc-f5093ded6a4c
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_client_travel_option
+field_name: field_client_travel_option
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: business
+      label: Negocio
+    -
+      value: pleasure
+      label: Placer
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

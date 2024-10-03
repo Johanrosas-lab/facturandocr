@@ -1,0 +1,9 @@
+uuid: dee98157-5fa2-4f36-9d25-b8ae1e9ba3f6
+langcode: es
+status: true
+dependencies: {  }
+id: products_by_category_block
+label: 'Products by Category Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

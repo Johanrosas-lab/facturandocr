@@ -1,0 +1,21 @@
+uuid: 6b4d274a-b52e-4729-a670-15e5138f1db4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_phone_number
+    - profile.type.client
+  module:
+    - telephone
+id: profile.client.field_client_phone_number
+field_name: field_client_phone_number
+entity_type: profile
+bundle: client
+label: 'Número de telefono'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

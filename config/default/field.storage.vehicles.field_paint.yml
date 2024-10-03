@@ -1,0 +1,27 @@
+uuid: ce11f9d6-5735-4085-9bb0-1b1b1eb7e2c6
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: vehicles.field_paint
+field_name: field_paint
+entity_type: vehicles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Normal
+      label: Normal
+    -
+      value: Metalica
+      label: Metalica
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

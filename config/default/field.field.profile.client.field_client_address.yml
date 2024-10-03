@@ -1,0 +1,39 @@
+uuid: 6ee2667d-47e9-4d94-953a-a1d14ec799e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_address
+    - profile.type.client
+  module:
+    - address
+id: profile.client.field_client_address
+field_name: field_client_address
+entity_type: profile
+bundle: client
+label: Dirección
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

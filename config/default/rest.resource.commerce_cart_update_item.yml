@@ -1,0 +1,26 @@
+uuid: ee7e7eb6-edc9-4587-b607-cad7573c14e1
+langcode: es
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - commerce_cart_api
+    - hal
+    - serialization
+    - simple_oauth
+    - user
+_core:
+  default_config_hash: WqYdG4xXtHm4Ok5hm8eKZIdWyoZ2icbbjm88ZEWLQXs
+id: commerce_cart_update_item
+plugin_id: commerce_cart_update_item
+granularity: resource
+configuration:
+  methods:
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - basic_auth
+    - oauth2
+    - cookie

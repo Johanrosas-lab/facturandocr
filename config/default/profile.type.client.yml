@@ -1,0 +1,16 @@
+uuid: a83e106f-e516-4b0c-9246-349cdf925740
+langcode: es
+status: true
+dependencies: {  }
+id: client
+label: Client
+registration: false
+multiple: false
+roles:
+  authenticated: '0'
+  administrator: '0'
+  service_provider: '0'
+  customer: '0'
+weight: 0
+use_revisions: false
+description: ''

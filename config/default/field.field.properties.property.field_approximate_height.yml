@@ -1,0 +1,23 @@
+uuid: b5a41fda-d8b4-453c-8c95-9628032721a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_approximate_height
+id: properties.property.field_approximate_height
+field_name: field_approximate_height
+entity_type: properties
+bundle: property
+label: 'Altura Aproximada'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

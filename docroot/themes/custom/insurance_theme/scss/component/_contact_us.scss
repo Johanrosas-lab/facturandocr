@@ -1,0 +1,110 @@
+.path-contact{
+    .dialog-off-canvas-main-canvas{
+        .container-fluid{
+            padding-left: 0px;
+            padding-right: 0px;
+            .top-header{
+                .row{
+                    .col-sm-12{
+                        padding: 0 0px ;
+                        z-index: 1000 ;
+                        position: inherit;
+                        .region-header{
+                            @media (max-width:$screen-tablet){
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #row-offcanvas{
+            #main{
+                .home-page{
+                    margin-top: 300px;
+                    @media (max-width: $screen-desktop){
+                        // margin-bottom: 1000px;
+                    }
+                    @media (max-width:$screen-phone){
+                        margin-top: 460px;
+                    }
+                    .page-header{
+                        display: none ;
+                    }
+                    .row{
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        #canvasoff{
+                            display: none;
+                        }
+                        .col-sm-12{
+                            padding-left: 0px;
+                            padding-right: 0px;
+                            .region-content{
+                                #contact-message-feedback-form:before{
+                                    width: 100%;
+                                    background-image: url(/themes/custom/insurance_theme/images/bkg-img.png);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                    height: 200px;
+                                    object-fit: cover;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    color: transparent;
+                                    content: 'AS YOU LIKE';
+                                }
+                                #contact-message-feedback-form{
+                                    text-align: center;
+                                    #edit-subject-wrapper{
+                                        padding-left: 80px;
+                                        padding-right: 80px;
+                                    }
+                                    #edit-message-wrapper{
+                                        padding-left: 80px;
+                                        padding-right: 80px;
+                                    }
+                                    #edit-actions{
+                                        padding: 0px 0px;
+                                        margin-bottom: 25px;
+                                        text-align: center;
+                                        #edit-submit{
+                                            @media (max-width:$screen-phone){
+                                                padding: 12px 0px;
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                #block-views-block-related-products-block-1{
+                                    background-image: none;
+                                }
+
+                                .page-header{
+                                    display: none ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer{
+                border-top:transparent;
+                margin-top: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                .region-footer{
+
+                }
+            }
+        }
+    }
+    .pager-nav{
+        margin-bottom: 50px;
+    }
+    .clearfix:before{
+        content: none;
+    }
+}

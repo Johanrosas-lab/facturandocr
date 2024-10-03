@@ -1,0 +1,177 @@
+uuid: 37e53f55-1621-4271-be6b-aa6db0a4d22b
+langcode: es
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: cotizaciones
+title: Cotizacion
+description: ''
+category: ''
+elements: "datos_del_asegurado:\n  '#type': label\n  '#title': 'Datos del asegurado'\ntipo_de_identificacion:\n  '#type': select\n  '#title': 'Tipo de identificación'\n  '#options':\n    0: 'CÉDULA FÍSICA NACIONAL'\n    1: 'CÉDULA DE RESIDENCIA'\n    6: 'DOCUMENTO ÚNICO'\n    10: 'RESIDENTE RÉGIMEN EXCEPCIONAL'\n  '#required': true\nidentificacion:\n  '#type': textfield\n  '#title': Identificación\n  '#maxlength': '17'\n  '#required': true\nnombre_del_asegurado:\n  '#type': textfield\n  '#title': 'Nombre del asegurado'\n  '#required': true\nfecha_de_nacimiento:\n  '#type': date\n  '#title': 'Fecha de Nacimiento'\n  '#datepicker': true\n  '#date_date_format': d/m/Y\n  '#required': true\ncorreo_electronico:\n  '#type': textfield\n  '#title': 'Correo Electrónico'\n  '#required': true\n_cuando_iniciara_su_viaje_:\n  '#type': date\n  '#title': '¿Cuándo iniciará su viaje?'\n  '#datepicker': true\n  '#date_date_format': d/m/Y\n  '#required': true\n_cuando_finalizara_su_viaje_:\n  '#type': date\n  '#title': '¿Cuándo finalizará su viaje?'\n  '#datepicker': true\n  '#date_date_format': d/m/Y\n  '#required': true\nsucursal_emision:\n  '#type': select\n  '#title': 'Sucursal emisión'\n  '#options':\n    21: 'CENTRO   SERV. AL INTERMEDIARI'\n    '02': 'SEDE ALAJUELA'\n    '03': 'SEDE CARTAGO'\n    '05': 'SEDE CIUDAD NEILLY'\n    '06': 'SEDE CIUDAD QUESADA'\n    22: 'SEDE CURRIDABAT'\n    16: 'SEDE GUADALUPE'\n    12: 'SEDE GUÁPILES'\n    '04': 'SEDE HEREDIA'\n    18: 'SEDE LA MERCED'\n    '07': 'SEDE LIBERIA'\n    '08': 'SEDE LIMÓN'\n    17: 'SEDE METROP. DESAMPARADO'\n    '09': 'SEDE METROPOLITANA OESTE'\n    20: 'SEDE MONTES DE OCA'\n    15: 'SEDE NICOYA'\n    10: 'SEDE PUNTARENAS'\n    11: 'SEDE SAN ISIDRO DE EL GR'\n    '01': 'SEDE SAN JOSÉ'\n    14: 'SEDE SAN RAMÓN'\n    19: 'SEDE TIBÁS'\n    13: 'SEDE TURRIALBA'\n    23: TELEINS\n  '#required': true\ndestino_de_su_viaje:\n  '#type': textfield\n  '#title': 'Destino de su viaje'\n  '#required': true\nedad:\n  '#type': textfield\n  '#title': Edad\n  '#required': true\ntipo_de_actividad:\n  '#type': select\n  '#title': 'Tipo de actividad'\n  '#options':\n    '0005': 'DE 1 A 5 DÍAS'\n    '0015': 'DE 11 A 15 DÍAS'\n    '0045': 'DE 121 A 150 DÍAS'\n    '0050': 'DE 151 A 180 DÍAS'\n    '0020': 'DE 16 A 30 DÍAS'\n    '0025': 'DE 31 A 45 DÍAS'\n    '0030': 'DE 46 A 60 DÍAS'\n    '0010': 'DE 6 A 10 DÍAS'\n    '0035': 'DE 61 A 90 DÍAS'\n    '0040': 'DE 91 A 120 DÍAS'\n    '0000': 'NO APLICA'\n  '#required': true\nopcion_de_sumas_aseguradas_menores:\n  '#type': select\n  '#title': 'Opción de Sumas Aseguradas menores'\n  '#options':\n    'NO': 'NO'\n    SI: SI\n  '#required': true\ntipo_de_riesgo:\n  '#type': select\n  '#title': 'Tipo de riesgo'\n  '#options':\n    '00': 'DE 16 DÍAS A 17 AÑOS'\n    '01': 'DE 18 AÑOS A 64 AÑOS'\n    '02': 'DE 65 AÑOS A 69 AÑOS'\n    '03': 'DE 70 AÑOS A 85 AÑOS'\n    '04': 'DE 86 AÑOS EN ADELANTE'\n    10: 'HASTA 10 DÍAS'\n    40: 'HASTA 120 DÍAS'\n    15: 'HASTA 15 DÍAS'\n    45: 'HASTA 150 DÍAS'\n    50: 'HASTA 180 DÍAS'\n    20: 'HASTA 30 DÍAS'\n    25: 'HASTA 45 DÍAS'\n    '05': 'HASTA 5 DÍAS'\n    30: 'HASTA 60 DÍAS'\n    35: 'HASTA 90 DÍAS'\n    '0000': 'NO APLICA'\n  '#required': true\ntipo_tarifa:\n  '#type': select\n  '#title': 'Tipo tarifa'\n  '#options':\n    '0000': 'NO APLICA'\n    '0004': 'OPC. 1 ASEG REDUCI'\n    '0020': 'OPC. 1 DE 18 A 64 AÑOS'\n    '0030': 'OPC. 1 DE 65 A 69 AÑOS'\n    '0040': 'OPC. 1 DE 70 A 84 AÑOS'\n    '0005': 'OPC. 2 ASEG REDUCI'\n    '0060': 'OPC. 2 DE 18 A 64 AÑOS'\n    '0070': 'OPC. 2 DE 65 A 69 AÑOS'\n    '0080': 'OPC. 2 DE 70 A 84 AÑOS'\n    '0006': 'OPC. 3 ASEG REDUCI'\n    '0100': 'OPC. 3 DE 18 A 64 AÑOS'\n    '0110': 'OPC. 3 DE 65 A 69 AÑOS'\n    '0120': 'OPC. 3 DE 70 A 84 AÑOS'\n    '0001': 'OPC.1 AL 100%'\n    '0010': 'OPC.1 DE 16 DÍAS A 17 AÑO'\n    '0002': 'OPC.2 AL 100%'\n    '0050': 'OPC.2 DE 16 DÍAS A 17 AÑO'\n    '0003': 'OPC.3 AL 100%'\n    '0090': 'OPC.3 DE 16 DÍAS A 17 AÑO'\n  '#required': true\nnumero_celular_o_telefono_fijo:\n  '#type': textfield\n  '#title': 'Número celular o teléfono fijo'\n  '#required': true\ndatos_del_beneficiario_1:\n  '#type': label\n  '#title': 'Datos del beneficiario 1'\ntipo_identificacion_beneficiario_1:\n  '#type': select\n  '#title': 'Tipo identificación Beneficiario 1'\n  '#options':\n    1: 'CÉDULA DE RESIDENCIA'\n    0: 'CÉDULA FÍSICA NACIONAL'\n    6: 'DOCUMENTO ÚNICO'\n    10: 'RESIDENTE RÉGIMEN EXCEPCIONAL'\n  '#required': true\nno_identificacion_beneficiario:\n  '#type': textfield\n  '#title': 'No. identificación Beneficiario'\n  '#required': true\nnombre_del_beneficiario:\n  '#type': textfield\n  '#title': 'Nombre del Beneficiario'\n  '#required': true\nparentesco:\n  '#type': select\n  '#title': Parentesco\n  '#options':\n    '010': ASEGURADO\n    '020': CONYUGE\n    '080': 'CONYUGE VC'\n    '060': HERMANOS\n    120: 'HERMANOS VC'\n    '030': HIJOS\n    '090': 'HIJOS VC'\n    '040': MADRE\n    100: 'MADRE VC'\n    '000': 'NO APLICA'\n    999: OTROS\n    140: 'OTROS VC'\n    '050': PADRE\n    110: 'PADRE VC'\n    '070': PATRONO\n    130: 'PATRONO VC'\n  '#required': true\nporcentaje:\n  '#type': textfield\n  '#title': Porcentaje\n  '#required': true\ndatosben2:\n  '#type': label\n  '#title': 'Datos del beneficiario 2'\ntipo_identificacion_beneficiario2:\n  '#type': select\n  '#title': 'Tipo identificación Beneficiario2'\n  '#options':\n    0: 'CÉDULA FÍSICA NACIONAL'\n    1: 'CÉDULA DE RESIDENCIA'\n    6: 'DOCUMENTO ÚNICO'\n    10: 'RESIDENTE RÉGIMEN EXCEPCIONAL'\nno_identificacion_beneficiario2:\n  '#type': textfield\n  '#title': 'No. identificación Beneficiario'\nnombre_del_beneficiario2:\n  '#type': textfield\n  '#title': 'Nombre del Beneficiario'\nparentesco2:\n  '#type': select\n  '#title': Parentesco\n  '#options':\n    '010': ASEGURADO\n    '020': CONYUGE\n    '080': 'CONYUGE VC'\n    '060': HERMANOS\n    120: 'HERMANOS VC'\n    '030': HIJOS\n    '090': 'HIJOS VC'\n    '040': MADRE\n    100: 'MADRE VC'\n    '000': 'NO APLICA'\n    999: OTROS\n    140: 'OTROS VC'\n    '050': PADRE\n    110: 'PADRE VC'\n    '070': PATRONO\n    130: 'PATRONO VC'\nporcentaje2:\n  '#type': textfield\n  '#title': Porcentaje\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Cotizar"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

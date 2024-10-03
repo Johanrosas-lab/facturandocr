@@ -1,0 +1,11 @@
+uuid: c6fd1619-158f-4854-9e24-32fd071bd964
+langcode: es
+status: true
+dependencies: {  }
+id: seguro
+label: Seguro
+orderItemType: default
+generateTitle: true
+traits:
+  - purchasable_entity_subscription
+locked: false

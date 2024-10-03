@@ -1,0 +1,55 @@
+uuid: 88e47bb5-3868-4a1d-bf2e-0eb40dd42660
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ramo.field_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.ramo
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.ramo.default
+targetEntityType: taxonomy_term
+bundle: ramo
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

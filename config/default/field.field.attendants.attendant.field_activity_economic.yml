@@ -1,0 +1,19 @@
+uuid: 5afd7307-0170-4a3a-a093-1df14704e838
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_activity_economic
+id: attendants.attendant.field_activity_economic
+field_name: field_activity_economic
+entity_type: attendants
+bundle: attendant
+label: 'Actividad Economica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

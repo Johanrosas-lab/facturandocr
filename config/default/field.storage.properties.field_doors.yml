@@ -1,0 +1,39 @@
+uuid: 71864de3-9435-4fbe-a082-3796dab73f88
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_doors
+field_name: field_doors
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Madera
+    -
+      value: '1'
+      label: Vidrio
+    -
+      value: '2'
+      label: Plásticas
+    -
+      value: '3'
+      label: 'Doble Hoja'
+    -
+      value: '4'
+      label: Corredizas
+    -
+      value: '5'
+      label: 'Rejas o ante porton'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

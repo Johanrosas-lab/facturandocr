@@ -1,0 +1,25 @@
+uuid: 085b37d6-edfd-4748-8852-664e9f649586
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - insurance_theme
+id: insurance_theme_titulodelapagina
+theme: insurance_theme
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/product/*\r\n/catalogo"
+    negate: true
+    context_mapping: {  }

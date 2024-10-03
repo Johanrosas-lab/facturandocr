@@ -1,0 +1,28 @@
+uuid: 80ca4548-becb-4952-8a2d-38d2bcaf1e83
+langcode: es
+status: true
+dependencies: {  }
+id: informed_consent_acceptance
+label: 'informed consent acceptance'
+bundles:
+  - informed_consent
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Acepto los términos y condiciones.'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unflag this item'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: reload
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

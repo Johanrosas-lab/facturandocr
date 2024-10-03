@@ -1,0 +1,21 @@
+uuid: 87c56404-91f8-421d-a946-c4c08e439063
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_external_doors
+  module:
+    - options
+id: properties.property.field_external_doors
+field_name: field_external_doors
+entity_type: properties
+bundle: property
+label: 'Puertas Externas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

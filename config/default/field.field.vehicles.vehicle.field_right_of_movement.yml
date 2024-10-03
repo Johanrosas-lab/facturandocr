@@ -1,0 +1,23 @@
+uuid: c0ffbe8a-72e4-41ba-a5e6-eed28fe8904f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_right_of_movement
+id: vehicles.vehicle.field_right_of_movement
+field_name: field_right_of_movement
+entity_type: vehicles
+bundle: vehicle
+label: 'Derecho de Circulacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

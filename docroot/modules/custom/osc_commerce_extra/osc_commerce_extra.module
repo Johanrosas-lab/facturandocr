@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Contains osc_commerce_extra.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function osc_commerce_extra_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the osc_commerce_extra module.
+    case 'help.page.osc_commerce_extra':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra custom features for commerce') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_commerce_checkout_pane_info_alter().
+ */
+function osc_commerce_extra_commerce_checkout_pane_info_alter(&$definitions) {
+  $definitions['order_summary']['label'] = t('Formalización');
+}
+
+/**
+ * Implements hook_theme().
+ */
+function osc_commerce_extra_theme() {
+  $theme['osc_commerce_extra_user_variation'] = [
+    'render element' => 'build',
+    'template' => 'osc_commerce_extra_user_variation',
+    'variables' => [
+      'field_insurance_restrictions' => null,
+      'field_general_conditions' => null,
+      'field_product_image' => null,
+      'price' => null,
+      'title_product' => null
+    ],
+  ];
+  return $theme;
+}

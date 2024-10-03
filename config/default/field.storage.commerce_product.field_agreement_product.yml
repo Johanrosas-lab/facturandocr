@@ -1,0 +1,23 @@
+uuid: 2fce59ef-8e1e-4c77-85a1-798b26a71d31
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+id: commerce_product.field_agreement_product
+field_name: field_agreement_product
+entity_type: commerce_product
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

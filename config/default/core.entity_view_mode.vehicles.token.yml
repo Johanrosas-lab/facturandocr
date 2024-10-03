@@ -1,0 +1,10 @@
+uuid: 72e68d36-abc6-4edc-bddf-31b9621b32dd
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: vehicles.token
+label: Token
+targetEntityType: vehicles
+cache: true

@@ -1,0 +1,21 @@
+uuid: d2f2538b-4fb7-4e2c-a857-25ce75e9ecf9
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.beneficiaries.beneficiary
+    - field.storage.beneficiaries.field_gender
+  module:
+    - options
+id: beneficiaries.beneficiary.field_gender
+field_name: field_gender
+entity_type: beneficiaries
+bundle: beneficiary
+label: Genero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

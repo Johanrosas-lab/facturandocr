@@ -1,0 +1,19 @@
+uuid: 726324a6-8147-4a14-8ce2-05458824ba91
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_folio_number
+id: properties.property.field_folio_number
+field_name: field_folio_number
+entity_type: properties
+bundle: property
+label: 'Numero de Folio Real'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

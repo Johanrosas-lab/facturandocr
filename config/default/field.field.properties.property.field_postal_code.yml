@@ -1,0 +1,19 @@
+uuid: 435942e4-3904-4c17-8c56-c1b6295eb97f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_postal_code
+id: properties.property.field_postal_code
+field_name: field_postal_code
+entity_type: properties
+bundle: property
+label: 'Codigo Postal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

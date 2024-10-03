@@ -1,0 +1,36 @@
+uuid: 65019d86-4f2c-45a2-bd46-e2f731573cea
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.como_funciona_.body
+    - node.type.como_funciona_
+  module:
+    - text
+    - user
+id: node.como_funciona_.teaser
+targetEntityType: node
+bundle: como_funciona_
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  share_everywhere:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

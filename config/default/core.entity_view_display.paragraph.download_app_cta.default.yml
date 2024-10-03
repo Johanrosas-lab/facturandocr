@@ -1,0 +1,36 @@
+uuid: 883ca2db-3406-4cc7-9f3c-be07f2f6b0af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.download_app_cta.field_download_link_link
+    - field.field.paragraph.download_app_cta.field_download_link_type
+    - paragraphs.paragraphs_type.download_app_cta
+  module:
+    - link
+    - options
+id: paragraph.download_app_cta.default
+targetEntityType: paragraph
+bundle: download_app_cta
+mode: default
+content:
+  field_download_link_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_download_link_type:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

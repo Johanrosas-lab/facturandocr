@@ -1,0 +1,21 @@
+uuid: 8bef16b7-f9b9-4b5c-a0aa-01579518b899
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_characteristic
+field_name: field_characteristic
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

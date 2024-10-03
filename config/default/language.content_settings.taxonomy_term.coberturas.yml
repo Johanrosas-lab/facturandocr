@@ -1,0 +1,11 @@
+uuid: 5c5ac87c-7169-4221-b899-cf0f2d7863e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.coberturas
+id: taxonomy_term.coberturas
+target_entity_type_id: taxonomy_term
+target_bundle: coberturas
+default_langcode: site_default
+language_alterable: false

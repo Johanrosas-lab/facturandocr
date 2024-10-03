@@ -1,0 +1,27 @@
+uuid: 6e528f2e-57f7-45c0-b5f1-958a118c3d03
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: attendants.field_gender_attendant
+field_name: field_gender_attendant
+entity_type: attendants
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Masculino
+      label: Masculino
+    -
+      value: Femenino
+      label: Femenino
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

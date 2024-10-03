@@ -1,0 +1,186 @@
+.region-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  #block-contacto {
+    display: flex;
+    margin-right: 20px;
+    width: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: $screen-tablet) {
+      display: none;
+    }
+
+    .block-title {
+      display: none;
+    }
+
+    .field {
+
+      p {
+        color: $color-placeholder;
+        font-size: 1em;
+        margin: 0 0 10px;
+      }
+
+      .contact-info {
+        padding-right: 30px;
+        font-family: sans-serif;
+        flex-direction: column;
+        margin-top: 10px !important;
+        display:inline;
+        justify-content: space-between;
+
+        @media (max-width: 315px){
+          flex-wrap: wrap;
+        }
+
+        p {
+          margin-left: 0 !important;
+          margin-bottom: 10px !important;
+          color:$color-black !important;
+        }
+
+        p.email {
+          background-repeat: no-repeat;
+          background-image: url(/themes/custom/segurosins_theme/images/at_icon.png);
+          padding: 5px;
+        }
+
+        p.phone {
+          background-repeat: no-repeat;
+          background-image: url(/themes/custom/segurosins_theme/images/phone_icon.png);
+          padding: 5px;
+        }
+
+        p.email,p.phone {
+          display: inline;
+          padding-left: 25px;
+        }
+      }
+
+    }
+  }
+  .pull-left {
+    padding-left: 30px;
+  }
+}
+
+#block-initialmenu {
+  width: 100%;
+  height: 55px;
+  background-color: $color-blue;
+  display: flex;
+  justify-content: flex-start;
+  @media (max-width: 446px){
+    height: auto;
+  }
+  .menu--initial-menu{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 15px 0 20px;
+    @media (max-width: 446px){
+      flex-wrap: wrap;
+    }
+    li {
+      padding-right: 0px;
+      @media (min-width: $screen-phone){
+        padding-right: 30px;
+      }
+      a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover, &:focus {
+          background-color: transparent;
+          box-shadow: 0px -2px 0px 0px $color-white inset;
+        }
+
+
+        @media (min-width: $screen-phone) {
+          font-size: 16px;
+          padding: 17px 15px;
+        }
+
+      }
+      &:last-child{
+        @media (min-width: $screen-phone) {
+          position: absolute;
+          right: 0;
+          a {
+            padding: 10px 17px;
+            background-color: $color-secondary;
+            border-radius: 20px;
+            &:hover {
+              box-shadow: 0px 0px 0px 0px;
+              background-color: $color-secondary-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#block-insurance-theme-account-menu, #block-login-3 {
+  width: 100%;
+
+  @media (min-width: $screen-tablet) {
+    width: auto;
+  }
+
+  .menu--account {
+    width: 100%;
+
+    @media (min-width: $screen-tablet) {
+      width: auto;
+    }
+  }
+
+  .dropdown-menu li {
+    width: 100%;
+
+    @media (min-width: $screen-tablet) {
+      width: auto;
+    }
+  }
+}
+
+.menu--login {
+  li > a {
+    color: $color-black;
+
+    @media (min-width: $screen-phone) {
+      padding: 20px;
+    }
+  }
+
+  li > a:hover, .nav > li > a:focus {
+    color: $color-white;
+    text-decoration: none;
+    background-color: $color-secondary;
+  }
+}
+
+.menu-logo{
+  display: flex;
+  .logo-ins{
+    img{
+      height: 60px;
+      width: 107px;
+      object-fit: cover;
+      margin-left: 50px;
+      margin-top: 10px;
+
+      @media (min-width: $screen-phone) {
+        margin-top: initial;
+      }
+    }
+  }
+}

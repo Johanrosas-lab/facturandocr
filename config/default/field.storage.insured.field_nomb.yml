@@ -1,0 +1,21 @@
+uuid: 2dffaf4a-2bcb-4aa2-8034-85b38d7b13a6
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_nomb
+field_name: field_nomb
+entity_type: insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

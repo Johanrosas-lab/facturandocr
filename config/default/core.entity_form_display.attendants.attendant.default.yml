@@ -1,0 +1,219 @@
+uuid: ef5da142-0fe8-40df-a415-90046a795146
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.field.attendants.attendant.field_activity_economic
+    - field.field.attendants.attendant.field_canton
+    - field.field.attendants.attendant.field_cellphone_attendant
+    - field.field.attendants.attendant.field_civil_status_attendant
+    - field.field.attendants.attendant.field_date_of_birth_of_charge
+    - field.field.attendants.attendant.field_district
+    - field.field.attendants.attendant.field_email_attendant
+    - field.field.attendants.attendant.field_gender_attendant
+    - field.field.attendants.attendant.field_id_identification_attendan
+    - field.field.attendants.attendant.field_last_name_attendant
+    - field.field.attendants.attendant.field_monthly_income
+    - field.field.attendants.attendant.field_name_attendant
+    - field.field.attendants.attendant.field_name_of_patron
+    - field.field.attendants.attendant.field_nationality_of_attendant
+    - field.field.attendants.attendant.field_origin_of_means
+    - field.field.attendants.attendant.field_politically_exposed
+    - field.field.attendants.attendant.field_postal_code
+    - field.field.attendants.attendant.field_province
+    - field.field.attendants.attendant.field_thirdparty_funds
+    - field.field.attendants.attendant.field_type_of_identification
+    - field.field.attendants.attendant.field_type_of_worker
+  module:
+    - datetime
+id: attendants.attendant.default
+targetEntityType: attendants
+bundle: attendant
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_activity_economic:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_canton:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cellphone_attendant:
+    weight: 17
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_civil_status_attendant:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_date_of_birth_of_charge:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_district:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email_attendant:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_gender_attendant:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_id_identification_attendan:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_last_name_attendant:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_monthly_income:
+    weight: 20
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_name_attendant:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name_of_patron:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nationality_of_attendant:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_origin_of_means:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_politically_exposed:
+    weight: 22
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_postal_code:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_province:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_thirdparty_funds:
+    weight: 23
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_type_of_identification:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type_of_worker:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+hidden: {  }

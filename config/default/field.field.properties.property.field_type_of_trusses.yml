@@ -1,0 +1,21 @@
+uuid: 9219ae7e-ae47-462d-a823-6d68c198cacb
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_type_of_trusses
+  module:
+    - options
+id: properties.property.field_type_of_trusses
+field_name: field_type_of_trusses
+entity_type: properties
+bundle: property
+label: 'Techos:Tipo de Cerchas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

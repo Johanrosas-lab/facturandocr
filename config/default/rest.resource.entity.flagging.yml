@@ -1,0 +1,20 @@
+uuid: 161871bc-58ae-4ccd-9d00-a0a6c82093dd
+langcode: es
+status: true
+dependencies:
+  module:
+    - flag
+    - serialization
+    - simple_oauth
+id: entity.flagging
+plugin_id: 'entity:flagging'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - oauth2

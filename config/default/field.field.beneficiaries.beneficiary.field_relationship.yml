@@ -1,0 +1,19 @@
+uuid: f3e91b4d-9ef9-4b2a-88fa-1a85cfe5dd26
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.beneficiaries.beneficiary
+    - field.storage.beneficiaries.field_relationship
+id: beneficiaries.beneficiary.field_relationship
+field_name: field_relationship
+entity_type: beneficiaries
+bundle: beneficiary
+label: Parentesco
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

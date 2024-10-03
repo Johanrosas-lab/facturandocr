@@ -1,0 +1,27 @@
+uuid: 947ac16c-6694-44f5-aae8-b3ff2ce1d95c
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: additional_insured.field_gender_additional
+field_name: field_gender_additional
+entity_type: additional_insured
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: M
+      label: M
+    -
+      value: F
+      label: F
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

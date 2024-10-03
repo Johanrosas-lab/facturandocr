@@ -1,0 +1,21 @@
+uuid: 2d636d1b-de91-4a20-9648-14c4851ec916
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: insured.field_ocupacion_del_asegurado
+field_name: field_ocupacion_del_asegurado
+entity_type: insured
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

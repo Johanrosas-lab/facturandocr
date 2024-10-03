@@ -1,0 +1,18 @@
+uuid: 23dcc040-4fd6-43fa-9fac-ede36026d337
+langcode: es
+status: true
+dependencies:
+  module:
+    - serialization
+    - simple_oauth
+    - system
+id: entity.menu
+plugin_id: 'entity:menu'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

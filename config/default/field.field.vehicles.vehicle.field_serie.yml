@@ -1,0 +1,19 @@
+uuid: d08fbd1a-cefd-4968-a317-594427f9a90f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_serie
+id: vehicles.vehicle.field_serie
+field_name: field_serie
+entity_type: vehicles
+bundle: vehicle
+label: Serie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

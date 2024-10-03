@@ -1,0 +1,11 @@
+insurances:
+  version: 1
+  css:
+    theme:
+      assets/css/insurances_style.css: {}
+  js:
+    assets/js/insurances.js: {}
+  dependencies:
+      - core/jquery
+      - core/jquery.ui.sortable
+      - core/drupalSettings

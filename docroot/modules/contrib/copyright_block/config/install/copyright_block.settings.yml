@@ -1,0 +1,5 @@
+start_year: ''
+seperator: '-'
+text:
+  value: 'Copyright'
+  format: basic_html

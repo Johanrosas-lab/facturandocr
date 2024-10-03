@@ -1,0 +1,9 @@
+uuid: 8ea70558-4d37-448c-8104-82c790811493
+langcode: es
+status: true
+dependencies: {  }
+id: sliderparagraph
+label: SliderParagraph
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

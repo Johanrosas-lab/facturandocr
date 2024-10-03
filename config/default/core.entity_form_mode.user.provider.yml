@@ -1,0 +1,10 @@
+uuid: 1a73ba4f-ad1c-4957-8d7f-8edc9c206d75
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.provider
+label: Provider
+targetEntityType: user
+cache: true

@@ -1,0 +1,27 @@
+uuid: afe79c97-b0a8-4cd5-a511-ee8d53b5d2ce
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_download_link_type
+field_name: field_download_link_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: IOS
+      label: IOS
+    -
+      value: Android
+      label: Android
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

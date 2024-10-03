@@ -1,0 +1,32 @@
+uuid: 1e4b051d-8499-408d-8a49-e4a91b1227bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_section.field_cta_headline
+    - field.field.paragraph.cta_section.field_cta_paragraph
+    - paragraphs.paragraphs_type.cta_section
+id: paragraph.cta_section.default
+targetEntityType: paragraph
+bundle: cta_section
+mode: default
+content:
+  field_cta_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cta_paragraph:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

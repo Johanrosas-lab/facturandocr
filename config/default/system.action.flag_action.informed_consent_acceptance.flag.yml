@@ -1,0 +1,13 @@
+uuid: db596aa1-41f5-4110-8fab-380dea3b14a4
+langcode: es
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.informed_consent_acceptance.flag
+label: 'Flag this item'
+type: node
+plugin: 'flag_action:informed_consent_acceptance.flag'
+configuration:
+  flag_id: informed_consent_acceptance
+  flag_action: flag

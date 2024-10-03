@@ -1,0 +1,11 @@
+uuid: cee81b03-2381-4103-bdce-917f99e23fc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_intro
+id: block_content.bloque_intro
+target_entity_type_id: block_content
+target_bundle: bloque_intro
+default_langcode: site_default
+language_alterable: false

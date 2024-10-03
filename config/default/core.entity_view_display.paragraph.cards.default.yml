@@ -1,0 +1,57 @@
+uuid: e62bece3-329f-4dfe-912a-dc636cc168dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards.field_card_des
+    - field.field.paragraph.cards.field_card_la
+    - field.field.paragraph.cards.field_card_link
+    - field.field.paragraph.cards.field_insurance_image
+    - paragraphs.paragraphs_type.cards
+  module:
+    - image
+    - link
+id: paragraph.cards.default
+targetEntityType: paragraph
+bundle: cards
+mode: default
+content:
+  field_card_des:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_card_la:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_card_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_insurance_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,31 @@
+uuid: 3898ed77-97b6-4eed-a0d9-21e46d472669
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view_block.field_views_title
+    - field.field.paragraph.view_block.field_views_view
+    - paragraphs.paragraphs_type.view_block
+id: paragraph.view_block.default
+targetEntityType: paragraph
+bundle: view_block
+mode: default
+content:
+  field_views_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_views_view:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

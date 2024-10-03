@@ -1,0 +1,17 @@
+
+osc_commerce_extra.cart_messages:
+  path: '/admin/commerce/config/cart/messages'
+  defaults:
+    _form: '\Drupal\osc_commerce_extra\Form\CartMessages'
+    _title: 'Cart Messages'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+osc_commerce_extra.user_variation:
+  path: '/user/order/product/{variation_id}'
+  defaults:
+    _controller: '\Drupal\osc_commerce_extra\Controller\UserProductPagesController::loadVariation'
+  requirements:
+    _permission: 'access content'
+

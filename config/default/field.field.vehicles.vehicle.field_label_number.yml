@@ -1,0 +1,23 @@
+uuid: dc09a5e1-f827-411e-b14b-dbf314f56e99
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_label_number
+id: vehicles.vehicle.field_label_number
+field_name: field_label_number
+entity_type: vehicles
+bundle: vehicle
+label: 'Numero de Marchamo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

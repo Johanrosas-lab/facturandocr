@@ -1,0 +1,7 @@
+osc_settings.profile_picture:
+    path: '/profile_picture'
+    defaults:
+        _form: '\Drupal\osc_settings\Form\EditProfilePicture'
+        _title: 'Imagen de Perfil'
+    requirements:
+        _permission: 'access content'

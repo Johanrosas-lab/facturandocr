@@ -1,0 +1,92 @@
+.my-product-detail{
+  padding: 0 35px 70px 35px !important;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  .insurance-header{
+    display: flex;
+    @media (max-width: 995px){
+      display: block;
+    }
+    .insurance-info{
+      display: flex;
+      width: 100%;
+      @media (max-width: 660px){
+        display: block;
+        margin-top: 20px;
+        .insurance-details{
+          padding-left: 0px !important;
+          margin-top: 20px;
+        }
+      }
+      .insurance-image{
+        img{
+          width: 220px;
+        }
+      }
+      .insurance-details{
+        padding-left: 20px;
+        padding-right: 20px;
+        h3{
+          margin: 0;
+          max-width: 440px;
+          width: 100%;
+          font-size: 25px;
+          color: $color-secondary;
+          font-family: 'Roboto-Regular';
+        }
+        h5{
+          font-size: 25px;
+          color: $color-third;
+          font-family: 'Roboto-Regular';
+        }
+      }
+    }
+    .insurance-actions{
+      width: 50%;
+      text-align: right;
+      a{
+        padding: 8px 20px;
+        font-size: 16px;
+        background-color: $color-secondary;
+        color: $color-white;
+        border-radius: 100px;
+        text-decoration: none;
+        &:before{
+          content: "\f0d6";
+          font-family: 'FontAwesome';
+          width: 20px;
+          height: auto;
+          color: $color-white;
+          margin-right: 10px;
+        }
+        &:hover{
+          background-color: $color-blue-hover;
+          box-shadow: 0 2px 4px $color-background-overlay;
+        }
+      }
+      @media (max-width: 995px){
+        text-align: left;
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+  .insurance-general-info{
+    margin-top: 50px;
+    box-shadow: 0 2px 4px $color-background-overlay;
+    border-radius: 4px;
+    .general-info-header{
+      border-bottom: 1px solid $color-border-gray;
+      padding: 15px;
+      h3{
+        font-size: 20px;
+        font-family: 'Roboto-Light';
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+    .general-info-content{
+      padding: 15px;
+    }
+  }
+}

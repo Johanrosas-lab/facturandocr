@@ -1,0 +1,10 @@
+uuid: ffec1e82-7bae-49a6-b69c-becf67ca7ab2
+langcode: es
+status: true
+dependencies: {  }
+id: properties
+label: Properties
+created: true
+changed: true
+uid: true
+title: true

@@ -1,0 +1,31 @@
+uuid: 7f16072c-aa2c-437b-a5d4-41740b620087
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.products_by_category_block.field_products_category_category
+    - field.field.paragraph.products_by_category_block.field_products_category_title
+    - paragraphs.paragraphs_type.products_by_category_block
+id: paragraph.products_by_category_block.default
+targetEntityType: paragraph
+bundle: products_by_category_block
+mode: default
+content:
+  field_products_category_category:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_products_category_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

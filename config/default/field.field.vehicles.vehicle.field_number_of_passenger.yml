@@ -1,0 +1,23 @@
+uuid: 3bf3e707-592a-4cff-b1c7-690401480ef3
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_number_of_passenger
+id: vehicles.vehicle.field_number_of_passenger
+field_name: field_number_of_passenger
+entity_type: vehicles
+bundle: vehicle
+label: 'Numero de Pasajeros'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

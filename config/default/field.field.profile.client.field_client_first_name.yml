@@ -1,0 +1,19 @@
+uuid: ebd28fac-3e36-40c0-ab29-6ae156af0db3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_client_first_name
+    - profile.type.client
+id: profile.client.field_client_first_name
+field_name: field_client_first_name
+entity_type: profile
+bundle: client
+label: Nombre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

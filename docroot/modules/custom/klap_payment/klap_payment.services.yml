@@ -1,0 +1,7 @@
+services:
+  klap_payment.user:
+    class: Drupal\klap_payment\Services\KlapUserManager
+    arguments: ['@current_user', '@config.factory', '@entity_type.manager']
+  klap_payment.card:
+    class: Drupal\klap_payment\Services\KlapCardManager
+    arguments: ['@current_user', '@config.factory', '@entity_type.manager']

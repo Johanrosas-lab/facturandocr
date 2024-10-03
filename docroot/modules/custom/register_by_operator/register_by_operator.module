@@ -1,0 +1,41 @@
+<?php
+  use \Drupal\Core\Form\FormStateInterface;
+  /**
+   * Implements hook_theme().
+   */
+  function register_by_operator_theme() {
+    return [
+      'osc_consumer_login' => [
+        'variables' => [ 'login_form' => NULL, 'error' => NULL,
+          'user_name' => null],
+        'template' => 'page--osc-consumer-login-form'
+      ]
+    ];
+  }
+
+  /**
+   * Implements hook_user_login().
+   */
+  function register_by_operator_user_login($account) {
+    $digital_agent = \Drupal::request()->query->get('digital_agent');
+    if ($digital_agent) {
+      $agent_digital_list = $account->get('field_digital_agent_list');
+      if ($agent_digital_list->isEmpty()) {
+        $account->set('field_digital_agent_list', $digital_agent);
+      } else {
+        $agent_exist = FALSE;
+        foreach ($agent_digital_list->getValue() as $item => $value) {
+          if ($value['target_id'] === $digital_agent) {
+            $agent_exist = TRUE;
+            break;
+          }
+        }
+        if (!$agent_exist) {
+          $account->field_digital_agent_list->appendItem(['target_id' => $digital_agent]);
+        }
+      }
+      $account->set('field_digital_agent', $digital_agent);
+      $account->save();
+    }
+  }
+

@@ -1,0 +1,21 @@
+uuid: ff04d9a0-6c2a-4b11-911a-50d061bdd6d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_type_of_identification
+  module:
+    - options
+id: attendants.attendant.field_type_of_identification
+field_name: field_type_of_identification
+entity_type: attendants
+bundle: attendant
+label: 'Tipo de Cedula'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

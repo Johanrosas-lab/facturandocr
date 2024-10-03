@@ -1,0 +1,20 @@
+uuid: 69429bf6-8fe8-4581-b368-76060b433dd6
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_client_count_professionals
+field_name: field_client_count_professionals
+entity_type: profile
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

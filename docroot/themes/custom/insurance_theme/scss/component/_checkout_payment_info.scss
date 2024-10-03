@@ -1,0 +1,243 @@
+.path-checkout {
+
+  .checkout-pane {
+    .panel-heading {
+      background: $color-secondary;
+      color: $color-white;
+    }
+  }
+  
+  section.klap-payment-add-card-form{
+    margin-top: 50px;
+    padding: 0 30px;
+    #klap-payment-add-card-form{
+      .add-card-custom-title{
+        margin-bottom: 30px;
+        h2{
+          font-size: 18px;
+          color: $color-black;
+        }
+      }
+      .number-name-row{
+        display: flex;
+        margin-bottom: 20px;
+        .add-card-field{
+          min-width: 226px;
+          width: 312px;
+          margin: 0 15px;
+        }
+        @media (max-width: 550px){
+          display: inline-block;
+          width: 100%;
+          margin-bottom: -15px;
+          .add-card-field{
+            width: 100%;
+            margin: 0 0 25px;
+          }
+        }
+      }
+      .expiration-date{
+        margin: 0 15px;
+        h3{
+          color: $color-placeholder;
+          font-size: 14px;
+          font-weight: 700;
+          display: inline-block;
+        }
+        .date-security-row{
+          display: flex;
+          .date{
+            display: flex;
+            .form-item{
+              width: 148px;
+            }
+            .form-item-year-expired{
+              margin-left: 15px;
+            }
+          }
+          .security{
+            margin-left: 30px;
+            position: relative;
+            bottom: 28px;
+            label{
+              margin-bottom: 8px;
+            }
+          }
+        }
+        @media (max-width: 550px){
+          display: inline-block;
+          width: 100%;
+          margin: 0;
+          .date-security-row{
+            width: 100%;
+            margin: 0 0 25px;
+            display: inline-block;
+            .date{
+              .form-item{
+                width: 100%;
+              }
+            }
+          }
+          .security{
+            margin-left: 0 !important;
+            bottom: 0px !important;
+          }
+        }
+      }
+      .add-provider-submit{
+        .form-actions{
+          padding: 0;
+          button{
+            background-color: $color-third;
+            font-size: 16px;
+            padding: 7px 30px;
+            letter-spacing: 0px;
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+      .form-item{
+        label{
+          color: $color-placeholder;
+          font-size: 14px;
+        }
+        input{
+          border-radius: 0;
+          border: none;
+          border-bottom: 1px solid #747474;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  form.commerce-checkout-flow-multistep-default {
+
+    .checkout-pane-payment-method {
+      margin-top: 0;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      min-width: 572px;
+
+      .panel-default{
+        border: none;
+        box-shadow: none;
+        margin-bottom: 0;
+
+        .panel-heading {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          letter-spacing: 1px;
+          padding: 16.5px 10px;
+          background: $color-white;
+          border: none;
+          .panel-title {
+            color: $color-black;
+            font-size: 18px;
+            font-family: 'Roboto-Regular';
+            letter-spacing: 0px;
+          }
+        }
+        .panel-body{
+          padding: 0 15px 50px 15px;
+          .form-item-payment-method-usercards-options{
+            margin-bottom: 10px;
+            margin-top: 0;
+            display: flex;
+            &:not(:first-child){
+              padding-bottom: 6px;
+            }
+            .option{
+              display: flex;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              align-items: center;
+              width: 90%;
+              &:hover{
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+                -webkit-box-shadow: 0 2px 4px 0 $color-background-overlay;
+                box-shadow: 0 2px 4px 0 $color-background-overlay;
+              }
+              input[type="radio"]{
+                margin-top: 0;
+                margin-left: -11px;
+                &:before{
+                  content: " ";
+                  width: 15px;
+                  height: 15px;
+                  display: block;
+                  border-radius: 50%;
+                  // border: 1px solid $color-secondary;
+                  background-color: $color-white;
+                  position: relative;
+                  left: -1px;
+                  top: -1px;
+                  cursor: pointer;
+                  box-shadow: inset 0 0px 4px 1px $color-background-overlay;
+                }
+              }
+              input[type="radio"]:checked{
+                &:before{
+                  background-color: $color-secondary;
+                }
+                &:after{
+                  content: "\f00c";
+                  font-family: 'FontAwesome';
+                  color: #fff;
+                  font-size: 9px;
+                  display: block;
+                  position: relative;
+                  top: -13px;
+                  left: 2px;
+                }
+              }
+              p{
+                padding: 0 10px;
+                font-size: 14px;
+                color: $color-black;
+                margin-bottom: 0;
+              }
+              .klap_payment-type{
+                width: 100px;
+                margin-left: 15px;
+                height: 45px;
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center;
+              }
+              .klap_payment-type-Visa{
+                background-image: url('../images/visa.svg');
+              }
+              .klap_payment-type-visa{
+                background-image: url('../images/visa.svg');
+              }
+              .klap_payment-type-mastercard{
+                background-image: url('../images/mastercard.svg');
+              }
+              .klap_payment-type-amex{
+                background-image: url('../images/amex.svg');
+              }
+              .klap_payment-type-discover{
+                background-image: url('../images/discover.png');
+              }
+              .klap_payment-month{
+                padding-right: 0;
+                span{
+                  font-style: italic;
+                  color: $color-placeholder;
+                  padding-right: 10px;
+                }
+              }
+              .klap_payment-date{
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 964c7013-9660-4684-b440-2f9da75edc84
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - serialization
+    - simple_oauth
+_core:
+  default_config_hash: t_jfECmZhJqBOJuSOFn87EOi_TWi-_fRYTuJgd19vgg
+id: entity.node
+plugin_id: 'entity:node'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - oauth2

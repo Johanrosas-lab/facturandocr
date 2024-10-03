@@ -1,0 +1,54 @@
+uuid: 17774621-2400-4c63-b3ec-f86f5ac8c2d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us.field_about_us_content
+    - field.field.paragraph.about_us.field_about_us_headline
+    - field.field.paragraph.about_us.field_about_us_link
+    - field.field.paragraph.about_us.field_about_us_title
+    - paragraphs.paragraphs_type.about_us
+  module:
+    - link
+id: paragraph.about_us.default
+targetEntityType: paragraph
+bundle: about_us
+mode: default
+content:
+  field_about_us_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_about_us_headline:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_about_us_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_about_us_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

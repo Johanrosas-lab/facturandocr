@@ -1,0 +1,23 @@
+uuid: eb15e7d7-cf76-4f41-bcb4-1f7438ca86cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.attendants.attendant
+    - field.storage.attendants.field_politically_exposed
+id: attendants.attendant.field_politically_exposed
+field_name: field_politically_exposed
+entity_type: attendants
+bundle: attendant
+label: 'Persona Politicamente Expuesta(PEPs)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: si
+  off_label: 'no'
+field_type: boolean

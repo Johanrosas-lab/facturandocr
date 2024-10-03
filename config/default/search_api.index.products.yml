@@ -1,0 +1,158 @@
+uuid: 28eca158-d818-4b77-b4c0-e26caefaa5c6
+langcode: es
+status: false
+dependencies:
+  config:
+    - field.storage.commerce_product.body
+    - field.storage.commerce_product.field_product_image
+  module:
+    - flag
+    - commerce_store
+    - commerce_product
+    - search_api
+id: products
+name: Products
+description: ''
+read_only: true
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:commerce_product'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.body
+  entity_id:
+    label: 'ID de entidad'
+    datasource_id: 'entity:flagging'
+    property_path: entity_id
+    type: string
+    dependencies:
+      module:
+        - flag
+  entity_id_1:
+    label: 'ID de entidad'
+    datasource_id: 'entity:flagging'
+    property_path: entity_id
+    type: string
+    dependencies:
+      module:
+        - flag
+  field_product_image:
+    label: Image
+    datasource_id: 'entity:commerce_product'
+    property_path: field_product_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_product_image
+  flag_id:
+    label: Flagging
+    datasource_id: 'entity:flagging'
+    property_path: flag_id
+    type: string
+    dependencies:
+      module:
+        - flag
+  flagged_entity:
+    label: Entity
+    datasource_id: 'entity:flagging'
+    property_path: flagged_entity
+    type: integer
+    dependencies:
+      module:
+        - flag
+  flagged_entity_1:
+    label: Entity
+    datasource_id: 'entity:flagging'
+    property_path: flagged_entity
+    type: integer
+    dependencies:
+      module:
+        - flag
+  name:
+    label: Name
+    datasource_id: 'entity:commerce_store'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - commerce_store
+  product_id:
+    label: ID
+    datasource_id: 'entity:commerce_product'
+    property_path: product_id
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  title:
+    label: Título
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - commerce_product
+  type:
+    label: 'Product type'
+    datasource_id: 'entity:commerce_product'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  variations:
+    label: Variations
+    datasource_id: 'entity:commerce_product'
+    property_path: variations
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_product_attribute_value':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_product_variation':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_store':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:flagging':
+    bundles:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  overridden_by_acquia_search: 2
+server: null

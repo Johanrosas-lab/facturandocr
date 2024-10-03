@@ -1,0 +1,28 @@
+klap_payment.page_card:
+  path: '/payment-methods/list'
+  defaults:
+    _controller: '\Drupal\klap_payment\Controller\PaymentController::listCard'
+    _title: 'Pago'
+  requirements:
+    _permission: 'access content'
+klap_payment.open_modal_form:
+  path: '/order/product/modal_form/{order_item_id}/{order_id}/{variation_id}'
+  defaults:
+    _title: 'Modal Form'
+    _controller: '\Drupal\klap_payment\Controller\ModalFormPaymentController::openModalForm'
+  requirements:
+    _permission: 'access content'
+klap_payment.remove_card:
+  path: '/remove-card/custom'
+  defaults:
+    _title: 'Remove Card'
+    _controller: '\Drupal\klap_payment\Controller\RemoveCardController::removeCard'
+  requirements:
+    _permission: 'access content'
+klap_payment.addCard:
+  path: '/add-card/custom'
+  defaults:
+    _title: 'Add Card'
+    _controller: '\Drupal\klap_payment\Controller\AddCardController::addCard'
+  requirements:
+    _permission: 'access content'

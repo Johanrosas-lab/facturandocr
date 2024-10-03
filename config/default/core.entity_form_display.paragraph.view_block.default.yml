@@ -1,0 +1,31 @@
+uuid: cc266fab-8e72-40f1-b5a3-2a9fec8d6d61
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view_block.field_views_title
+    - field.field.paragraph.view_block.field_views_view
+    - paragraphs.paragraphs_type.view_block
+id: paragraph.view_block.default
+targetEntityType: paragraph
+bundle: view_block
+mode: default
+content:
+  field_views_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_views_view:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

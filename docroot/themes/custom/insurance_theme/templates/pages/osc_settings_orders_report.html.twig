@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article class="order-report row" {{ attributes }}>
+    <div class="order-report-info col-md-12">
+        <div class="row">
+            <div class="dropdown col-md-2">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Año: {{ date.year }}
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    {% for key, value in years %}
+                        <li class="{{ date.year == value ? 'active' }}"><a href="/orders-month/{{ value }}-{{ date.month.number }}/report"> Año {{ value }} </a> </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="dropdown col-md-2">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Mes: {{ date.month.name }}
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="{{ date.month.number == 1 ? 'active' }}"><a href="/orders-month/{{ date.year }}-01/report"> Enero </a> </li>
+                    <li class="{{ date.month.number == 2 ? 'active' }}"><a href="/orders-month/{{ date.year }}-02/report"> Febrero </a> </li>
+                    <li class="{{ date.month.number == 3 ? 'active' }}"><a href="/orders-month/{{ date.year }}-03/report"> Marzo </a> </li>
+                    <li class="{{ date.month.number == 4 ? 'active' }}"><a href="/orders-month/{{ date.year }}-04/report"> Abril </a> </li>
+                    <li class="{{ date.month.number == 5 ? 'active' }}"><a href="/orders-month/{{ date.year }}-05/report"> Mayo </a> </li>
+                    <li class="{{ date.month.number == 6 ? 'active' }}"><a href="/orders-month/{{ date.year }}-06/report"> Junio </a> </li>
+                    <li class="{{ date.month.number == 7 ? 'active' }}"><a href="/orders-month/{{ date.year }}-07/report"> Julio </a> </li>
+                    <li class="{{ date.month.number == 8 ? 'active' }}"><a href="/orders-month/{{ date.year }}-08/report"> Agosto </a> </li>
+                    <li class="{{ date.month.number == 9 ? 'active' }}"><a href="/orders-month/{{ date.year }}-09/report"> Septiembre </a> </li>
+                    <li class="{{ date.month.number == 10 ? 'active' }}"><a href="/orders-month/{{ date.year }}-10/report"> Octubre </a> </li>
+                    <li class="{{ date.month.number == 11 ? 'active' }}"><a href="/orders-month/{{ date.year }}-11/report"> Noviembre </a> </li>
+                    <li class="{{ date.month.number == 12 ? 'active' }}"><a href="/orders-month/{{ date.year }}-12/report"> Diciembre </a> </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                {{ form }}
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <table class="order-report-info-table table table-striped">
+                <tr>
+                    <th>Order ID</th>
+                    <th>ID del usuario</th>
+                    <th>Correo del comprador</th>
+                    <th>Precio</th>
+                    <th>Fecha</th>
+                </tr>
+                {% for key, value in table %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ value.user }}</td>
+                        <td>{{ value.mail }}</td>
+                        <td>{{ value.price.currency }} {{ value.price.number }}</td>
+                        <td>{{ value.date }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</article>

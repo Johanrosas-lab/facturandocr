@@ -1,0 +1,66 @@
+uuid: b23257ce-7ee6-4eea-8c0a-277813defb5b
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_outer_walls
+field_name: field_outer_walls
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Bloques de concreto'
+    -
+      value: '1'
+      label: Ladrillo
+    -
+      value: '2'
+      label: 'Laminas fibrocemento o similares'
+    -
+      value: '3'
+      label: 'Laminas Plásticas'
+    -
+      value: '4'
+      label: 'Laminas Metálicas'
+    -
+      value: '5'
+      label: 'Cemento Armado'
+    -
+      value: '6'
+      label: 'Ladrillo Mixto'
+    -
+      value: '7'
+      label: 'Piedra bloque'
+    -
+      value: '8'
+      label: Concreto
+    -
+      value: '9'
+      label: Prefabricada
+    -
+      value: '10'
+      label: Madera
+    -
+      value: '11'
+      label: 'Tela Metálica'
+    -
+      value: '12'
+      label: 'Hierro galvanizado'
+    -
+      value: '13'
+      label: Bahareque
+    -
+      value: '14'
+      label: 'Cualquier material combustible'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

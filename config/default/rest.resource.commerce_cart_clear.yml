@@ -1,0 +1,26 @@
+uuid: 32eb9869-d9f8-4da1-b085-7dbe34d6b426
+langcode: es
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - commerce_cart_api
+    - hal
+    - serialization
+    - simple_oauth
+    - user
+_core:
+  default_config_hash: gFt_6Zv9JEPLa560_rsfsqrQC21_LQ6becnJMNjUIpM
+id: commerce_cart_clear
+plugin_id: commerce_cart_clear
+granularity: resource
+configuration:
+  methods:
+    - DELETE
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - basic_auth
+    - oauth2
+    - cookie

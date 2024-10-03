@@ -1,0 +1,26 @@
+uuid: 5f0dbb26-2caf-45ab-bbf3-dfdbddde1eaa
+langcode: es
+status: true
+dependencies:
+  module:
+    - printfriendly
+    - system
+  theme:
+    - insurance_theme
+id: printfriendly
+theme: insurance_theme
+region: content
+weight: -2
+provider: null
+plugin: block_printfriendly
+settings:
+  id: block_printfriendly
+  label: printfriendly
+  provider: printfriendly
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true
+    context_mapping: {  }

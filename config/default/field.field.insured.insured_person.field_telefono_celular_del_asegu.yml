@@ -1,0 +1,21 @@
+uuid: abbe8837-f771-4904-9059-b599ddb8e999
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.insured.insured_person
+    - field.storage.insured.field_telefono_celular_del_asegu
+  module:
+    - telephone
+id: insured.insured_person.field_telefono_celular_del_asegu
+field_name: field_telefono_celular_del_asegu
+entity_type: insured
+bundle: insured_person
+label: 'K. Teléfono celular del asegurado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

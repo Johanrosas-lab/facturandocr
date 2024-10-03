@@ -1,0 +1,57 @@
+/**
+ * Node styling.
+ */
+
+.is-unpublished {
+  background-color: #fff4f4;
+}
+
+.basic-page {
+  margin-top: 40px;
+}
+
+.node-preview-container {
+  margin-top: -($grid-gutter-width / 2);
+}
+
+.node-preview-form-select {
+  padding: ($grid-gutter-width / 2);
+}
+// Basic pagfe styles "Ayuda / Nosotros"
+
+.user-logged-in.page-node-type-page{
+  .home-page{
+    .region{
+      .content{
+        padding: 20px;
+      }
+    }
+  }
+}
+.page-node-type-page{
+  .home-page{
+    .region{
+      .content{
+        padding: 20px 30px;
+      }
+    }
+  }
+}
+/* home page basic pages styles, footer menu link pages */
+.not-logged-in.page-node-type-page{
+  .home-page{
+    .region{
+      margin-top: 95px;
+      .page-header{
+        margin-bottom: 45px;
+        border: none;
+        padding: 35px 30px;
+        color: #fff;
+        background: #0c3873;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0c3873), color-stop(50%, #244b81), to(#3c5f8f));
+        background: linear-gradient(to bottom, #0c3873 0%, #244b81 50%, #3c5f8f 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c3873', endColorstr='#3c5f8f',GradientType=0 );
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 1687202c-c3d5-4e54-ac26-81fab60a64f4
+langcode: es
+status: true
+dependencies: {  }
+id: initial-menu
+label: 'Initial Menu'
+description: 'Menu inicial'
+locked: false

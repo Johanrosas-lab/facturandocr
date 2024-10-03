@@ -1,0 +1,21 @@
+uuid: 364c117c-574d-47b6-8a0b-9375ce8bfc49
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: insured.field_tipo_de_residencia_del_ase
+field_name: field_tipo_de_residencia_del_ase
+entity_type: insured
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

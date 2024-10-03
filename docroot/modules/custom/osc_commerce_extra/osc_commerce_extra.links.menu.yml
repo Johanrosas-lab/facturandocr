@@ -1,0 +1,7 @@
+osc_commerce_extra.cart_messages:
+  title: 'Cart Message Settings'
+  route_name: osc_commerce_extra.cart_messages
+  description: 'Manage cart messages'
+  parent: system.admin_config_system
+  weight: 99
+

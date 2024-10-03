@@ -1,0 +1,25 @@
+uuid: b8795850-b879-44ab-a6d0-19317f3df66d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sliderparagraph.field_bloque
+    - paragraphs.paragraphs_type.sliderparagraph
+id: paragraph.sliderparagraph.default
+targetEntityType: paragraph
+bundle: sliderparagraph
+mode: default
+content:
+  field_bloque:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

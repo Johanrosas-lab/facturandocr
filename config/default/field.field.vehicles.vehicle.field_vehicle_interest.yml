@@ -1,0 +1,21 @@
+uuid: ea6d68c3-dfde-437b-b16f-1ddfc2f64bb6
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_vehicle_interest
+  module:
+    - options
+id: vehicles.vehicle.field_vehicle_interest
+field_name: field_vehicle_interest
+entity_type: vehicles
+bundle: vehicle
+label: 'Interes Asegurable de Vehiculo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

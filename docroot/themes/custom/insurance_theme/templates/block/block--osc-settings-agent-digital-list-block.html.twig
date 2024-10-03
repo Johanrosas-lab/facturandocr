@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Profile ws custom block.
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'clearfix',
+]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div>
+      Hola mundo!!!!
+      <select class="selectpicker" data-live-search="true">
+        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+      </select>
+
+    </div>
+
+  {% endblock %}
+</section>

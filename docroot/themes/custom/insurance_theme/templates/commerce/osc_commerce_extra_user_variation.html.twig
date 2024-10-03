@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="my-product-detail" {{ attributes }}>
+  <div class="insurance-header">
+    <div class="insurance-info">
+      <a href="{{ back_link }}" data-toggle="tooltip" data-placement="top" title="Volver"></a>
+      <div class="insurance-image">
+        <img src="{{field_product_image }}" alt="">
+      </div>
+      <div class="insurance-details">
+        <h3>{{title_product}}</h3>
+        <h5>{{price.currency_code}} {{price.number}}</h5>
+      </div>
+    </div>
+    <div class="insurance-actions">
+      <a href='/reclamo'>Aplicar seguro</a>
+    </div>
+  </div>
+  <div class="insurance-general-info">
+    <div class="general-info-header">
+      <h3>Información General</h3>
+    </div>
+    <div class="general-info-content">
+      <p>{{field_insurance_restrictions}}</p>
+      <a href="{{field_general_conditions}}"><i class="fas fa-file-pdf"></i></a>
+    </div>
+  </div>
+</article>

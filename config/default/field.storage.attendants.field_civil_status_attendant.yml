@@ -1,0 +1,27 @@
+uuid: 6869044a-1a56-416c-b3a6-e851f286f0ef
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: attendants.field_civil_status_attendant
+field_name: field_civil_status_attendant
+entity_type: attendants
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Soltero
+      label: Soltero
+    -
+      value: Casado
+      label: Casado
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

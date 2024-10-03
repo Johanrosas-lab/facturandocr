@@ -1,0 +1,18 @@
+uuid: 81aa3a11-069c-4473-9e48-471028b0db2d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.como_funciona_
+id: node.como_funciona_.title
+field_name: title
+entity_type: node
+bundle: como_funciona_
+label: 'Cómo funciona?'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 237c7c63-a47a-43bf-979b-9e49e66f23ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.provider_category
+id: taxonomy_term.provider_category
+target_entity_type_id: taxonomy_term
+target_bundle: provider_category
+default_langcode: site_default
+language_alterable: false

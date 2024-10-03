@@ -1,0 +1,10 @@
+uuid: 89d9bbae-d499-492a-b60d-674a854b1597
+langcode: es
+status: true
+dependencies: {  }
+id: additional_insured
+label: 'Asegurado Adicional'
+created: true
+changed: true
+uid: true
+title: true

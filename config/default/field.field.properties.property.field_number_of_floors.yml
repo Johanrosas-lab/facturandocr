@@ -1,0 +1,23 @@
+uuid: 7901fa41-2d1e-4b02-a46e-b7c1e618efd0
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_number_of_floors
+id: properties.property.field_number_of_floors
+field_name: field_number_of_floors
+entity_type: properties
+bundle: property
+label: 'Numero de pisos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

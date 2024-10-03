@@ -1,0 +1,57 @@
+uuid: 2d4459a1-b324-4d27-ba90-da6b3ebb364d
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: properties.field_internal_walls
+field_name: field_internal_walls
+entity_type: properties
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Cemento Armado'
+    -
+      value: '1'
+      label: Concreto
+    -
+      value: '2'
+      label: 'Ladrillo Mixto'
+    -
+      value: '3'
+      label: 'Piedra Bloque'
+    -
+      value: '4'
+      label: Cemento
+    -
+      value: '5'
+      label: Prefabricada
+    -
+      value: '6'
+      label: Madera
+    -
+      value: '7'
+      label: 'Tela Metálica'
+    -
+      value: '8'
+      label: 'Hierro galvanizado'
+    -
+      value: '9'
+      label: Bahareque
+    -
+      value: '10'
+      label: 'Cualquier material Combustible'
+    -
+      value: '11'
+      label: Gypsum
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

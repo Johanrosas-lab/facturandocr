@@ -1,0 +1,7 @@
+uuid: 9a75dbd6-d745-4869-9202-9aa595d42e0f
+langcode: es
+status: false
+dependencies: {  }
+formId: node_formas_de_pago_form
+captchaType: default
+label: null

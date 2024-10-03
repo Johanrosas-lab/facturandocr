@@ -1,0 +1,19 @@
+uuid: 47a56bb6-0255-441a-a237-684994d3e835
+langcode: es
+status: true
+dependencies:
+  module:
+    - address
+    - profile
+id: profile.field_client_address
+field_name: field_client_address
+entity_type: profile
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

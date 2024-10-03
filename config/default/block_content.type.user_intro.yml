@@ -1,0 +1,8 @@
+uuid: 16808709-55d2-4de1-ad6b-429c42cfc223
+langcode: es
+status: true
+dependencies: {  }
+id: user_intro
+label: 'User Intro'
+revision: 0
+description: 'User block in the login and register sections'

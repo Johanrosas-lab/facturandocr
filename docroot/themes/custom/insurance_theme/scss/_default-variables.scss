@@ -1,0 +1,51 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+$color-blue:                #074776;
+$color-white:               #fff;
+$color-black:               #222222;
+$color-background-overlay:  rgba(0,0,0,0.18);
+$color-text-shadow:         rgba(0,0,0,0.2);
+$color-secondary:           #0E7636;
+$color-secondary-light:     #2F874F;
+$color-blue-hover:          #1A5086;
+$color-grid-background:     #f4f6f8;
+$color-third:               #FEE337;
+$color-third-hover:         #7DBB2F;
+$color-border-gray:         #EDEDED;
+$color-placeholder:         #747474;
+$color-favorites:           #CD0000;
+$color-lightblue:           #D2E8F8;
+$color-red-error:           #D0021B;
+$color-success:             #5FD15C;
+$color-twitter:             #1DA1F2;
+$color-facebook:            #3B5998;
+$color-instagram:           #c32aa3;
+$color-fair:                #F7B32B;
+$color-good:                #FDE74C;
+$color-strong:              #5FD15C;
+$color-gray:                rgba(94, 94, 94, 0.2);
+$color-dark-gray:           #505050;
+$box-shadow:                 4px 4px 4px rgba(0, 0, 0, 0.35);
+// Media queries break points
+
+$screen-phone:              480px;
+$screen-tablet:             768px;
+$screen-tablet-landscape:   1025px;
+$screen-desktop:            992px;
+$screen-lg-desktop:         1200px;
+
+$font-primary: Roboto;
+$font-secondary: Aleo;

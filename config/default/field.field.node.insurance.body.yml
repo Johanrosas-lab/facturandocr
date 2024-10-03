@@ -1,0 +1,23 @@
+uuid: 35394e01-8c15-4089-a62f-01d19020b67b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.insurance
+  module:
+    - text
+id: node.insurance.body
+field_name: body
+entity_type: node
+bundle: insurance
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

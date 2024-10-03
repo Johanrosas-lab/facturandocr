@@ -1,0 +1,20 @@
+uuid: dbde4bc7-60b1-413e-8bb1-4003217bcbff
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - eck
+id: insured.field_fecha_de_nacimiento_del_as
+field_name: field_fecha_de_nacimiento_del_as
+entity_type: insured
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

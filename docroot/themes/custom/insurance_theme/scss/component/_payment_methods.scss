@@ -1,0 +1,360 @@
+.path-payment-methods{
+  .home-page{
+    .region-content {
+      padding-bottom: 50px;
+
+      .block-klap-list-card-block {
+        form{
+          margin-top: 0;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          width: 70%;
+          @media(max-width: 1100px){
+            width: 100%;
+          }
+          .panel-default{
+            border: none;
+            box-shadow: none;
+            margin-bottom: 0;
+            border-radius: 8px;
+            .panel-heading{
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              letter-spacing: 1px;
+              padding: 16.5px 10px;
+              background: $color-white;
+              border: none;
+              .panel-title{
+                color: $color-secondary;
+                font-size: 20px;
+                font-family: 'Roboto-Light';
+                letter-spacing: 1px;
+              }
+            }
+            .panel-body{
+              padding: 0 15px 30px 15px;
+            }
+          }
+          .form-item-options{
+            margin-bottom: 10px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: row-reverse;
+            &:not(:first-child){
+              padding-bottom: 6px;
+            }
+            .option{
+              display: flex;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              align-items: center;
+              width: 90%;
+              &:hover{
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+                -webkit-box-shadow: 0 2px 4px 0 $color-background-overlay;
+                box-shadow: 0 2px 4px 0 $color-background-overlay;
+              }
+              input[type="radio"]{
+                margin-top: 0;
+                margin-left: -11px;
+                &:before{
+                  content: " ";
+                  width: 15px;
+                  height: 15px;
+                  display: block;
+                  border-radius: 50%;
+                  // border: 1px solid $color-secondary;
+                  background-color: $color-white;
+                  position: relative;
+                  left: -1px;
+                  top: -1px;
+                  cursor: pointer;
+                  box-shadow: inset 0 0px 4px 1px $color-background-overlay;
+                }
+              }
+              input[type="radio"]:checked{
+                &:before{
+                  background-color: $color-secondary;
+                }
+                &:after{
+                  content: "\f00c";
+                  font-family: 'FontAwesome';
+                  color: #fff;
+                  font-size: 9px;
+                  display: block;
+                  position: relative;
+                  top: -13px;
+                  left: 2px;
+                }
+              }
+              p{
+                padding: 0 10px;
+                font-size: 14px;
+                color: $color-black;
+                margin-bottom: 0;
+              }
+              .klap_payment-type{
+                width: 100px;
+                margin-left: 15px;
+                height: 45px;
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center;
+              }
+              .klap_payment-type-Visa{
+                background-image: url('../images/visa.svg');
+              }
+              .klap_payment-type-visa{
+                background-image: url('../images/visa.svg');
+              }
+              .klap_payment-type-mastercard{
+                background-image: url('../images/mastercard.svg');
+              }
+              .klap_payment-type-amex{
+                background-image: url('../images/amex.svg');
+              }
+              .klap_payment-type-discover{
+                background-image: url('../images/discover.png');
+              }
+              .klap_payment-month{
+                padding-right: 0;
+                span{
+                  font-style: italic;
+                  color: $color-placeholder;
+                  padding-right: 10px;
+                }
+              }
+              .klap_payment-date{
+                padding-left: 5px;
+              }
+              .klap_payment-remove{
+                right: 0;
+                color: $color-red-error;
+                margin-left: auto;
+                margin-right: 10px;
+                background: $color-border-gray;
+                border-top-right-radius: 4px;
+              }
+            }
+            span.klap_payment-remove{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 10%;
+              background-color: $color-grid-background;
+              color: $color-placeholder;
+              cursor: pointer;
+              &:hover{
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+                -webkit-box-shadow: 2px 2px 4px 0 $color-background-overlay;
+                box-shadow: 2px 2px 4px 0 $color-background-overlay;
+                color: $color-red-error;
+              }
+              &:hover ~ label{
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+                -webkit-box-shadow: -1px 2px 4px 0 $color-background-overlay;
+                box-shadow: -1px 2px 4px 0 $color-background-overlay;
+              }
+            }
+            #loadingmessage{
+              width: 5%;
+              position: absolute;
+              height: 100%;
+              align-items: center;
+              display: flex;
+              img{
+                width: 100%;
+              }
+            }
+            .remove-card-question{
+              background-color: $color-grid-background;
+              padding: 5px 0;
+              p{
+                color: $color-black;
+                font-size: 12px;
+              }
+              button{
+                padding: 3px 6px;
+              }
+              .delete-card{
+                background-color: $color-third;
+                border-color: $color-third;
+                margin-right: 10px;
+                &:hover{
+                  background-color: $color-third-hover;
+                  border-color: $color-third-hover;
+                }
+              }
+              .cancel-delete-card{
+                &:hover{
+                  color: $color-white;
+                  background-color: $color-secondary;
+                  border-color: $color-secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+      .klap-payment-add-card-form{
+        padding: 0 29px 70px 29px;
+        @media (max-width: 400px){
+          padding: 0 15px 70px 15px;
+        }
+        form{
+          margin-top: 0;
+          margin-bottom: 20px;
+          padding: 0 0 10px;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px 0 rgba(177,177,177,0.5);
+          width: 70%;
+
+          .add-card-custom-title{
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            background: #0c3873;
+            background: -moz-linear-gradient(top, #0c3873 0%, #244b81 50%, #3c5f8f 100%);
+            background: -webkit-linear-gradient(top, #0c3873 0%,#244b81 50%,#3c5f8f 100%);
+            background: linear-gradient(to bottom, #0c3873 0%,#244b81 50%,#3c5f8f 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c3873', endColorstr='#3c5f8f',GradientType=0 );
+            h2{
+              margin: 0;
+              padding: 20px 10px;
+              color: $color-white;
+              font-size: 20px;
+              font-family: 'Roboto-Light';
+              letter-spacing: 1px;
+            }
+          }
+          .section-row{
+            padding: 0 10px;
+          }
+          .number-name-row{
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            .number-card{
+              padding-left: 10px;
+            }
+            .owner_name{
+              padding-right: 10px;
+            }
+          }
+          h3.date-label{
+            width: initial;
+            display: inline-block;
+            color: $color-black;
+            font-size: 16px;
+            margin:0 10px 10px;
+            position: relative;
+            top: 29px;
+          }
+          .date-security-row{
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            .date{
+              display: flex;
+              .form-item{
+                width: 50%;
+              }
+              .form-item-year-expired{
+                padding-left: 5px;
+                display: flex;
+                align-items: flex-end;
+                label{
+                  display: none;
+                }
+              }
+              .form-item-month-expired{
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 0;
+                label{
+                  display: none;
+                }
+              }
+            }
+            .security{
+              padding-left: 10px;
+            }
+          }
+          .add-card-field{
+            width: 50%;
+          }
+          .form-item{
+            label{
+              color: $color-black;
+              font-size: 16px;
+              margin-bottom: 10px;
+              font-weight: normal;
+            }
+            input{
+              border: none;
+              border-radius: 100px;
+              box-shadow: 0 2px 4px $color-background-overlay;
+            }
+          }
+          .form-actions{
+            padding: 0;
+            margin: 0 10px;
+            button.button{
+              padding: 6px 120px !important;
+              font-size: 16px;
+              span{
+                display: none;
+              }
+              @media (max-width: $screen-lg-desktop){
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* message styles "fill profile info to see this otion" */
+    #block-showcards{
+      margin-top: 140px;
+      padding: 0 30px;
+      .no-info-msg{
+        .exclamation{
+          position: absolute;
+          top: 93px;
+          float: left;
+          font-size: 85px;
+          color: $color-secondary;
+          opacity: 0.18;
+          font-family: 'Varela-Round';
+          letter-spacing: -9px;
+        }
+        .message{
+          font-size: 20px;
+          font-family: 'Varela-Round';
+          width: 400px;
+          position: relative;
+          left: 24px;
+        }
+        a{
+          background-color: $color-secondary;
+          padding: 10px 12px;
+          border-radius: 100px;
+          color: #fff;
+          text-decoration: none;
+          position: relative;
+          margin: 25px;
+          top: 15px;
+          &:hover{
+            background-color: $color-blue-hover;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+          }
+        }
+      }
+    }
+  }
+}

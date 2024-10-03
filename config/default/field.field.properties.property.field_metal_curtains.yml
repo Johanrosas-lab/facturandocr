@@ -1,0 +1,23 @@
+uuid: 7d8a8b01-ab63-498d-95f5-afbe70e8f9b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_metal_curtains
+id: properties.property.field_metal_curtains
+field_name: field_metal_curtains
+entity_type: properties
+bundle: property
+label: 'ventanas:Cortinas Metalicas'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: si
+  off_label: 'no'
+field_type: boolean

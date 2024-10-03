@@ -1,0 +1,5 @@
+name: Insurances
+type: module
+description: Functionality Insurances Form Fields
+core: 8.x
+package: Custom

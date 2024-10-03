@@ -1,0 +1,19 @@
+uuid: 709499ce-0a93-4757-9022-71ab3e984968
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.vehicles.vehicle
+    - field.storage.vehicles.field_plate
+id: vehicles.vehicle.field_plate
+field_name: field_plate
+entity_type: vehicles
+bundle: vehicle
+label: Placa
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

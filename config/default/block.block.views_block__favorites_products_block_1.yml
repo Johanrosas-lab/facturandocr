@@ -1,0 +1,31 @@
+uuid: e1838ff1-6645-4f16-b429-8d4b443bf69b
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.favorites_products
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__favorites_products_block_1
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:favorites_products-block_1'
+settings:
+  id: 'views_block:favorites_products-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

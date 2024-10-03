@@ -1,0 +1,34 @@
+uuid: 04ebe32d-421a-421e-b923-8358dcd460ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.beneficiaries.field_beneficiaries_email
+    - field.field.node.beneficiaries.field_beneficiaries_first_name
+    - field.field.node.beneficiaries.field_beneficiaries_last_name
+    - field.field.node.beneficiaries.field_beneficiaries_user
+    - node.type.beneficiaries
+  module:
+    - user
+id: node.beneficiaries.teaser
+targetEntityType: node
+bundle: beneficiaries
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  share_everywhere:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_beneficiaries_email: true
+  field_beneficiaries_first_name: true
+  field_beneficiaries_last_name: true
+  field_beneficiaries_user: true
+  langcode: true

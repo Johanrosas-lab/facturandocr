@@ -1,0 +1,16 @@
+uuid: d43bfde7-391e-4b6e-9ce0-5b23c2a976cb
+langcode: es
+status: true
+dependencies: {  }
+id: consentimiento_informado
+label: 'Consentimiento Informado'
+published_version: consentimiento_informado_1573853599
+require_signup: true
+require_existing: false
+settings:
+  new_users:
+    require: true
+    require_method: form_inline
+  existing_users:
+    require: false
+    require_method: redirect

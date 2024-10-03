@@ -1,0 +1,23 @@
+uuid: 211d683b-dd4c-4945-bd6b-60c1d5eac895
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_about_us_link
+    - paragraphs.paragraphs_type.about_us
+  module:
+    - link
+id: paragraph.about_us.field_about_us_link
+field_name: field_about_us_link
+entity_type: paragraph
+bundle: about_us
+label: 'about us link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

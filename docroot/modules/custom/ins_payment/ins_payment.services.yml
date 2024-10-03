@@ -1,0 +1,7 @@
+services:
+  ins_payment.config_onsite:
+    class: Drupal\ins_payment\Services\ConfigOnsite
+  ins_payment.prepare_data:
+    class: Drupal\ins_payment\Services\InsPaymentPrepareData
+  ins_payment.transaction_manager:
+    class: Drupal\ins_payment\Services\InsPaymentTransactionManager

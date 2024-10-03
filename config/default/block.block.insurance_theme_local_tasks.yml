@@ -1,0 +1,38 @@
+uuid: 66082a44-fa3b-491e-bb8a-e89e5ae2feb1
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - insurance_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: insurance_theme_local_tasks
+theme: insurance_theme
+region: content
+weight: -13
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/register\r\n/user/password\r\n/user/*"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

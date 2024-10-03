@@ -1,0 +1,21 @@
+ins_consume.consume:
+    path: '/cotizar-poliza'
+    defaults:
+        _controller: '\Drupal\ins_consume\Controller\CotizarXML::cotizar'
+        _title: 'Cotizaciones'
+    requirements:
+        _permission: 'access content'
+ins_consume.comprar:
+    path: '/comprar-poliza'
+    defaults:
+        _controller: '\Drupal\ins_consume\Controller\CotizarXML::comprar'
+        _title: 'Proveedor de servicios'
+    requirements:
+        _permission: 'access content'
+ins_consume.default_information:
+  path: /admin/ins-information
+  defaults:
+    _form: 'Drupal\ins_consume\Form\DefaultInsInformationForm'
+    _title: 'MessagesForm'
+  requirements:
+    _permission: 'access administration pages'

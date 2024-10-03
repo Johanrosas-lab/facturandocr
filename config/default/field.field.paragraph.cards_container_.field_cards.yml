@@ -1,0 +1,19 @@
+uuid: 8ea72618-7c48-4820-9607-f34b39615236
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.cards_container_
+id: paragraph.cards_container_.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: cards_container_
+label: 'Cards container label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 144910a8-75d6-472c-b5bd-12d0088360f6
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+id: properties.field_folio_number
+field_name: field_folio_number
+entity_type: properties
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

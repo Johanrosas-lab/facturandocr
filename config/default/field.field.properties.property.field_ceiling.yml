@@ -1,0 +1,21 @@
+uuid: 9b62ebf4-1e0d-4dfd-a9fd-a2565f253b25
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.properties.property
+    - field.storage.properties.field_ceiling
+  module:
+    - options
+id: properties.property.field_ceiling
+field_name: field_ceiling
+entity_type: properties
+bundle: property
+label: 'Cielo Raso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

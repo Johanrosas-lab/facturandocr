@@ -1,0 +1,21 @@
+uuid: 07d93d8b-391f-402d-8207-3334dccdd318
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.storage.additional_insured.field_gender_additional
+  module:
+    - options
+id: additional_insured.additional_insured.field_gender_additional
+field_name: field_gender_additional
+entity_type: additional_insured
+bundle: additional_insured
+label: 'Y. Sexo del Asegurado Adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

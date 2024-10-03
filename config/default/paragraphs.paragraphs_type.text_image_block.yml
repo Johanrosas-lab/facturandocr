@@ -1,0 +1,9 @@
+uuid: 7aec5833-2139-4955-a919-1a7c50c60cc6
+langcode: es
+status: true
+dependencies: {  }
+id: text_image_block
+label: 'Text - Image Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

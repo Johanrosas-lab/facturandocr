@@ -1,0 +1,9 @@
+uuid: 06810e02-0ad9-4eaf-9f08-d8c5c3e929e9
+langcode: es
+status: true
+dependencies: {  }
+id: product_variation
+label: Característica
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

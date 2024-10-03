@@ -1,0 +1,21 @@
+uuid: cb09120d-cb05-479b-9794-8852c78dcdc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.additional_insured.additional_insured
+    - field.storage.additional_insured.field_id_type_additional
+  module:
+    - options
+id: additional_insured.additional_insured.field_id_type_additional
+field_name: field_id_type_additional
+entity_type: additional_insured
+bundle: additional_insured
+label: 'U. Tipo de documento de identidad del Asegurado Adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

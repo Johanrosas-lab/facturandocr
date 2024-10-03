@@ -1,0 +1,19 @@
+uuid: 6daec2db-fc47-45f9-ae38-e361d113afe3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_paragraph
+    - paragraphs.paragraphs_type.cta_section
+id: paragraph.cta_section.field_cta_paragraph
+field_name: field_cta_paragraph
+entity_type: paragraph
+bundle: cta_section
+label: 'CTA paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

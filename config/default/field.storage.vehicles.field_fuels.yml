@@ -1,0 +1,36 @@
+uuid: 0efe7d4d-8df9-4f2d-b2a8-0678e551d854
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: vehicles.field_fuels
+field_name: field_fuels
+entity_type: vehicles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Gasolina
+    -
+      value: '1'
+      label: Discel
+    -
+      value: '2'
+      label: Gas
+    -
+      value: '3'
+      label: Alcohol
+    -
+      value: '4'
+      label: Electricidad
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

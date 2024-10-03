@@ -1,0 +1,33 @@
+uuid: 3606ae57-5362-4284-ab6f-36c714c82514
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.login
+  module:
+    - system
+    - user
+  theme:
+    - insurance_theme
+id: login_3
+theme: insurance_theme
+region: header
+weight: -14
+provider: null
+plugin: 'system_menu_block:login'
+settings:
+  id: 'system_menu_block:login'
+  label: Login
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

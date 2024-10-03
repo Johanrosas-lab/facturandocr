@@ -1,0 +1,8 @@
+uuid: 21da7af1-aea8-40f2-a9b6-240f9b3b5315
+langcode: es
+status: true
+dependencies: {  }
+name: 'Modalidad Contratacion'
+vid: modality_recruitment
+description: ''
+weight: 0

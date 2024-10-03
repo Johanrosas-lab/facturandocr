@@ -1,0 +1,93 @@
+uuid: a1a41462-539a-4483-b400-f69f2b310d71
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - field.field.commerce_order.default.field_beneficiaries_data
+    - field.field.commerce_order.default.field_card_order
+    - field.field.commerce_order.default.field_contract_data_form
+    - field.field.commerce_order.default.field_payment_data
+  module:
+    - commerce_order
+    - inline_entity_form
+    - json_field
+_core:
+  default_config_hash: PPsASqkK-uvJ0SoeIRkXpbjQUgkSM2AoZAvmOWIOPdc
+id: commerce_order.default.default
+targetEntityType: commerce_order
+bundle: default
+mode: default
+content:
+  adjustments:
+    type: commerce_adjustment_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  billing_profile:
+    type: commerce_billing_profile
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  cart:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 20
+    third_party_settings: {  }
+    region: content
+  field_beneficiaries_data:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: json_textarea
+    region: content
+  field_card_order:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: json_textarea
+    region: content
+  field_contract_data_form:
+    weight: 24
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: json_textarea
+    region: content
+  field_payment_data:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  order_items:
+    type: inline_entity_form_complex
+    weight: 1
+    settings:
+      override_labels: true
+      label_singular: 'order item'
+      label_plural: 'order items'
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  ip_address: true
+  mail: true
+  order_number: true
+  state: true
+  store_id: true
+  uid: true

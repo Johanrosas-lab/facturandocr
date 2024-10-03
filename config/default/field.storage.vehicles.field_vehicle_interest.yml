@@ -1,0 +1,36 @@
+uuid: 2780c901-4b65-4664-905a-9809243227e8
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+id: vehicles.field_vehicle_interest
+field_name: field_vehicle_interest
+entity_type: vehicles
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Propietario
+    -
+      value: '1'
+      label: 'Conyuge de propietario'
+    -
+      value: '2'
+      label: Arrendario
+    -
+      value: '3'
+      label: 'Depositario Judicial'
+    -
+      value: '4'
+      label: Comodatario
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

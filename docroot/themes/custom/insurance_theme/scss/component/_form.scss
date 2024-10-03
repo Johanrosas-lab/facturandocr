@@ -1,0 +1,697 @@
+/**
+ * Form styles.
+ */
+// Checkboxes / radio buttons.
+
+.checkbox,
+.radio {
+  // Remove top/bottom margins when in table context, because this is most
+  // likely a tableselect checkbox element.
+  table &.form-no-label {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+// Browsers do not recognize pseudo :after selectors, we must create a wrapper
+// around the select element to style it properly.
+// $see http://stackoverflow.com/q/21103542
+
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  .form-inline & {
+    width: auto;
+  }
+
+  .input-group & {
+    display: table-cell;
+    // Reset rounded corners
+    &:first-child .form-control:first-child {
+      @include border-left-radius($border-radius-base);
+    }
+
+    &:last-child .form-control:first-child {
+      @include border-right-radius($border-radius-base);
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 1;
+    padding-right: 2em;
+
+    &::-ms-expand {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    color: $brand-primary;
+    content: '▼';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: -.5em;
+    padding-right: 0.5em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    // Use a more stylish icon if the theme uses glyphicons.
+    .has-glyphicons & {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\e114'; // .glyphicon-chevron-down
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+    }
+
+    .has-error & {
+      color: $state-danger-text;
+    }
+
+    .has-success & {
+      color: $state-success-text;
+    }
+
+    .has-warning & {
+      color: $state-warning-text;
+    }
+  }
+}
+// Use CSS/SVG image for required mark.
+// @see https://www.drupal.org/node/2152217
+// @see https://www.drupal.org/node/2274631
+
+.form-required:after {
+  background-image: url("../images/required.svg");
+  background-size: 10px 7px;
+  content: "";
+  display: inline-block;
+  line-height: 1;
+  height: 7px;
+  width: 10px;
+}
+// Form action buttons.
+
+.form-actions {
+  .btn,
+  .btn-group {
+    margin-right: 10px;
+  }
+
+  .btn-group {
+    .btn {
+      margin-right: 0;
+    }
+  }
+}
+
+#edit-submit {
+  @include btn-blue($padding: 12px 120px);
+  margin-bottom: 10px;
+  &:hover{
+    background-color: $color-blue-hover;
+  }
+}
+#edit-submit-acquia-search {
+  @include btn-blue($padding: 10px 30px,$size: 16px);
+  margin-left: 13px;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  @media (max-width: 783px) {
+    margin-left: 5px;
+  }
+  @media (max-width: $screen-tablet) {
+    border-radius: 100px;
+    width: 200px;
+  }
+  &:hover{
+    background-color: $color-blue-hover;
+  }
+  &:focus{
+    outline: 0 !important;
+  }
+}
+// Homepage search form
+
+form#views-exposed-form-acquia-search-page{
+  #edit-actions{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .form-inline {
+    margin-top: 23px;
+    .form-item {
+      .form-control {
+        &:focus {
+          outline: 0 !important;
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+      .control-label{
+        display: none;
+      }
+      #edit-search{
+        height: 42px;
+        width: 267px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 100px;
+        margin-right: -4px;
+        color: $color-black;
+        font-size: 16px;
+        font-family: 'Roboto-Light';
+        margin-top: -1px;
+        padding: 0 20px;
+        @include placeholder();
+        @media (max-width: $screen-tablet) {
+          border-radius: 100px;
+          margin: 0 auto;
+          width: 300px;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $color-placeholder;
+          font-style: italic;
+          font-family: 'Roboto-Light';
+          font-weight: 100;
+          font-size: 15px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: $color-placeholder;
+          font-style: italic;
+          font-family: 'Roboto-Light';
+          font-weight: 100;
+          font-size: 15px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: $color-placeholder;
+          font-style: italic;
+          font-family: 'Roboto-Light';
+          font-weight: 100;
+          font-size: 15px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: $color-placeholder;
+          font-style: italic;
+          font-family: 'Roboto-Light';
+          font-weight: 100;
+          font-size: 15px;
+        }
+      }
+      .select-wrapper {
+        &:after {
+          color: $color-placeholder;
+          margin-right: 10px;
+        }
+
+        select#edit-field-categoria {
+          cursor: pointer;
+          height: 42px;
+          width: 212px;
+          background-color: rgba(255,255,255,0.8);
+          border-radius: 0 100px 100px 0;
+          @include placeholder();
+          @media (max-width: $screen-tablet) {
+            width: 300px;
+            border-radius: 100px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+//login-form - register-form
+.user-login,
+.user-register,
+.user-new-pass{
+  .region-content-top{
+    display: none;
+  }
+  .region-sidebar-first{
+    position: fixed;
+    width: 430px;
+    margin-left: -4px;
+    @media (max-width: $screen-desktop){
+      display: none;
+    }
+    .field--name-field-user-intro-logo{
+      margin: auto;
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      padding: 0 30px;
+    }
+    .field--name-field-user-intro-background{
+      height: 100vh;
+      img{
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    #block-userintro{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .password-link{
+    text-align: center;
+  }
+  .region-content {
+    .tabs{
+      width: 310px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      .nav-tabs{
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        li{
+          width: 50%;
+          a{
+            width: 100%;
+            text-align: center;
+            color: $color-placeholder;
+            font-size: 18px;
+            font-family: 'Roboto-Regular';
+            &:hover{
+              color: $color-secondary;
+              border-color: transparent;
+              background-color: transparent;
+            }
+          }
+        }
+        li.active{
+          a{
+            border: none;
+            color: $color-secondary;
+            border-bottom: 3px solid $color-secondary;
+          }
+        }
+      }
+    }
+    .page-header {
+      display: none;
+    }
+    .social-auth {
+      &:last-child {
+        background-color: #FF2731;
+        &:after {
+          content: 'Ingresar con google';
+        }
+      }
+    }
+    .block-social-auth {
+      a {
+        @include btn-blue($background-color:#345E97,$padding: 0);
+        margin: 10px 0px;
+        height: 49px;
+        min-width: 297px;
+
+        &:after {
+          content: 'Ingresar con Facebook';
+          font-size: 14px;
+          font-family: 'Roboto-Regular';
+          color: $color-white;
+          position: relative;
+          top: 10px;
+          left: -29px;
+        }
+
+        img {
+          float: left;
+          width: 49px;
+          margin-left: 20px;
+        }
+      }
+    }
+    .user-login-form,
+    .user-register-form,
+    .user-pass{
+      .form-item {
+        margin: 0 auto;
+        max-width: 300px;
+        @media (min-width: $screen-phone) {
+          max-width: 340px;
+        }
+
+        label {
+          color: black;
+        }
+        input {
+          border: none;
+          border-bottom: 1px solid $color-border-gray;
+          border-radius: 0;
+          width: 100%;
+          box-shadow: none;
+          margin: 0 auto;
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #fff inset;
+          }
+          &:focus {
+            border-color: $color-border-gray;
+            box-shadow: none;
+          }
+        }
+      }
+      p{
+        font-size: 12px;
+        margin: 0 auto;
+        max-width: 300px;
+
+        @media (min-width: $screen-phone) {
+          max-width: 340px;
+        }
+      }
+      #edit-mail--description{
+        color: $color-white;
+        margin-top: 11px;
+        position: absolute;
+        width: 335px;
+        padding: 10px;
+        background-color: $color-secondary;
+        box-shadow: 2px 4px 6px 0px $color-background-overlay;
+        border-radius: 4px;
+        display: none;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          margin-left: -0.5em;
+          bottom: 98px;
+          right: -15px;
+          box-sizing: border-box;
+          border: 9px solid $gray;
+          border-color: transparent transparent $color-secondary $color-secondary;
+          transform-origin: 0 0;
+          transform: rotate(135deg);
+          box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.10);
+        }
+      }
+      .js-form-type-email,
+      .js-form-type-textfield {
+        // border-top: 1px solid #ececec;
+        padding-top: 30px;
+      }
+      .js-form-type-email {
+        label {
+          float: left;
+        }
+
+        svg {
+          position: relative;
+          left: 76%;
+          cursor: pointer;
+
+          &:hover ~ #edit-mail--description{
+            display: block;
+          }
+        }
+
+        path {
+          fill: $color-secondary;
+        }
+      }
+
+      .form-type-password {
+        padding-top: 15px;
+      }
+
+      .form-item-pass-pass2 {
+        .password-confirm {
+          font-size: 12px;
+          color: $color-placeholder;
+        }
+      }
+
+      .form-type-checkbox {
+        .control-label {
+          padding-top: 11px;
+
+          .form-checkbox {
+            width: auto;
+            left: 0;
+            top: 15px;
+          }
+        }
+      }
+
+      .captcha {
+        margin-top: 30px;
+
+        img {
+          margin: 0 auto;
+        }
+
+        .form-item {
+          border-top: none;
+          padding-top: 15px;
+        }
+      }
+
+      .form-actions {
+        margin: 40px 0 0 0;
+        text-align: center;
+
+        button {
+          padding: 12px 0!important;
+          width: 300px;
+          width: 300px;
+          margin-right: 0 !important;
+
+          &:focus {
+            outline: 0 !important;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+
+    .alert-danger {
+      margin: 15px 15px -67px 15px;
+      background-color: $color-red-error;
+      border-color: $color-red-error;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+      color: $color-white;
+      font-family: 'Roboto-Light';
+
+      button {
+        span {
+          color: $color-black;
+        }
+      }
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+  // register, login mobile media queries
+  @media (max-width: $screen-phone) {
+    .region-content {
+      .tabs {
+        ul {
+          li {
+            a {
+              font-size: 16px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 353px){
+    .user-login-form,
+    .user-register-form{
+      .form-item{
+        max-width: inherit;
+        min-width: inherit;
+        width: 100%;
+      }
+    }
+  }
+}
+// consentimiento informado form
+.entity-legal-document-acceptance-form{
+  padding-left: 20px;
+  button{
+    &:hover{
+      background-color: $color-blue-hover !important;
+    }
+  }
+}
+// not-logged-in product checkout form
+.path-checkout{
+  .commerce-checkout-flow{
+    .checkout-pane-login{
+      width: fit-content;
+      margin: 0 auto;
+      .form-wrapper__returning-customer{
+        width: 100%;
+        border: none;
+        .panel-heading{
+          background-color: $color-white;
+          color: $color-black;
+          border: none;
+          text-align: center;
+          .panel-title{
+            font-size: 18px;
+            font-family: 'Roboto-Regular';
+            border-bottom: 3px solid $color-secondary;
+          }
+        }
+        .panel-body{
+          padding: 30px 0;
+          .form-item{
+            label{
+              color: $color-black;
+              font-size: 14px;
+              font-family: 'Roboto-Regular';
+            }
+            input{
+              border: none;
+              border-bottom: 1px solid $color-border-gray;
+              box-shadow: none;
+              border-radius: 0;
+            }
+            input:-webkit-autofill {
+              -webkit-box-shadow: 0 0 0 1000px white inset !important;
+            }
+          }
+          button{
+            @include btn-blue();
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+          }
+          a{
+            position: relative;
+            left: 160px;
+            top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+// password strength meter styles
+.password-strength{
+  .password-strength__meter{
+    border-radius: 100px;
+    background-color: $color-lightblue;
+    .password-strength__indicator{
+      border-radius: 100px;
+    }
+    .is-weak{
+      background-color: $color-secondary;
+    }
+    .is-fair{
+      background-color: $color-secondary;
+    }
+    .is-good{
+      background-color: $color-secondary;
+    }
+    .is-strong{
+      background-color: $color-secondary;
+    }
+  }
+  .password-strength__title{
+    font-size: 12px;
+    color: $color-placeholder;
+  }
+}
+//Colorbox form
+#popup-field-group-pop-up-productos{
+  position: absolute;
+  z-index: 1500;
+  background-color: $color-white;
+  top: 42px;
+}
+
+// user log-in form from digital agent url
+.digital-agent-login-wrapper{
+  margin-top: 93px;
+  padding: 0;
+  .digital-agent-header{
+    text-align: center;
+    margin-bottom: 35px;
+    background-color: $color-secondary;
+    height: 230px;
+    display: flex;
+    h1{
+      width: 100%;
+      padding: 38px 30px 0;
+      margin: 0 auto;
+      color: $color-white;
+    }
+  }
+  .digital-agent-form-wrapper{
+    margin: 0 auto;
+    max-width: 560px;
+    width: 100%;
+    box-shadow: 0 2px 4px $color-background-overlay;
+    border-radius: 4px;
+    padding: 30px 40px;
+    position: relative;
+    bottom: 110px;
+    background-color: $color-white;
+    .digital-agent-name{
+      text-align: center;
+      padding-bottom: 30px;
+      p{
+        margin-bottom: 7px;
+        color: $color-secondary;
+      }
+      h2{
+        margin-top: 0;
+      }
+    }
+    form{
+      .form-type-textfield,
+      .form-type-password{
+        max-width: 100%;
+        min-width: 297px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        label{
+          color: $color-black;
+        }
+        input{
+          border: none;
+          border-bottom: 1px solid $color-border-gray;
+          border-radius: 0;
+          width: 100%;
+          box-shadow: none;
+          margin: 0 auto;
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px $color-white inset;
+          }
+          &:focus {
+            border-color: $color-border-gray;
+            box-shadow: none;
+          }
+        }
+      }
+      .form-actions{
+        padding: 30px 0 0;
+        text-align: center;
+        button{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

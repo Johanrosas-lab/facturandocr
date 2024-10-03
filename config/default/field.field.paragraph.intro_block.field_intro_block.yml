@@ -1,0 +1,23 @@
+uuid: d898d4a4-1f8e-423d-85a2-07a351357e31
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro_block
+    - paragraphs.paragraphs_type.intro_block
+id: paragraph.intro_block.field_intro_block
+field_name: field_intro_block
+entity_type: paragraph
+bundle: intro_block
+label: Block
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

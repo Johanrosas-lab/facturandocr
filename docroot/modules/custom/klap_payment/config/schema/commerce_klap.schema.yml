@@ -1,0 +1,10 @@
+commerce_payment.commerce_payment_gateway.plugin.klap_onsite:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    app_name:
+      type: string
+      label: 'Application Name'
+
+
+
+

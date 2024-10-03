@@ -1,0 +1,86 @@
+uuid: 321e3d78-08e7-4232-9f6a-705645cff24b
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.seguro
+    - field.field.commerce_product_variation.seguro.attribute_plans
+    - field.field.commerce_product_variation.seguro.billing_schedule
+    - field.field.commerce_product_variation.seguro.field_characteristic
+    - field.field.commerce_product_variation.seguro.subscription_type
+  module:
+    - commerce
+    - commerce_price
+    - paragraphs
+id: commerce_product_variation.seguro.default
+targetEntityType: commerce_product_variation
+bundle: seguro
+mode: default
+content:
+  attribute_plans:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  billing_schedule:
+    type: options_select
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_characteristic:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+    region: content
+  list_price:
+    type: commerce_list_price
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sku:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  subscription_type:
+    type: commerce_plugin_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true
